@@ -67,7 +67,7 @@ const HomePage = () => {
   return (
     <div className="relative">
       {/* Persuasive Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-space-darker via-space-dark to-purple-900/20">
           {/* Animated Stars */}
