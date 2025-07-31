@@ -51,8 +51,8 @@ const Navigation = () => {
                 to={item.href}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 group ${
                   location.pathname === item.href
-                    ? 'text-neon-purple'
-                    : 'text-foreground hover:text-neon-purple'
+                    ? 'text-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
                 }`}
               >
                 {item.name}
