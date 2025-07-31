@@ -1,55 +1,90 @@
-import { motion } from 'framer-motion';
-import { ExternalLink, Star, Globe } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { motion } from "framer-motion";
+import { ExternalLink, Star, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Templates = () => {
   const templates = [
     {
       id: 1,
       title: "Foods and Bakery Template",
-      description: "Professional bakery and restaurant website with online ordering, menu showcase, and delivery integration. Perfect for food businesses.",
+      description:
+        "Professional bakery and restaurant website with online ordering, menu showcase, and delivery integration. Perfect for food businesses.",
       url: "https://preview--foods-and-bakery.lovable.app/",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F77bb014385f34745aa37a20528be287d?format=webp&width=800",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F77bb014385f34745aa37a20528be287d?format=webp&width=800",
       category: "Food & Restaurant",
-      features: ["Online Ordering", "Menu Display", "Delivery Integration", "Contact Forms"]
+      features: [
+        "Online Ordering",
+        "Menu Display",
+        "Delivery Integration",
+        "Contact Forms",
+      ],
     },
     {
       id: 2,
       title: "Safari Adventures Template",
-      description: "Stunning safari and tourism website featuring breathtaking landscapes, tour packages, and booking systems for adventure companies.",
+      description:
+        "Stunning safari and tourism website featuring breathtaking landscapes, tour packages, and booking systems for adventure companies.",
       url: "https://preview--vybz-tours-voyage-kenya.lovable.app/",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fa63d3005451e452e9fb98fc415143881?format=webp&width=800",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fa63d3005451e452e9fb98fc415143881?format=webp&width=800",
       category: "Travel & Tourism",
-      features: ["Tour Packages", "Booking System", "Photo Gallery", "Testimonials"]
+      features: [
+        "Tour Packages",
+        "Booking System",
+        "Photo Gallery",
+        "Testimonials",
+      ],
     },
     {
       id: 3,
       title: "Safaris Template",
-      description: "Premium safari website template with elegant design, wildlife photography showcase, and comprehensive tour management system.",
+      description:
+        "Premium safari website template with elegant design, wildlife photography showcase, and comprehensive tour management system.",
       url: "https://builder.io/app/projects/1d30dacd73954ad08ba84a6f4b2dd5af/main",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F8257e18852c64464b1240bdb849fff2b?format=webp&width=800",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F8257e18852c64464b1240bdb849fff2b?format=webp&width=800",
       category: "Travel & Safari",
-      features: ["Wildlife Gallery", "Tour Management", "Booking Calendar", "Multi-language"]
+      features: [
+        "Wildlife Gallery",
+        "Tour Management",
+        "Booking Calendar",
+        "Multi-language",
+      ],
     },
     {
       id: 4,
       title: "Sugar & Spice Eats",
-      description: "Vibrant restaurant template showcasing authentic Swahili cuisine with rich imagery, online menu, and ordering capabilities.",
+      description:
+        "Vibrant restaurant template showcasing authentic Swahili cuisine with rich imagery, online menu, and ordering capabilities.",
       url: "https://preview--sugar-spice-swahili-bites.lovable.app/",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F35f7aa21676040ca81c40045df3c9e6a?format=webp&width=800",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F35f7aa21676040ca81c40045df3c9e6a?format=webp&width=800",
       category: "Restaurant & Cuisine",
-      features: ["Recipe Showcase", "Cultural Menu", "Order Online", "Location Finder"]
+      features: [
+        "Recipe Showcase",
+        "Cultural Menu",
+        "Order Online",
+        "Location Finder",
+      ],
     },
     {
       id: 5,
       title: "Construction Template",
-      description: "Professional construction company website with project portfolios, service listings, and client testimonials for building contractors.",
+      description:
+        "Professional construction company website with project portfolios, service listings, and client testimonials for building contractors.",
       url: "https://80ddfba2a53540f6a9bb8e6a8342aa36-nova-lab.projects.builder.my/",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Ff632aae694bd4ce08967e3bdac490110?format=webp&width=800",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Ff632aae694bd4ce08967e3bdac490110?format=webp&width=800",
       category: "Construction & Building",
-      features: ["Project Portfolio", "Service Catalog", "Quote Requests", "Team Showcase"]
-    }
+      features: [
+        "Project Portfolio",
+        "Service Catalog",
+        "Quote Requests",
+        "Team Showcase",
+      ],
+    },
   ];
 
   const containerVariants = {
@@ -70,7 +105,7 @@ const Templates = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
+        ease: "easeOut",
       },
     },
   };
@@ -89,11 +124,14 @@ const Templates = () => {
             Website Templates
           </h1>
           <p className="text-xl sm:text-2xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            Choose from our premium collection of professionally designed templates. Get your website up and running in minutes!
+            Choose from our premium collection of professionally designed
+            templates. Get your website up and running in minutes!
           </p>
           <div className="flex items-center justify-center mt-6 space-x-2">
             <Star className="w-5 h-5 text-neon-purple fill-current" />
-            <span className="text-foreground/70">Premium Quality Templates</span>
+            <span className="text-foreground/70">
+              Premium Quality Templates
+            </span>
             <Star className="w-5 h-5 text-neon-purple fill-current" />
           </div>
         </motion.div>
@@ -129,7 +167,7 @@ const Templates = () => {
                     <Button
                       size="sm"
                       className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30"
-                      onClick={() => window.open(template.url, '_blank')}
+                      onClick={() => window.open(template.url, "_blank")}
                     >
                       <Globe className="w-4 h-4 mr-2" />
                       Preview
@@ -148,7 +186,9 @@ const Templates = () => {
 
                   {/* Features */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-foreground/90 mb-2">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-foreground/90 mb-2">
+                      Key Features:
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {template.features.map((feature, index) => (
                         <span
@@ -165,7 +205,7 @@ const Templates = () => {
                   <div className="flex gap-3">
                     <Button
                       className="flex-1 bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white shadow-lg transition-all duration-300"
-                      onClick={() => window.open(template.url, '_blank')}
+                      onClick={() => window.open(template.url, "_blank")}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       View Live Demo
@@ -194,7 +234,8 @@ const Templates = () => {
             Need a Custom Template?
           </h3>
           <p className="text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Can't find exactly what you're looking for? Our team can create a custom template tailored specifically to your business needs.
+            Can't find exactly what you're looking for? Our team can create a
+            custom template tailored specifically to your business needs.
           </p>
           <Button
             size="lg"

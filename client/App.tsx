@@ -32,7 +32,10 @@ const App = () => (
             <Route path="/trifidclub" element={<TrifidClub />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/templates" element={<Templates />} />
-            <Route path="/business-card-templates" element={<BusinessCardTemplates />} />
+            <Route
+              path="/business-card-templates"
+              element={<BusinessCardTemplates />}
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

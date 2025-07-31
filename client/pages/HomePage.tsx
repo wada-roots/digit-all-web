@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ChevronDown, Play, Star, Zap, Rocket, Eye } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import Modal from '@/components/Modal';
-import SocialMediaPopup from '@/components/popups/SocialMediaPopup';
-import SEOPopup from '@/components/popups/SEOPopup';
-import PhotographyPopup from '@/components/popups/PhotographyPopup';
-import WebsitePopup from '@/components/popups/WebsitePopup';
-import AppPopup from '@/components/popups/AppPopup';
-import BusinessCardsPopup from '@/components/popups/BusinessCardsPopup';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ChevronDown, Play, Star, Zap, Rocket, Eye } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Modal from "@/components/Modal";
+import SocialMediaPopup from "@/components/popups/SocialMediaPopup";
+import SEOPopup from "@/components/popups/SEOPopup";
+import PhotographyPopup from "@/components/popups/PhotographyPopup";
+import WebsitePopup from "@/components/popups/WebsitePopup";
+import AppPopup from "@/components/popups/AppPopup";
+import BusinessCardsPopup from "@/components/popups/BusinessCardsPopup";
 
 const HomePage = () => {
   const [activePopup, setActivePopup] = useState<string | null>(null);
@@ -26,7 +26,9 @@ const HomePage = () => {
   const handleSubmit = (serviceType: string, data: any) => {
     console.log(`${serviceType} form submitted:`, data);
     // Here you would typically send the data to your backend
-    alert(`Thank you for your ${serviceType} inquiry! We'll get back to you within 24 hours.`);
+    alert(
+      `Thank you for your ${serviceType} inquiry! We'll get back to you within 24 hours.`,
+    );
     setActivePopup(null);
   };
 
@@ -48,7 +50,7 @@ const HomePage = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
+        ease: "easeOut",
       },
     },
   };
@@ -58,7 +60,7 @@ const HomePage = () => {
     transition: {
       duration: 6,
       repeat: Infinity,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   };
 
@@ -112,20 +114,17 @@ const HomePage = () => {
           animate="visible"
         >
           {/* Main Persuasive Headlines */}
-          <motion.div
-            className="mb-16"
-            variants={itemVariants}
-          >
+          <motion.div className="mb-16" variants={itemVariants}>
             <motion.h1
               className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-neon-purple to-neon-pink bg-clip-text text-transparent leading-tight"
               animate={{
                 scale: [1, 1.02, 1],
-                rotateX: [0, 5, 0]
+                rotateX: [0, 5, 0],
               }}
               transition={{
                 duration: 3,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             >
               🚀 STOP Losing Customers to Your Competition
@@ -135,12 +134,12 @@ const HomePage = () => {
               className="text-xl sm:text-2xl text-neon-blue font-semibold mb-6"
               animate={{
                 opacity: [0.7, 1, 0.7],
-                y: [0, -5, 0]
+                y: [0, -5, 0],
               }}
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                delay: 0.5
+                delay: 0.5,
               }}
             >
               ⚡ Get Results in 24-48 Hours, Not Months
@@ -155,7 +154,8 @@ const HomePage = () => {
                 transition={{ duration: 4, repeat: Infinity }}
                 className="font-medium"
               >
-                💰 <span className="text-neon-pink">1,247+ businesses</span> increased revenue by 300% with our proven system
+                💰 <span className="text-neon-pink">1,247+ businesses</span>{" "}
+                increased revenue by 300% with our proven system
               </motion.p>
 
               <motion.p
@@ -163,13 +163,14 @@ const HomePage = () => {
                 transition={{ duration: 4, repeat: Infinity, delay: 2 }}
                 className="font-medium"
               >
-                📈 Our clients dominate their markets while competitors struggle to keep up
+                📈 Our clients dominate their markets while competitors struggle
+                to keep up
               </motion.p>
 
               <motion.p
                 className="text-neon-purple font-bold text-xl"
                 animate={{
-                  scale: [1, 1.05, 1]
+                  scale: [1, 1.05, 1],
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -183,7 +184,9 @@ const HomePage = () => {
             className="flex flex-col items-center"
             variants={itemVariants}
           >
-            <p className="text-sm text-neon-blue/80 mb-2 font-semibold">👇 Choose Your Success Package Below</p>
+            <p className="text-sm text-neon-blue/80 mb-2 font-semibold">
+              👇 Choose Your Success Package Below
+            </p>
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
@@ -210,11 +213,16 @@ const HomePage = () => {
             <motion.p
               className="text-xl text-foreground/80 max-w-3xl mx-auto"
               animate={{
-                color: ["rgba(255,255,255,0.8)", "rgba(168, 85, 247, 0.9)", "rgba(255,255,255,0.8)"]
+                color: [
+                  "rgba(255,255,255,0.8)",
+                  "rgba(168, 85, 247, 0.9)",
+                  "rgba(255,255,255,0.8)",
+                ],
               }}
               transition={{ duration: 3, repeat: Infinity }}
             >
-              🎯 Results-driven packages that transform your business into a market leader
+              🎯 Results-driven packages that transform your business into a
+              market leader
             </motion.p>
           </motion.div>
 
@@ -222,52 +230,58 @@ const HomePage = () => {
             {[
               {
                 id: "social-media",
-                image: "https://images.pexels.com/photos/13883892/pexels-photo-13883892.jpeg",
+                image:
+                  "https://images.pexels.com/photos/13883892/pexels-photo-13883892.jpeg",
                 title: "Social Media Marketing",
                 description: "Boost your online presence with 10x engagement",
                 caption: "Get your social media strategy in 24 hours",
-                price: "From $299/month"
+                price: "From $299/month",
               },
               {
                 id: "seo",
-                image: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
+                image:
+                  "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
                 title: "Search Engine Optimization",
                 description: "Rank #1 on Google within 90 days",
                 caption: "80% of your SEO work is done automatically",
-                price: "From $499/month"
+                price: "From $499/month",
               },
               {
                 id: "photography",
-                image: "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
+                image:
+                  "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
                 title: "Photography & Videography",
                 description: "Professional content that converts",
                 caption: "Get your brand photoshoot in one session",
-                price: "From $799/project"
+                price: "From $799/project",
               },
               {
                 id: "website",
-                image: "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg",
+                image:
+                  "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg",
                 title: "Website Development",
                 description: "Lightning-fast, mobile-responsive websites",
                 caption: "Get your website template in 10 minutes",
-                price: "From $1,299"
+                price: "From $1,299",
               },
               {
                 id: "app",
-                image: "https://images.pexels.com/photos/7947951/pexels-photo-7947951.jpeg",
+                image:
+                  "https://images.pexels.com/photos/7947951/pexels-photo-7947951.jpeg",
                 title: "App Development",
                 description: "Native iOS & Android apps that scale",
                 caption: "80% of your app is done with our templates",
-                price: "From $2,999"
+                price: "From $2,999",
               },
               {
                 id: "business-cards",
-                image: "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg",
+                image:
+                  "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg",
                 title: "Business Cards",
                 description: "Premium designs that make lasting impressions",
                 caption: "Get your business cards designed in 2 hours",
-                price: "From $99"
-              }
+                price: "From $99",
+              },
             ].map((service, index) => (
               <motion.div
                 key={index}
@@ -308,24 +322,34 @@ const HomePage = () => {
                           size="sm"
                           onClick={() => handleOrderClick(service.id)}
                           className={`bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white px-4 py-2 text-sm rounded-full shadow-lg transition-all duration-300 ${
-                            service.id === 'social-media' || service.id === 'seo' ? 'flex-1' : 'flex-1'
+                            service.id === "social-media" ||
+                            service.id === "seo"
+                              ? "flex-1"
+                              : "flex-1"
                           }`}
                         >
                           Order Now
                         </Button>
-                        {service.id !== 'social-media' && service.id !== 'seo' && (
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            asChild
-                            className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white px-4 py-2 text-sm rounded-full transition-all duration-300"
-                          >
-                            <Link to={service.id === 'business-cards' ? '/business-card-templates' : '/templates'}>
-                              <Eye className="w-4 h-4 mr-1" />
-                              Templates
-                            </Link>
-                          </Button>
-                        )}
+                        {service.id !== "social-media" &&
+                          service.id !== "seo" && (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              asChild
+                              className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white px-4 py-2 text-sm rounded-full transition-all duration-300"
+                            >
+                              <Link
+                                to={
+                                  service.id === "business-cards"
+                                    ? "/business-card-templates"
+                                    : "/templates"
+                                }
+                              >
+                                <Eye className="w-4 h-4 mr-1" />
+                                Templates
+                              </Link>
+                            </Button>
+                          )}
                       </div>
                     </div>
                   </CardContent>
@@ -337,28 +361,39 @@ const HomePage = () => {
       </section>
 
       {/* Service Popups */}
-      <Modal isOpen={activePopup === 'social-media'} onClose={handleClosePopup}>
-        <SocialMediaPopup onSubmit={(data) => handleSubmit('Social Media Marketing', data)} />
+      <Modal isOpen={activePopup === "social-media"} onClose={handleClosePopup}>
+        <SocialMediaPopup
+          onSubmit={(data) => handleSubmit("Social Media Marketing", data)}
+        />
       </Modal>
 
-      <Modal isOpen={activePopup === 'seo'} onClose={handleClosePopup}>
-        <SEOPopup onSubmit={(data) => handleSubmit('SEO', data)} />
+      <Modal isOpen={activePopup === "seo"} onClose={handleClosePopup}>
+        <SEOPopup onSubmit={(data) => handleSubmit("SEO", data)} />
       </Modal>
 
-      <Modal isOpen={activePopup === 'photography'} onClose={handleClosePopup}>
-        <PhotographyPopup onSubmit={(data) => handleSubmit('Photography & Videography', data)} />
+      <Modal isOpen={activePopup === "photography"} onClose={handleClosePopup}>
+        <PhotographyPopup
+          onSubmit={(data) => handleSubmit("Photography & Videography", data)}
+        />
       </Modal>
 
-      <Modal isOpen={activePopup === 'website'} onClose={handleClosePopup}>
-        <WebsitePopup onSubmit={(data) => handleSubmit('Website Development', data)} />
+      <Modal isOpen={activePopup === "website"} onClose={handleClosePopup}>
+        <WebsitePopup
+          onSubmit={(data) => handleSubmit("Website Development", data)}
+        />
       </Modal>
 
-      <Modal isOpen={activePopup === 'app'} onClose={handleClosePopup}>
-        <AppPopup onSubmit={(data) => handleSubmit('App Development', data)} />
+      <Modal isOpen={activePopup === "app"} onClose={handleClosePopup}>
+        <AppPopup onSubmit={(data) => handleSubmit("App Development", data)} />
       </Modal>
 
-      <Modal isOpen={activePopup === 'business-cards'} onClose={handleClosePopup}>
-        <BusinessCardsPopup onSubmit={(data) => handleSubmit('Business Cards', data)} />
+      <Modal
+        isOpen={activePopup === "business-cards"}
+        onClose={handleClosePopup}
+      >
+        <BusinessCardsPopup
+          onSubmit={(data) => handleSubmit("Business Cards", data)}
+        />
       </Modal>
     </div>
   );

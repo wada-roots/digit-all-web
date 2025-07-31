@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search } from 'lucide-react';
-import { Button } from './ui/button';
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Search } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +13,8 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -22,12 +22,12 @@ const Navigation = () => {
   }, [location]);
 
   const navItems = [
-    { name: 'DMS', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Templates', href: '/templates' },
-    { name: 'Web/App Design', href: '/webdevelopment' },
-    { name: 'DMS Club', href: '/trifidclub' },
-    { name: 'Get in Touch', href: '/contact' },
+    { name: "DMS", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Templates", href: "/templates" },
+    { name: "Web/App Design", href: "/webdevelopment" },
+    { name: "DMS Club", href: "/trifidclub" },
+    { name: "Get in Touch", href: "/contact" },
   ];
 
   return (
@@ -51,19 +51,27 @@ const Navigation = () => {
                 to={item.href}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 group ${
                   location.pathname === item.href
-                    ? 'text-blue-600'
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? "text-blue-600"
+                    : "text-gray-700 hover:text-blue-600"
                 }`}
               >
                 {item.name}
-                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform transition-transform duration-300 ${
-                  location.pathname === item.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                }`} />
+                <span
+                  className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform transition-transform duration-300 ${
+                    location.pathname === item.href
+                      ? "scale-x-100"
+                      : "scale-x-0 group-hover:scale-x-100"
+                  }`}
+                />
               </Link>
             ))}
-            
+
             {/* Search Icon */}
-            <Button variant="ghost" size="icon" className="text-gray-700 hover:text-blue-600">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-gray-700 hover:text-blue-600"
+            >
               <Search className="h-5 w-5" />
             </Button>
           </div>
@@ -76,7 +84,11 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -91,15 +103,19 @@ const Navigation = () => {
                   to={item.href}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md ${
                     location.pathname === item.href
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button variant="ghost" size="icon" className="text-gray-700 hover:text-blue-600">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-gray-700 hover:text-blue-600"
+                >
                   <Search className="h-5 w-5" />
                 </Button>
               </div>

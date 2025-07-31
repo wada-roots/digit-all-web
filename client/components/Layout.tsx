@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { MessageCircle } from 'lucide-react';
-import ContactBar from './ContactBar';
-import Navigation from './Navigation';
-import { Button } from './ui/button';
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { MessageCircle } from "lucide-react";
+import ContactBar from "./ContactBar";
+import Navigation from "./Navigation";
+import { Button } from "./ui/button";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -21,18 +21,19 @@ const Layout = ({ children }: LayoutProps) => {
   // Update scroll progress
   useEffect(() => {
     const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const totalHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const progress = (window.scrollY / totalHeight) * 100;
       setScrollProgress(Math.min(progress, 100));
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi! I'm interested in your services.");
-    window.open(`https://wa.me/1234567890?text=${message}`, '_blank');
+    window.open(`https://wa.me/1234567890?text=${message}`, "_blank");
   };
 
   return (
@@ -41,9 +42,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Navigation />
 
       {/* Main Content */}
-      <main className="pt-28 lg:pt-32">
-        {children}
-      </main>
+      <main className="pt-28 lg:pt-32">{children}</main>
 
       {/* WhatsApp Float Button */}
       <Button
@@ -60,7 +59,7 @@ const Layout = ({ children }: LayoutProps) => {
           <div
             className="w-full bg-gradient-to-t from-neon-purple to-neon-pink rounded-full transition-all duration-300"
             style={{
-              height: `${scrollProgress}%`
+              height: `${scrollProgress}%`,
             }}
           />
         </div>

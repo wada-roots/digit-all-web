@@ -1,4 +1,4 @@
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock } from "lucide-react";
 
 const ContactBar = () => {
   return (
@@ -22,7 +22,9 @@ const ContactBar = () => {
 
         {/* Social Links or Additional Info */}
         <div className="mt-1 sm:mt-0">
-          <span className="text-blue-100">Get your free consultation today!</span>
+          <span className="text-blue-100">
+            Get your free consultation today!
+          </span>
         </div>
       </div>
     </div>

@@ -1,110 +1,130 @@
-import { motion } from 'framer-motion';
-import { ExternalLink, Star, Download, Eye } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { motion } from "framer-motion";
+import { ExternalLink, Star, Download, Eye } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 const BusinessCardTemplates = () => {
   const businessCardTemplates = [
     {
       id: 1,
       title: "Modern Minimalist",
-      description: "Clean, professional design with bold typography and minimal color palette. Perfect for corporate professionals.",
-      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description:
+        "Clean, professional design with bold typography and minimal color palette. Perfect for corporate professionals.",
+      image:
+        "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Professional",
       style: "Minimalist",
       colors: ["Black", "White", "Blue"],
-      format: "Standard (3.5 × 2 inches)"
+      format: "Standard (3.5 × 2 inches)",
     },
     {
       id: 2,
       title: "Creative Gradient",
-      description: "Eye-catching gradient design with modern typography. Ideal for creative agencies and designers.",
-      image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description:
+        "Eye-catching gradient design with modern typography. Ideal for creative agencies and designers.",
+      image:
+        "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Creative",
       style: "Modern",
       colors: ["Purple", "Pink", "Orange"],
-      format: "Standard (3.5 × 2 inches)"
+      format: "Standard (3.5 × 2 inches)",
     },
     {
       id: 3,
       title: "Elegant Gold Foil",
-      description: "Luxury design with gold foil accents and premium finish. Perfect for high-end businesses.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description:
+        "Luxury design with gold foil accents and premium finish. Perfect for high-end businesses.",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Luxury",
       style: "Elegant",
       colors: ["Black", "Gold", "White"],
-      format: "Standard (3.5 × 2 inches)"
+      format: "Standard (3.5 × 2 inches)",
     },
     {
       id: 4,
       title: "Tech Startup",
-      description: "Modern tech-inspired design with geometric patterns and vibrant colors for startups.",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description:
+        "Modern tech-inspired design with geometric patterns and vibrant colors for startups.",
+      image:
+        "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Technology",
       style: "Modern",
       colors: ["Blue", "Green", "White"],
-      format: "Standard (3.5 × 2 inches)"
+      format: "Standard (3.5 × 2 inches)",
     },
     {
       id: 5,
       title: "Vintage Classic",
-      description: "Timeless vintage design with classic typography and traditional elements.",
-      image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description:
+        "Timeless vintage design with classic typography and traditional elements.",
+      image:
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Traditional",
       style: "Vintage",
       colors: ["Brown", "Cream", "Gold"],
-      format: "Standard (3.5 × 2 inches)"
+      format: "Standard (3.5 × 2 inches)",
     },
     {
       id: 6,
       title: "Artistic Watercolor",
-      description: "Creative watercolor background with artistic flair. Great for artists and creative professionals.",
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description:
+        "Creative watercolor background with artistic flair. Great for artists and creative professionals.",
+      image:
+        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Artistic",
       style: "Creative",
       colors: ["Multicolor", "Blue", "Purple"],
-      format: "Standard (3.5 × 2 inches)"
+      format: "Standard (3.5 × 2 inches)",
     },
     {
       id: 7,
       title: "Corporate Professional",
-      description: "Traditional corporate design with clean lines and professional appearance.",
-      image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description:
+        "Traditional corporate design with clean lines and professional appearance.",
+      image:
+        "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Corporate",
       style: "Professional",
       colors: ["Navy", "White", "Silver"],
-      format: "Standard (3.5 × 2 inches)"
+      format: "Standard (3.5 × 2 inches)",
     },
     {
       id: 8,
       title: "Bold Geometric",
-      description: "Strong geometric patterns with bold colors for maximum impact and brand recognition.",
-      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description:
+        "Strong geometric patterns with bold colors for maximum impact and brand recognition.",
+      image:
+        "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Modern",
       style: "Bold",
       colors: ["Red", "Black", "White"],
-      format: "Standard (3.5 × 2 inches)"
+      format: "Standard (3.5 × 2 inches)",
     },
     {
       id: 9,
       title: "Nature Eco-Friendly",
-      description: "Organic design with natural elements and earth tones. Perfect for eco-conscious businesses.",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description:
+        "Organic design with natural elements and earth tones. Perfect for eco-conscious businesses.",
+      image:
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Eco-Friendly",
       style: "Natural",
       colors: ["Green", "Brown", "Cream"],
-      format: "Standard (3.5 × 2 inches)"
+      format: "Standard (3.5 × 2 inches)",
     },
     {
       id: 10,
       title: "Premium Black Card",
-      description: "Sophisticated black card with metallic accents and premium finishing for exclusive brands.",
-      image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      description:
+        "Sophisticated black card with metallic accents and premium finishing for exclusive brands.",
+      image:
+        "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Premium",
       style: "Luxury",
       colors: ["Black", "Silver", "White"],
-      format: "Standard (3.5 × 2 inches)"
-    }
+      format: "Standard (3.5 × 2 inches)",
+    },
   ];
 
   const containerVariants = {
@@ -125,7 +145,7 @@ const BusinessCardTemplates = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
+        ease: "easeOut",
       },
     },
   };
@@ -144,7 +164,8 @@ const BusinessCardTemplates = () => {
             Business Card Templates
           </h1>
           <p className="text-xl sm:text-2xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            Professional business card designs that make lasting impressions. Choose from our premium collection of templates.
+            Professional business card designs that make lasting impressions.
+            Choose from our premium collection of templates.
           </p>
           <div className="flex items-center justify-center mt-6 space-x-2">
             <Star className="w-5 h-5 text-neon-purple fill-current" />
@@ -203,30 +224,41 @@ const BusinessCardTemplates = () => {
                   {/* Template Details */}
                   <div className="space-y-3 mb-6">
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium text-foreground/70">Style:</span>
-                      <span className="text-xs text-neon-purple font-semibold">{template.style}</span>
+                      <span className="text-xs font-medium text-foreground/70">
+                        Style:
+                      </span>
+                      <span className="text-xs text-neon-purple font-semibold">
+                        {template.style}
+                      </span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium text-foreground/70">Colors:</span>
+                      <span className="text-xs font-medium text-foreground/70">
+                        Colors:
+                      </span>
                       <div className="flex gap-1">
                         {template.colors.map((color, index) => (
-                          <span key={index} className="text-xs bg-space-dark/50 px-2 py-1 rounded">
+                          <span
+                            key={index}
+                            className="text-xs bg-space-dark/50 px-2 py-1 rounded"
+                          >
                             {color}
                           </span>
                         ))}
                       </div>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium text-foreground/70">Format:</span>
-                      <span className="text-xs text-foreground/80">{template.format}</span>
+                      <span className="text-xs font-medium text-foreground/70">
+                        Format:
+                      </span>
+                      <span className="text-xs text-foreground/80">
+                        {template.format}
+                      </span>
                     </div>
                   </div>
 
                   {/* Actions */}
                   <div className="flex gap-2">
-                    <Button
-                      className="flex-1 bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white shadow-lg transition-all duration-300"
-                    >
+                    <Button className="flex-1 bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white shadow-lg transition-all duration-300">
                       <Download className="w-4 h-4 mr-2" />
                       Use Template
                     </Button>
@@ -254,7 +286,9 @@ const BusinessCardTemplates = () => {
             Need Custom Business Cards?
           </h3>
           <p className="text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Can't find the perfect design? Our team can create custom business cards tailored specifically to your brand identity and business needs.
+            Can't find the perfect design? Our team can create custom business
+            cards tailored specifically to your brand identity and business
+            needs.
           </p>
           <Button
             size="lg"
