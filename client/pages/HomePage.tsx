@@ -12,6 +12,23 @@ import AppPopup from '@/components/popups/AppPopup';
 import BusinessCardsPopup from '@/components/popups/BusinessCardsPopup';
 
 const HomePage = () => {
+  const [activePopup, setActivePopup] = useState<string | null>(null);
+
+  const handleOrderClick = (serviceType: string) => {
+    setActivePopup(serviceType);
+  };
+
+  const handleClosePopup = () => {
+    setActivePopup(null);
+  };
+
+  const handleSubmit = (serviceType: string, data: any) => {
+    console.log(`${serviceType} form submitted:`, data);
+    // Here you would typically send the data to your backend
+    alert(`Thank you for your ${serviceType} inquiry! We'll get back to you within 24 hours.`);
+    setActivePopup(null);
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
