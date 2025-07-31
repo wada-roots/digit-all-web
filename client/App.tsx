@@ -12,6 +12,7 @@ import Services from "./pages/Services";
 import WebDevelopment from "./pages/WebDevelopment";
 import TrifidClub from "./pages/TrifidClub";
 import Contact from "./pages/Contact";
+import ShowcaseServices from "./pages/ShowcaseServices";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
