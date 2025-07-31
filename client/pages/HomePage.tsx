@@ -116,7 +116,7 @@ const HomePage = () => {
           {/* Main Persuasive Headlines */}
           <motion.div className="mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
             <motion.h1
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-neon-purple to-neon-pink bg-clip-text text-transparent leading-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight"
               animate={{
                 scale: [1, 1.02, 1],
                 rotateX: [0, 5, 0],
