@@ -55,10 +55,10 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Scroll Indicator */}
       <div className="fixed bottom-6 right-6 z-40">
         <div className="w-2 h-16 bg-space-light rounded-full overflow-hidden">
-          <div 
+          <div
             className="w-full bg-gradient-to-t from-neon-purple to-neon-pink rounded-full transition-all duration-300"
             style={{
-              height: `${(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100}%`
+              height: `${scrollProgress}%`
             }}
           />
         </div>
