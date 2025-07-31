@@ -299,7 +299,7 @@ const HomePage = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4">
-                      <p className="text-neon-blue text-sm font-semibold bg-space-dark/70 backdrop-blur-sm px-3 py-1 rounded-full inline-block">
+                      <p className="text-neon-yellow text-sm font-semibold bg-space-dark/70 backdrop-blur-sm px-3 py-1 rounded-full inline-block">
                         {service.caption}
                       </p>
                     </div>
