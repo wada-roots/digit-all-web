@@ -24,6 +24,7 @@ const Navigation = () => {
   const navItems = [
     { name: 'DMS', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'Templates', href: '/templates' },
     { name: 'Web/App Design', href: '/webdevelopment' },
     { name: 'DMS Club', href: '/trifidclub' },
     { name: 'Get in Touch', href: '/contact' },
