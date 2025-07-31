@@ -37,9 +37,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <div className="text-2xl font-bold bg-gradient-to-r from-neon-purple to-neon-pink bg-clip-text text-transparent">
-              TRIFID
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fad7ac88088ca4b6199701f15e8ea1f6d?format=webp&width=800"
+              alt="DMS Logo"
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
