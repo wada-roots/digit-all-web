@@ -95,12 +95,12 @@ const HomePage = () => {
 
           {/* Gradient Orbs */}
           <motion.div
-            className="absolute top-1/4 left-1/4 w-64 h-64 bg-neon-purple/20 rounded-full blur-3xl"
+            className="absolute top-1/4 left-1/4 w-64 h-64 bg-neon-blue/20 rounded-full blur-3xl"
             animate={{ x: [0, 100, 0], y: [0, -50, 0] }}
             transition={{ duration: 20, repeat: Infinity }}
           />
           <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-pink/20 rounded-full blur-3xl"
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-yellow/20 rounded-full blur-3xl"
             animate={{ x: [0, -100, 0], y: [0, 50, 0] }}
             transition={{ duration: 25, repeat: Infinity, delay: 5 }}
           />
