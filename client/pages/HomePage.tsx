@@ -168,7 +168,7 @@ const HomePage = () => {
               </motion.p>
 
               <motion.p
-                className="text-neon-purple font-bold text-xl"
+                className="text-neon-blue font-bold text-xl"
                 animate={{
                   scale: [1, 1.05, 1],
                 }}
