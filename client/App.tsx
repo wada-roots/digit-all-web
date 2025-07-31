@@ -34,6 +34,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/templates" element={<Templates />} />
             <Route path="/business-card-templates" element={<BusinessCardTemplates />} />
+            <Route path="/test-buttons" element={<TestServiceButtons />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
