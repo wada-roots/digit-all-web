@@ -200,6 +200,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                id: "social-media",
                 image: "https://images.pexels.com/photos/13883892/pexels-photo-13883892.jpeg",
                 title: "Social Media Marketing",
                 description: "Boost your online presence with 10x engagement",
@@ -207,6 +208,7 @@ const HomePage = () => {
                 price: "From $299/month"
               },
               {
+                id: "seo",
                 image: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
                 title: "Search Engine Optimization",
                 description: "Rank #1 on Google within 90 days",
@@ -214,6 +216,7 @@ const HomePage = () => {
                 price: "From $499/month"
               },
               {
+                id: "photography",
                 image: "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
                 title: "Photography & Videography",
                 description: "Professional content that converts",
@@ -221,6 +224,7 @@ const HomePage = () => {
                 price: "From $799/project"
               },
               {
+                id: "website",
                 image: "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg",
                 title: "Website Development",
                 description: "Lightning-fast, mobile-responsive websites",
@@ -228,6 +232,7 @@ const HomePage = () => {
                 price: "From $1,299"
               },
               {
+                id: "app",
                 image: "https://images.pexels.com/photos/7947951/pexels-photo-7947951.jpeg",
                 title: "App Development",
                 description: "Native iOS & Android apps that scale",
@@ -235,6 +240,7 @@ const HomePage = () => {
                 price: "From $2,999"
               },
               {
+                id: "business-cards",
                 image: "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg",
                 title: "Business Cards",
                 description: "Premium designs that make lasting impressions",
