@@ -14,6 +14,7 @@ import TrifidClub from "./pages/TrifidClub";
 import Contact from "./pages/Contact";
 import Templates from "./pages/Templates";
 import BusinessCardTemplates from "./pages/BusinessCardTemplates";
+import TestServiceButtons from "./pages/TestServiceButtons";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
