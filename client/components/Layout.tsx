@@ -37,10 +37,11 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="min-h-screen bg-space-dark text-foreground">
+      <ContactBar />
       <Navigation />
-      
+
       {/* Main Content */}
-      <main className="pt-16 lg:pt-20">
+      <main className="pt-28 lg:pt-32">
         {children}
       </main>
 
