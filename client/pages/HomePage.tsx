@@ -154,7 +154,7 @@ const HomePage = () => {
         </motion.div>
       </section>
 
-      {/* Features Section */}
+      {/* Services Packages Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -165,49 +165,97 @@ const HomePage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-neon-purple to-neon-pink bg-clip-text text-transparent">
-              Why Choose Trifid Media
+              Our Service Packages
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              We combine cutting-edge technology with creative excellence to deliver results that are out of this world.
+              Choose from our comprehensive packages designed to elevate your digital presence and boost your business growth.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Zap className="w-8 h-8" />,
-                title: "Lightning Fast",
-                description: "Rapid development and deployment with modern technologies."
+                image: "https://images.pexels.com/photos/13883892/pexels-photo-13883892.jpeg",
+                title: "Social Media Marketing",
+                description: "Boost your online presence with 10x engagement",
+                caption: "Get your social media strategy in 24 hours",
+                price: "From $299/month"
               },
               {
-                icon: <Star className="w-8 h-8" />,
-                title: "Premium Quality",
-                description: "Pixel-perfect designs and flawless user experiences."
+                image: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
+                title: "Search Engine Optimization",
+                description: "Rank #1 on Google within 90 days",
+                caption: "80% of your SEO work is done automatically",
+                price: "From $499/month"
               },
               {
-                icon: <Rocket className="w-8 h-8" />,
-                title: "Launch Ready",
-                description: "Production-ready solutions that scale with your business."
+                image: "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
+                title: "Photography & Videography",
+                description: "Professional content that converts",
+                caption: "Get your brand photoshoot in one session",
+                price: "From $799/project"
+              },
+              {
+                image: "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg",
+                title: "Website Development",
+                description: "Lightning-fast, mobile-responsive websites",
+                caption: "Get your website template in 10 minutes",
+                price: "From $1,299"
+              },
+              {
+                image: "https://images.pexels.com/photos/7947951/pexels-photo-7947951.jpeg",
+                title: "App Development",
+                description: "Native iOS & Android apps that scale",
+                caption: "80% of your app is done with our templates",
+                price: "From $2,999"
+              },
+              {
+                image: "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg",
+                title: "Business Cards",
+                description: "Premium designs that make lasting impressions",
+                caption: "Get your business cards designed in 2 hours",
+                price: "From $99"
               }
-            ].map((feature, index) => (
+            ].map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-space-light/50 border-space-light hover:border-neon-purple/50 transition-all duration-300 group">
-                  <CardContent className="p-8 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-neon-purple to-neon-pink rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
+                <Card className="bg-space-light/50 border-space-light hover:border-neon-purple/50 transition-all duration-300 group overflow-hidden">
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <p className="text-neon-blue text-sm font-semibold bg-space-dark/70 backdrop-blur-sm px-3 py-1 rounded-full inline-block">
+                        {service.caption}
+                      </p>
                     </div>
-                    <h3 className="text-2xl font-semibold mb-4 text-foreground">
-                      {feature.title}
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">
+                      {service.title}
                     </h3>
-                    <p className="text-foreground/80">
-                      {feature.description}
+                    <p className="text-foreground/80 mb-4 text-sm leading-relaxed">
+                      {service.description}
                     </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-neon-purple font-bold text-lg">
+                        {service.price}
+                      </span>
+                      <Button
+                        size="sm"
+                        className="bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white px-4 py-2 text-sm rounded-full shadow-lg transition-all duration-300"
+                      >
+                        Order Now
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
