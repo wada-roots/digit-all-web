@@ -19,7 +19,7 @@ const Templates = () => {
       title: "Safari Adventures Template",
       description: "Stunning safari and tourism website featuring breathtaking landscapes, tour packages, and booking systems for adventure companies.",
       url: "https://preview--vybz-tours-voyage-kenya.lovable.app/",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F35f7aa21676040ca81c40045df3c9e6a?format=webp&width=800",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fa63d3005451e452e9fb98fc415143881?format=webp&width=800",
       category: "Travel & Tourism",
       features: ["Tour Packages", "Booking System", "Photo Gallery", "Testimonials"]
     },
