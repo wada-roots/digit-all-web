@@ -313,7 +313,7 @@ const HomePage = () => {
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-neon-purple font-bold text-lg">
+                        <span className="text-neon-blue font-bold text-lg">
                           {service.price}
                         </span>
                       </div>
