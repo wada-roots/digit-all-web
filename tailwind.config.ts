@@ -57,10 +57,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Trifid Media brand colors
+        // DMS Professional brand colors
         neon: {
           blue: "hsl(var(--neon-blue))",
-          pink: "hsl(var(--neon-pink))",
+          yellow: "hsl(var(--neon-yellow))",
           green: "hsl(var(--neon-green))",
           purple: "hsl(var(--neon-purple))",
           orange: "hsl(var(--neon-orange))",
