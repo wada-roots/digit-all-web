@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Trifid Media brand colors
+        neon: {
+          blue: "hsl(var(--neon-blue))",
+          pink: "hsl(var(--neon-pink))",
+          green: "hsl(var(--neon-green))",
+          purple: "hsl(var(--neon-purple))",
+          orange: "hsl(var(--neon-orange))",
+        },
+        space: {
+          dark: "hsl(var(--space-dark))",
+          darker: "hsl(var(--space-darker))",
+          light: "hsl(var(--space-light))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
