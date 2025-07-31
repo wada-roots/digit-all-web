@@ -64,13 +64,13 @@ const HomePage = () => {
 
   return (
     <div className="relative">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Persuasive Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-space-darker via-space-dark to-purple-900/20">
           {/* Animated Stars */}
           <div className="absolute inset-0">
-            {[...Array(50)].map((_, i) => (
+            {[...Array(30)].map((_, i) => (
               <motion.div
                 key={i}
                 className="absolute w-1 h-1 bg-white rounded-full"
@@ -104,64 +104,78 @@ const HomePage = () => {
           />
         </div>
 
-        {/* Hero Content */}
+        {/* Persuasive Animated Statements */}
         <motion.div
-          className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
+          className="relative z-10 text-center max-w-6xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {/* Astronaut Icon */}
+          {/* Main Persuasive Headlines */}
           <motion.div
-            className="mb-8 flex justify-center"
-            variants={itemVariants}
-            animate={floatingAnimation}
-          >
-            <div className="relative">
-              <div className="w-32 h-32 bg-gradient-to-br from-neon-blue to-neon-purple rounded-full flex items-center justify-center shadow-2xl">
-                <Rocket className="w-16 h-16 text-white" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-neon-blue to-neon-purple rounded-full blur-xl opacity-50 animate-pulse" />
-            </div>
-          </motion.div>
-
-          {/* Main Headline */}
-          <motion.h1
-            className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-neon-purple to-neon-pink bg-clip-text text-transparent leading-tight"
+            className="mb-16"
             variants={itemVariants}
           >
-            Marketing
-            <br />
-            <span className="text-neon-blue">Elevated</span>
-          </motion.h1>
-
-          {/* Subheading */}
-          <motion.p
-            className="text-xl sm:text-2xl lg:text-3xl text-foreground/80 mb-12 max-w-3xl mx-auto leading-relaxed"
-            variants={itemVariants}
-          >
-            We create powerful digital solutions that launch your business into the stratosphere of success.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-            variants={itemVariants}
-          >
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-neon-purple/25 transition-all duration-300"
+            <motion.h1
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-neon-purple to-neon-pink bg-clip-text text-transparent leading-tight"
+              animate={{
+                scale: [1, 1.02, 1],
+                rotateX: [0, 5, 0]
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
             >
-              <Play className="w-5 h-5 mr-2" />
-              Watch Our Story
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300"
+              🚀 STOP Losing Customers to Your Competition
+            </motion.h1>
+
+            <motion.p
+              className="text-xl sm:text-2xl text-neon-blue font-semibold mb-6"
+              animate={{
+                opacity: [0.7, 1, 0.7],
+                y: [0, -5, 0]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                delay: 0.5
+              }}
             >
-              Explore Services
-            </Button>
+              ⚡ Get Results in 24-48 Hours, Not Months
+            </motion.p>
+
+            <motion.div
+              className="text-lg sm:text-xl text-foreground/90 space-y-3 max-w-4xl mx-auto"
+              variants={itemVariants}
+            >
+              <motion.p
+                animate={{ x: [-10, 10, -10] }}
+                transition={{ duration: 4, repeat: Infinity }}
+                className="font-medium"
+              >
+                💰 <span className="text-neon-pink">1,247+ businesses</span> increased revenue by 300% with our proven system
+              </motion.p>
+
+              <motion.p
+                animate={{ x: [10, -10, 10] }}
+                transition={{ duration: 4, repeat: Infinity, delay: 2 }}
+                className="font-medium"
+              >
+                📈 Our clients dominate their markets while competitors struggle to keep up
+              </motion.p>
+
+              <motion.p
+                className="text-neon-purple font-bold text-xl"
+                animate={{
+                  scale: [1, 1.05, 1]
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                ⏰ Limited Time: Skip the waitlist & start TODAY
+              </motion.p>
+            </motion.div>
           </motion.div>
 
           {/* Scroll Indicator */}
@@ -169,7 +183,7 @@ const HomePage = () => {
             className="flex flex-col items-center"
             variants={itemVariants}
           >
-            <p className="text-sm text-foreground/60 mb-2">Scroll to explore</p>
+            <p className="text-sm text-neon-blue/80 mb-2 font-semibold">👇 Choose Your Success Package Below</p>
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
@@ -193,9 +207,15 @@ const HomePage = () => {
             <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-neon-purple to-neon-pink bg-clip-text text-transparent">
               Our Service Packages
             </h2>
-            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              Choose from our comprehensive packages designed to elevate your digital presence and boost your business growth.
-            </p>
+            <motion.p
+              className="text-xl text-foreground/80 max-w-3xl mx-auto"
+              animate={{
+                color: ["rgba(255,255,255,0.8)", "rgba(168, 85, 247, 0.9)", "rgba(255,255,255,0.8)"]
+              }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              🎯 Results-driven packages that transform your business into a market leader
+            </motion.p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
