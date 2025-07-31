@@ -114,7 +114,7 @@ const HomePage = () => {
             className="text-xl sm:text-2xl lg:text-3xl text-foreground/80 mb-12 max-w-3xl mx-auto leading-relaxed"
             variants={itemVariants}
           >
-            We create powerful, innovative, fun, and memorable content that launches your brand into orbit.
+            We create powerful digital solutions that launch your business into the stratosphere of success.
           </motion.p>
 
           {/* CTA Buttons */}
