@@ -295,6 +295,31 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Service Popups */}
+      <Modal isOpen={activePopup === 'social-media'} onClose={handleClosePopup}>
+        <SocialMediaPopup onSubmit={(data) => handleSubmit('Social Media Marketing', data)} />
+      </Modal>
+
+      <Modal isOpen={activePopup === 'seo'} onClose={handleClosePopup}>
+        <SEOPopup onSubmit={(data) => handleSubmit('SEO', data)} />
+      </Modal>
+
+      <Modal isOpen={activePopup === 'photography'} onClose={handleClosePopup}>
+        <PhotographyPopup onSubmit={(data) => handleSubmit('Photography & Videography', data)} />
+      </Modal>
+
+      <Modal isOpen={activePopup === 'website'} onClose={handleClosePopup}>
+        <WebsitePopup onSubmit={(data) => handleSubmit('Website Development', data)} />
+      </Modal>
+
+      <Modal isOpen={activePopup === 'app'} onClose={handleClosePopup}>
+        <AppPopup onSubmit={(data) => handleSubmit('App Development', data)} />
+      </Modal>
+
+      <Modal isOpen={activePopup === 'business-cards'} onClose={handleClosePopup}>
+        <BusinessCardsPopup onSubmit={(data) => handleSubmit('Business Cards', data)} />
+      </Modal>
     </div>
   );
 };
