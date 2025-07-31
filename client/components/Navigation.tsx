@@ -22,10 +22,10 @@ const Navigation = () => {
   }, [location]);
 
   const navItems = [
-    { name: 'Trifid Media', href: '/' },
+    { name: 'DMS', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Web/App Design', href: '/webdevelopment' },
-    { name: 'TRIFID Club', href: '/trifidclub' },
+    { name: 'DMS Club', href: '/trifidclub' },
     { name: 'Get in Touch', href: '/contact' },
   ];
 
