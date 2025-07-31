@@ -277,17 +277,32 @@ const HomePage = () => {
                     <p className="text-foreground/80 mb-4 text-sm leading-relaxed">
                       {service.description}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-neon-purple font-bold text-lg">
-                        {service.price}
-                      </span>
-                      <Button
-                        size="sm"
-                        onClick={() => handleOrderClick(service.id)}
-                        className="bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white px-4 py-2 text-sm rounded-full shadow-lg transition-all duration-300"
-                      >
-                        Order Now
-                      </Button>
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <span className="text-neon-purple font-bold text-lg">
+                          {service.price}
+                        </span>
+                      </div>
+                      <div className="flex gap-2">
+                        <Button
+                          size="sm"
+                          onClick={() => handleOrderClick(service.id)}
+                          className="flex-1 bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white px-4 py-2 text-sm rounded-full shadow-lg transition-all duration-300"
+                        >
+                          Order Now
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          asChild
+                          className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white px-4 py-2 text-sm rounded-full transition-all duration-300"
+                        >
+                          <Link to="/templates">
+                            <Eye className="w-4 h-4 mr-1" />
+                            Templates
+                          </Link>
+                        </Button>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
