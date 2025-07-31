@@ -1,7 +1,15 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Play, Star, Zap, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import Modal from '@/components/Modal';
+import SocialMediaPopup from '@/components/popups/SocialMediaPopup';
+import SEOPopup from '@/components/popups/SEOPopup';
+import PhotographyPopup from '@/components/popups/PhotographyPopup';
+import WebsitePopup from '@/components/popups/WebsitePopup';
+import AppPopup from '@/components/popups/AppPopup';
+import BusinessCardsPopup from '@/components/popups/BusinessCardsPopup';
 
 const HomePage = () => {
   const containerVariants = {
