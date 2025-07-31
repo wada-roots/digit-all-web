@@ -154,7 +154,7 @@ const HomePage = () => {
                 transition={{ duration: 4, repeat: Infinity }}
                 className="font-medium"
               >
-                💰 <span className="text-neon-pink">1,247+ businesses</span>{" "}
+                💰 <span className="text-neon-yellow">1,247+ businesses</span>{" "}
                 increased revenue by 300% with our proven system
               </motion.p>
 
