@@ -282,6 +282,7 @@ const HomePage = () => {
                       </span>
                       <Button
                         size="sm"
+                        onClick={() => handleOrderClick(service.id)}
                         className="bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white px-4 py-2 text-sm rounded-full shadow-lg transition-all duration-300"
                       >
                         Order Now
