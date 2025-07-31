@@ -10,11 +10,24 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  // Update scroll progress
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      setScrollProgress(Math.min(progress, 100));
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi! I'm interested in your services.");
