@@ -191,7 +191,7 @@ const HomePage = () => {
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <ChevronDown className="w-6 h-6 text-neon-purple" />
+              <ChevronDown className="w-6 h-6 text-neon-blue" />
             </motion.div>
           </motion.div>
         </motion.div>
