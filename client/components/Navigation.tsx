@@ -56,7 +56,7 @@ const Navigation = () => {
                 }`}
               >
                 {item.name}
-                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-neon-purple to-neon-pink transform transition-transform duration-300 ${
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform transition-transform duration-300 ${
                   location.pathname === item.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`} />
               </Link>
