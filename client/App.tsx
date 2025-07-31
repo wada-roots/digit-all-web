@@ -13,6 +13,7 @@ import WebDevelopment from "./pages/WebDevelopment";
 import TrifidClub from "./pages/TrifidClub";
 import Contact from "./pages/Contact";
 import TestPopups from "./pages/TestPopups";
+import PopupDemo from "./pages/PopupDemo";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
