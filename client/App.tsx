@@ -29,8 +29,6 @@ const App = () => (
             <Route path="/webdevelopment" element={<WebDevelopment />} />
             <Route path="/trifidclub" element={<TrifidClub />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/test-popups" element={<TestPopups />} />
-            <Route path="/popup-demo" element={<PopupDemo />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
