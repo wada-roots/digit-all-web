@@ -37,7 +37,7 @@ const Templates = () => {
       title: "Sugar & Spice Eats",
       description: "Vibrant restaurant template showcasing authentic Swahili cuisine with rich imagery, online menu, and ordering capabilities.",
       url: "https://preview--sugar-spice-swahili-bites.lovable.app/",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fa63d3005451e452e9fb98fc415143881?format=webp&width=800",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F35f7aa21676040ca81c40045df3c9e6a?format=webp&width=800",
       category: "Restaurant & Cuisine",
       features: ["Recipe Showcase", "Cultural Menu", "Order Online", "Location Finder"]
     },
