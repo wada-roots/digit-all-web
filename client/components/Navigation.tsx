@@ -63,7 +63,7 @@ const Navigation = () => {
             ))}
             
             {/* Search Icon */}
-            <Button variant="ghost" size="icon" className="text-foreground hover:text-neon-purple">
+            <Button variant="ghost" size="icon" className="text-gray-700 hover:text-blue-600">
               <Search className="h-5 w-5" />
             </Button>
           </div>
