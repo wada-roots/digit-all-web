@@ -110,4 +110,9 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Set dark theme as default for Trifid Media */
+  html {
+    @apply dark;
+  }
 }
