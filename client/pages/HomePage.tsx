@@ -249,26 +249,26 @@ const HomePage = () => {
               </p>
 
               <div className="mb-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl font-bold text-neon-yellow">Ksh 10,000</span>
-                  <span className="text-sm text-foreground/60 line-through">Ksh 30,000</span>
+                <div className="text-center mb-4">
+                  <span className="text-2xl font-bold text-neon-yellow">FREE TO JOIN</span>
+                  <p className="text-sm text-foreground/70 mt-1">Earn up to 20% commission per referral</p>
                 </div>
                 <ul className="space-y-2 text-sm text-foreground/80">
                   <li className="flex items-center">
                     <Star className="w-4 h-4 text-neon-blue mr-2" />
-                    Affiliate Website
+                    Free Registration
                   </li>
                   <li className="flex items-center">
                     <Star className="w-4 h-4 text-neon-blue mr-2" />
-                    Tracking Setup
+                    20% Commission
                   </li>
                   <li className="flex items-center">
                     <Star className="w-4 h-4 text-neon-blue mr-2" />
-                    Revenue Strategies
+                    Monthly Payouts
                   </li>
                   <li className="flex items-center">
                     <Star className="w-4 h-4 text-neon-blue mr-2" />
-                    Marketing Tools
+                    Easy Referral Process
                   </li>
                 </ul>
               </div>
