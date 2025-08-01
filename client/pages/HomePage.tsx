@@ -12,6 +12,7 @@ import WebsitePopup from "@/components/popups/WebsitePopup";
 import AppPopup from "@/components/popups/AppPopup";
 import BusinessCardsPopup from "@/components/popups/BusinessCardsPopup";
 import AffiliateMarketingPopup from "@/components/popups/AffiliateMarketingPopup";
+import PersonalWebsitePopup from "@/components/popups/PersonalWebsitePopup";
 
 const HomePage = () => {
   const [activePopup, setActivePopup] = useState<string | null>(null);
