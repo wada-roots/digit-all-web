@@ -180,11 +180,11 @@ const HomePage = () => {
               </div>
 
               <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-neon-yellow transition-colors duration-300">
-                Personal Website Package
+                Get your personal website within 60 Minutes!
               </h3>
 
               <p className="text-foreground/80 mb-4 leading-relaxed">
-                Get a stunning, professional personal website that showcases your skills, portfolio, and achievements. Perfect for freelancers, professionals, and personal branding.
+                The personal website is perfect for every profession. Get a stunning, professional website that showcases your skills, portfolio, and achievements in just 60 minutes!
               </p>
 
               <div className="mb-6">
