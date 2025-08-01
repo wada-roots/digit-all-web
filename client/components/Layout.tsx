@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
 import ContactBar from "./ContactBar";
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 import { Button } from "./ui/button";
 
 interface LayoutProps {
