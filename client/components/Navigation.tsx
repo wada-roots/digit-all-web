@@ -44,7 +44,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+          <div className="hidden lg:flex lg:items-center lg:space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -70,7 +70,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="text-gray-700 hover:text-blue-600"
+              className="text-gray-700 hover:text-blue-600 p-2 ml-2"
             >
               <Search className="h-5 w-5" />
             </Button>
@@ -79,7 +79,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="text-gray-700 hover:text-green-600"
+              className="text-gray-700 hover:text-green-600 p-2"
               onClick={() => window.open("https://wa.me/254700123456", "_blank")}
             >
               <MessageCircle className="h-5 w-5" />
