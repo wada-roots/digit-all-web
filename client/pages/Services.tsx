@@ -29,6 +29,22 @@ import AppPopup from "@/components/popups/AppPopup";
 import BusinessCardsPopup from "@/components/popups/BusinessCardsPopup";
 
 const Services = () => {
+  const [activePopup, setActivePopup] = useState<string | null>(null);
+
+  const handleQuoteClick = (serviceType: string) => {
+    setActivePopup(serviceType);
+  };
+
+  const handleClosePopup = () => {
+    setActivePopup(null);
+  };
+
+  const handleSubmit = (serviceType: string, data: any) => {
+    console.log(`${serviceType} quote request:`, data);
+    alert(`Thank you for your ${serviceType} quote request! We'll get back to you within 24 hours.`);
+    setActivePopup(null);
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
