@@ -45,6 +45,9 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Main Content */}
       <main className="pt-28 lg:pt-32">{children}</main>
 
+      {/* Footer */}
+      <Footer />
+
       {/* WhatsApp Float Button */}
       <Button
         onClick={handleWhatsAppClick}
@@ -58,7 +61,7 @@ const Layout = ({ children }: LayoutProps) => {
       <div className="fixed bottom-6 right-6 z-40">
         <div className="w-2 h-16 bg-space-light rounded-full overflow-hidden">
           <div
-            className="w-full bg-gradient-to-t from-neon-purple to-neon-pink rounded-full transition-all duration-300"
+            className="w-full bg-gradient-to-t from-neon-blue to-neon-yellow rounded-full transition-all duration-300"
             style={{
               height: `${scrollProgress}%`,
             }}
