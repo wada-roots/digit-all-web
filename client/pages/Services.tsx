@@ -94,6 +94,7 @@ const Services = () => {
       ]
     },
     {
+      id: "app",
       icon: Smartphone,
       title: "App Development",
       description: "Native mobile apps for iOS and Android platforms",
