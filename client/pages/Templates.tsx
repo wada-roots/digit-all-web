@@ -149,7 +149,7 @@ const Templates = () => {
               variants={itemVariants}
               className="group"
             >
-              <Card className="bg-space-light/50 border-space-light hover:border-neon-purple/50 transition-all duration-300 overflow-hidden">
+              <Card className="bg-space-light/50 border-space-light hover:border-neon-blue/50 transition-all duration-300 overflow-hidden">
                 {/* Template Preview Image */}
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -159,7 +159,7 @@ const Templates = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 via-transparent to-transparent" />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-neon-purple/90 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-neon-blue/90 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {template.category}
                     </span>
                   </div>
