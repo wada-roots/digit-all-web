@@ -506,6 +506,15 @@ const HomePage = () => {
           onSubmit={(data) => handleSubmit("Affiliate Marketing", data)}
         />
       </Modal>
+
+      <Modal
+        isOpen={activePopup === "personal-website"}
+        onClose={handleClosePopup}
+      >
+        <PersonalWebsitePopup
+          onSubmit={(data) => handleSubmit("Personal Website", data)}
+        />
+      </Modal>
     </div>
   );
 };
