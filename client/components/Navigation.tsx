@@ -87,12 +87,12 @@ const Navigation = () => {
           </div>
 
           {/* Mobile actions and menu button */}
-          <div className="lg:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center space-x-1">
             {/* Search Icon - Visible on mobile */}
             <Button
               variant="ghost"
               size="icon"
-              className="text-gray-700 hover:text-blue-600"
+              className="text-gray-700 hover:text-blue-600 p-2"
             >
               <Search className="h-5 w-5" />
             </Button>
@@ -101,7 +101,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="text-gray-700 hover:text-green-600"
+              className="text-gray-700 hover:text-green-600 p-2"
               onClick={() => window.open("https://wa.me/254700123456", "_blank")}
             >
               <MessageCircle className="h-5 w-5" />
@@ -112,7 +112,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600"
+              className="text-gray-700 hover:text-blue-600 p-2"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
