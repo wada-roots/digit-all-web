@@ -238,7 +238,7 @@ const AffiliateMarketingPopup = ({ onSubmit }: AffiliateMarketingPopupProps) => 
 
       <div className="mt-6 p-4 bg-neon-blue/10 rounded-lg border border-neon-blue/20">
         <p className="text-xs text-foreground/70 text-center">
-          🚀 Limited time offer! Regular price Ksh 30,000. Save 67% today!
+          💰 Earn 20% commission on every successful referral! Free to join, monthly payouts.
         </p>
       </div>
     </motion.div>
