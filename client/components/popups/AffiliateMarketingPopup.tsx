@@ -75,111 +75,154 @@ const AffiliateMarketingPopup = ({ onSubmit }: AffiliateMarketingPopupProps) => 
       </div>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <Label htmlFor="name" className="text-foreground/90">Full Name *</Label>
+      <form onSubmit={handleSubmit} className="space-y-8">
+        {/* Affiliate Details Section */}
+        <div className="bg-space-light/30 p-6 rounded-lg border border-neon-blue/20">
+          <h3 className="text-xl font-semibold text-neon-yellow mb-4 flex items-center">
+            <Users className="w-5 h-5 mr-2" />
+            Your Details (Affiliate)
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="affiliateName" className="text-foreground/90">Full Name *</Label>
+              <Input
+                id="affiliateName"
+                value={formData.affiliateName}
+                onChange={(e) => setFormData(prev => ({ ...prev, affiliateName: e.target.value }))}
+                required
+                className="bg-space-light border-space-light focus:border-neon-blue"
+                placeholder="Your full name"
+              />
+            </div>
+            <div>
+              <Label htmlFor="affiliateEmail" className="text-foreground/90">Email Address *</Label>
+              <Input
+                id="affiliateEmail"
+                type="email"
+                value={formData.affiliateEmail}
+                onChange={(e) => setFormData(prev => ({ ...prev, affiliateEmail: e.target.value }))}
+                required
+                className="bg-space-light border-space-light focus:border-neon-blue"
+                placeholder="your.email@example.com"
+              />
+            </div>
+          </div>
+
+          <div className="mt-4">
+            <Label htmlFor="affiliatePhone" className="text-foreground/90">Phone Number *</Label>
             <Input
-              id="name"
-              value={formData.name}
-              onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+              id="affiliatePhone"
+              value={formData.affiliatePhone}
+              onChange={(e) => setFormData(prev => ({ ...prev, affiliatePhone: e.target.value }))}
               required
               className="bg-space-light border-space-light focus:border-neon-blue"
-            />
-          </div>
-          <div>
-            <Label htmlFor="email" className="text-foreground/90">Email Address *</Label>
-            <Input
-              id="email"
-              type="email"
-              value={formData.email}
-              onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-              required
-              className="bg-space-light border-space-light focus:border-neon-blue"
+              placeholder="+254 700 123 456"
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <Label htmlFor="phone" className="text-foreground/90">Phone Number *</Label>
-            <Input
-              id="phone"
-              value={formData.phone}
-              onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-              required
-              className="bg-space-light border-space-light focus:border-neon-blue"
-            />
-          </div>
-          <div>
-            <Label htmlFor="experience" className="text-foreground/90">Marketing Experience</Label>
-            <Select onValueChange={(value) => setFormData(prev => ({ ...prev, experience: value }))}>
-              <SelectTrigger className="bg-space-light border-space-light">
-                <SelectValue placeholder="Select experience level" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="beginner">Beginner (0-1 years)</SelectItem>
-                <SelectItem value="intermediate">Intermediate (1-3 years)</SelectItem>
-                <SelectItem value="advanced">Advanced (3+ years)</SelectItem>
-                <SelectItem value="expert">Expert (5+ years)</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
+        {/* Client Details Section */}
+        <div className="bg-space-light/30 p-6 rounded-lg border border-neon-yellow/20">
+          <h3 className="text-xl font-semibold text-neon-blue mb-4 flex items-center">
+            <Handshake className="w-5 h-5 mr-2" />
+            Client Details (Your Referral)
+          </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <Label htmlFor="niche" className="text-foreground/90">Target Niche</Label>
-            <Input
-              id="niche"
-              value={formData.niche}
-              onChange={(e) => setFormData(prev => ({ ...prev, niche: e.target.value }))}
-              placeholder="e.g., Health, Tech, Finance"
-              className="bg-space-light border-space-light focus:border-neon-blue"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="clientName" className="text-foreground/90">Client Full Name *</Label>
+              <Input
+                id="clientName"
+                value={formData.clientName}
+                onChange={(e) => setFormData(prev => ({ ...prev, clientName: e.target.value }))}
+                required
+                className="bg-space-light border-space-light focus:border-neon-yellow"
+                placeholder="Client's full name"
+              />
+            </div>
+            <div>
+              <Label htmlFor="clientEmail" className="text-foreground/90">Client Email *</Label>
+              <Input
+                id="clientEmail"
+                type="email"
+                value={formData.clientEmail}
+                onChange={(e) => setFormData(prev => ({ ...prev, clientEmail: e.target.value }))}
+                required
+                className="bg-space-light border-space-light focus:border-neon-yellow"
+                placeholder="client@example.com"
+              />
+            </div>
           </div>
-          <div>
-            <Label htmlFor="website" className="text-foreground/90">Existing Website (Optional)</Label>
-            <Input
-              id="website"
-              value={formData.website}
-              onChange={(e) => setFormData(prev => ({ ...prev, website: e.target.value }))}
-              placeholder="https://yourwebsite.com"
-              className="bg-space-light border-space-light focus:border-neon-blue"
-            />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div>
+              <Label htmlFor="clientPhone" className="text-foreground/90">Client Phone *</Label>
+              <Input
+                id="clientPhone"
+                value={formData.clientPhone}
+                onChange={(e) => setFormData(prev => ({ ...prev, clientPhone: e.target.value }))}
+                required
+                className="bg-space-light border-space-light focus:border-neon-yellow"
+                placeholder="+254 700 123 456"
+              />
+            </div>
+            <div>
+              <Label htmlFor="clientCompany" className="text-foreground/90">Company/Business</Label>
+              <Input
+                id="clientCompany"
+                value={formData.clientCompany}
+                onChange={(e) => setFormData(prev => ({ ...prev, clientCompany: e.target.value }))}
+                className="bg-space-light border-space-light focus:border-neon-yellow"
+                placeholder="Company name (optional)"
+              />
+            </div>
           </div>
-        </div>
 
-        <div>
-          <Label htmlFor="goals" className="text-foreground/90">Your Goals</Label>
-          <Textarea
-            id="goals"
-            value={formData.goals}
-            onChange={(e) => setFormData(prev => ({ ...prev, goals: e.target.value }))}
-            placeholder="What do you want to achieve with affiliate marketing?"
-            className="bg-space-light border-space-light focus:border-neon-blue min-h-[100px]"
-          />
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div>
+              <Label htmlFor="clientService" className="text-foreground/90">Service Needed *</Label>
+              <Select onValueChange={(value) => setFormData(prev => ({ ...prev, clientService: value }))}>
+                <SelectTrigger className="bg-space-light border-space-light">
+                  <SelectValue placeholder="Select service needed" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="website">Website Development</SelectItem>
+                  <SelectItem value="app">App Development</SelectItem>
+                  <SelectItem value="social-media">Social Media Marketing</SelectItem>
+                  <SelectItem value="seo">SEO Services</SelectItem>
+                  <SelectItem value="photography">Photography & Videography</SelectItem>
+                  <SelectItem value="business-cards">Business Cards</SelectItem>
+                  <SelectItem value="other">Other Services</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div>
+              <Label htmlFor="clientBudget" className="text-foreground/90">Estimated Budget</Label>
+              <Select onValueChange={(value) => setFormData(prev => ({ ...prev, clientBudget: value }))}>
+                <SelectTrigger className="bg-space-light border-space-light">
+                  <SelectValue placeholder="Select budget range" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="under-50k">Under Ksh 50,000</SelectItem>
+                  <SelectItem value="50k-100k">Ksh 50,000 - 100,000</SelectItem>
+                  <SelectItem value="100k-250k">Ksh 100,000 - 250,000</SelectItem>
+                  <SelectItem value="250k-500k">Ksh 250,000 - 500,000</SelectItem>
+                  <SelectItem value="500k-plus">Ksh 500,000+</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
 
-        <div>
-          <Label className="text-foreground/90 mb-3 block">Additional Services (Optional)</Label>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {[
-              'Social Media Marketing',
-              'Email Marketing Setup',
-              'Content Creation',
-              'SEO Optimization',
-              'Paid Advertising',
-              'Analytics Setup'
-            ].map((service) => (
-              <div key={service} className="flex items-center space-x-2">
-                <Checkbox
-                  id={service}
-                  onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)}
-                />
-                <Label htmlFor={service} className="text-sm text-foreground/80">{service}</Label>
-              </div>
-            ))}
+          <div className="mt-4">
+            <Label htmlFor="notes" className="text-foreground/90">Additional Notes</Label>
+            <Textarea
+              id="notes"
+              value={formData.notes}
+              onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
+              placeholder="Any additional information about the client or their requirements..."
+              className="bg-space-light border-space-light focus:border-neon-yellow min-h-[100px]"
+            />
           </div>
         </div>
 
@@ -188,7 +231,7 @@ const AffiliateMarketingPopup = ({ onSubmit }: AffiliateMarketingPopupProps) => 
             type="submit"
             className="flex-1 bg-gradient-to-r from-neon-yellow to-neon-blue hover:from-neon-blue hover:to-neon-yellow text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
           >
-            Get Started - Ksh 10,000
+            Submit Referral & Join Program
           </Button>
         </div>
       </form>
