@@ -118,6 +118,7 @@ const Services = () => {
       ]
     },
     {
+      id: "social-media",
       icon: Share2,
       title: "Social Media Marketing",
       description: "Boost your online presence with strategic social media campaigns",
