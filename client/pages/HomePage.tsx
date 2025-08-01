@@ -241,11 +241,11 @@ const HomePage = () => {
               </div>
 
               <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-neon-blue transition-colors duration-300">
-                Affiliate Marketing Setup
+                Affiliate Marketing
               </h3>
 
               <p className="text-foreground/80 mb-4 leading-relaxed">
-                Launch your affiliate marketing empire with our complete setup package. We'll build your affiliate website, set up tracking, and provide monetization strategies.
+                Earn with our Affiliate Marketing program by just referring us to clients that need our services. Send us potential client details and start earning commissions for every successful referral!
               </p>
 
               <div className="mb-6">
