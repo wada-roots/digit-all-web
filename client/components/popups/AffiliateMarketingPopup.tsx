@@ -32,20 +32,6 @@ const AffiliateMarketingPopup = ({ onSubmit }: AffiliateMarketingPopupProps) => 
     onSubmit(formData);
   };
 
-  const handleServiceChange = (service: string, checked: boolean) => {
-    if (checked) {
-      setFormData(prev => ({
-        ...prev,
-        services: [...prev.services, service]
-      }));
-    } else {
-      setFormData(prev => ({
-        ...prev,
-        services: prev.services.filter(s => s !== service)
-      }));
-    }
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
