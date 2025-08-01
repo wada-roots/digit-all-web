@@ -215,7 +215,7 @@ const HomePage = () => {
 
               <Button
                 className="w-full bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
-                onClick={() => handleOrderClick('website')}
+                onClick={() => handleOrderClick('personal-website')}
               >
                 Order Now - Save 60%
               </Button>
