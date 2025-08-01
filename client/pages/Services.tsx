@@ -142,6 +142,7 @@ const Services = () => {
       ]
     },
     {
+      id: "seo",
       icon: Search,
       title: "SEO Services",
       description: "Rank higher on Google and drive organic traffic to your business",
