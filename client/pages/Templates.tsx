@@ -120,7 +120,7 @@ const Templates = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-neon-purple to-neon-pink bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-neon-blue to-neon-yellow bg-clip-text text-transparent">
             Website Templates
           </h1>
           <p className="text-xl sm:text-2xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
@@ -128,11 +128,11 @@ const Templates = () => {
             templates. Get your website up and running in minutes!
           </p>
           <div className="flex items-center justify-center mt-6 space-x-2">
-            <Star className="w-5 h-5 text-neon-purple fill-current" />
+            <Star className="w-5 h-5 text-neon-blue fill-current" />
             <span className="text-foreground/70">
               Premium Quality Templates
             </span>
-            <Star className="w-5 h-5 text-neon-purple fill-current" />
+            <Star className="w-5 h-5 text-neon-blue fill-current" />
           </div>
         </motion.div>
 
