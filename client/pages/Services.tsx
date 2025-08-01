@@ -98,7 +98,7 @@ const Services = () => {
       icon: Smartphone,
       title: "App Development",
       description: "Native mobile apps for iOS and Android platforms",
-      image: "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-147413.jpeg",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F337f0569c1864af4bf5811ca10e0776f?format=webp&width=800",
       price: "From Ksh 50,000",
       features: [
         "Cross-Platform Development",
