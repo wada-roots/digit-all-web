@@ -70,6 +70,7 @@ const Services = () => {
 
   const mainServices = [
     {
+      id: "website",
       icon: Globe,
       title: "Website Development",
       description: "Professional websites that convert visitors into customers",
