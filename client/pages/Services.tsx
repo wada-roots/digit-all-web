@@ -410,6 +410,7 @@ const Services = () => {
                     
                     <div className="mt-6 pt-6 border-t border-space-light">
                       <Button
+                        onClick={() => handleQuoteClick(service.id)}
                         className="w-full bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
                       >
                         Get Quote
