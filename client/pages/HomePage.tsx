@@ -277,7 +277,7 @@ const HomePage = () => {
                 className="w-full bg-gradient-to-r from-neon-yellow to-neon-blue hover:from-neon-blue hover:to-neon-yellow text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
                 onClick={() => handleOrderClick('affiliate-marketing')}
               >
-                Start Earning - Save 67%
+                START EARNING!!
               </Button>
             </motion.div>
           </motion.div>
