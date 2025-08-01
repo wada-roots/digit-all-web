@@ -122,19 +122,16 @@ const HomePage = () => {
           animate="visible"
         >
           {/* Header */}
-          <motion.div
-            className="text-center mb-12"
-            variants={itemVariants}
-          >
+          <motion.div className="text-center mb-12" variants={itemVariants}>
             <motion.h1
               className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight"
               animate={{
-                scale: [1, 1.02, 1]
+                scale: [1, 1.02, 1],
               }}
               transition={{
                 duration: 3,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             >
               🔥 LIMITED TIME OFFERS
@@ -143,12 +140,12 @@ const HomePage = () => {
             <motion.p
               className="text-xl sm:text-2xl text-neon-blue font-semibold"
               animate={{
-                opacity: [0.7, 1, 0.7]
+                opacity: [0.7, 1, 0.7],
               }}
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                delay: 0.5
+                delay: 0.5,
               }}
             >
               ⚡ Get Professional Solutions at Unbeatable Prices
@@ -185,13 +182,19 @@ const HomePage = () => {
               </h3>
 
               <p className="text-foreground/80 mb-4 leading-relaxed">
-                The personal website is perfect for every profession. Get a stunning, professional website that showcases your skills, portfolio, and achievements in just 60 minutes!
+                The personal website is perfect for every profession. Get a
+                stunning, professional website that showcases your skills,
+                portfolio, and achievements in just 60 minutes!
               </p>
 
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl font-bold text-neon-blue">Ksh 10,000</span>
-                  <span className="text-sm text-foreground/60 line-through">Ksh 25,000</span>
+                  <span className="text-3xl font-bold text-neon-blue">
+                    Ksh 10,000
+                  </span>
+                  <span className="text-sm text-foreground/60 line-through">
+                    Ksh 25,000
+                  </span>
                 </div>
                 <ul className="space-y-2 text-sm text-foreground/80">
                   <li className="flex items-center">
@@ -215,7 +218,7 @@ const HomePage = () => {
 
               <Button
                 className="w-full bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
-                onClick={() => handleOrderClick('personal-website')}
+                onClick={() => handleOrderClick("personal-website")}
               >
                 Order Now - Save 60%
               </Button>
@@ -246,13 +249,20 @@ const HomePage = () => {
               </h3>
 
               <p className="text-foreground/80 mb-4 leading-relaxed">
-                Earn with our Affiliate Marketing program by just referring us to clients that need our services. Send us potential client details and start earning commissions for every successful referral!
+                Earn with our Affiliate Marketing program by just referring us
+                to clients that need our services. Send us potential client
+                details and start earning commissions for every successful
+                referral!
               </p>
 
               <div className="mb-6">
                 <div className="text-center mb-4">
-                  <span className="text-2xl font-bold text-neon-yellow">FREE TO JOIN</span>
-                  <p className="text-sm text-foreground/70 mt-1">Earn up to 20% commission per referral</p>
+                  <span className="text-2xl font-bold text-neon-yellow">
+                    FREE TO JOIN
+                  </span>
+                  <p className="text-sm text-foreground/70 mt-1">
+                    Earn up to 20% commission per referral
+                  </p>
                 </div>
                 <ul className="space-y-2 text-sm text-foreground/80">
                   <li className="flex items-center">
@@ -276,7 +286,7 @@ const HomePage = () => {
 
               <Button
                 className="w-full bg-gradient-to-r from-neon-yellow to-neon-blue hover:from-neon-blue hover:to-neon-yellow text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
-                onClick={() => handleOrderClick('affiliate-marketing')}
+                onClick={() => handleOrderClick("affiliate-marketing")}
               >
                 START EARNING!!
               </Button>
@@ -288,7 +298,9 @@ const HomePage = () => {
             className="flex flex-col items-center"
             variants={itemVariants}
           >
-            <p className="text-sm text-neon-blue/80 mb-2 font-semibold">👇 Explore More Services Below</p>
+            <p className="text-sm text-neon-blue/80 mb-2 font-semibold">
+              👇 Explore More Services Below
+            </p>
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}

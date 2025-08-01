@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { 
+import {
   Crown,
-  Users, 
-  Zap, 
-  Shield, 
+  Users,
+  Zap,
+  Shield,
   Star,
   CheckCircle,
   ArrowRight,
@@ -19,7 +19,7 @@ import {
   Diamond,
   Plus,
   Clock,
-  Target
+  Target,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -29,10 +29,10 @@ import { Label } from "@/components/ui/label";
 const TrifidClub = () => {
   const [selectedPlan, setSelectedPlan] = useState("premium");
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: ''
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
   });
 
   const membershipPlans = [
@@ -51,13 +51,13 @@ const TrifidClub = () => {
         "Basic Resources Library",
         "Community Forum Access",
         "2 Free Templates",
-        "Email Support"
+        "Email Support",
       ],
       benefits: [
         "Stay updated with industry trends",
         "Access to fundamental business resources",
-        "Connect with fellow entrepreneurs"
-      ]
+        "Connect with fellow entrepreneurs",
+      ],
     },
     {
       id: "premium",
@@ -77,14 +77,14 @@ const TrifidClub = () => {
         "Exclusive Templates (10+)",
         "Networking Events",
         "Business Tools Access",
-        "Marketing Templates"
+        "Marketing Templates",
       ],
       benefits: [
         "Fast-track your business growth",
         "Learn from industry experts",
         "Get personalized guidance",
-        "Access premium resources"
-      ]
+        "Access premium resources",
+      ],
     },
     {
       id: "elite",
@@ -104,70 +104,78 @@ const TrifidClub = () => {
         "24/7 Priority Support",
         "Exclusive Mastermind Group",
         "Quarterly Business Reviews",
-        "Personal Account Manager"
+        "Personal Account Manager",
       ],
       benefits: [
         "Complete business transformation",
         "Hands-on implementation support",
         "Direct access to founders",
-        "Fastest path to success"
-      ]
-    }
+        "Fastest path to success",
+      ],
+    },
   ];
 
   const clubFeatures = [
     {
       icon: BookOpen,
       title: "Exclusive Learning Hub",
-      description: "Access to masterclasses, workshops, and courses from industry experts",
-      image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
+      description:
+        "Access to masterclasses, workshops, and courses from industry experts",
+      image:
+        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
     },
     {
       icon: Users,
       title: "Networking Community",
       description: "Connect with like-minded entrepreneurs and business owners",
-      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+      image:
+        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
     },
     {
       icon: Target,
       title: "Business Coaching",
       description: "One-on-one sessions with experienced business mentors",
-      image: "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg"
+      image:
+        "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg",
     },
     {
       icon: Gift,
       title: "Exclusive Resources",
       description: "Templates, tools, and resources to accelerate your growth",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
-    }
+      image:
+        "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+    },
   ];
 
   const stats = [
     { icon: Users, number: "1,000+", label: "Active Members" },
     { icon: Award, number: "50+", label: "Expert Mentors" },
     { icon: TrendingUp, number: "300%", label: "Average Growth" },
-    { icon: Star, number: "4.9", label: "Member Rating" }
+    { icon: Star, number: "4.9", label: "Member Rating" },
   ];
 
   const testimonials = [
     {
       name: "Sarah Johnson",
       company: "Tech Startup",
-      image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
-      text: "DMS Club transformed my business. The mentorship and resources helped me scale from 0 to 6 figures in just 8 months!"
+      image:
+        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
+      text: "DMS Club transformed my business. The mentorship and resources helped me scale from 0 to 6 figures in just 8 months!",
     },
     {
       name: "Michael Chen",
       company: "E-commerce Store",
-      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
-      text: "The networking opportunities alone are worth the membership. I've found partners, clients, and mentors through the community."
+      image:
+        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      text: "The networking opportunities alone are worth the membership. I've found partners, clients, and mentors through the community.",
     },
     {
       name: "Amara Okafor",
       company: "Consulting Firm",
-      image: "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg",
-      text: "Best investment I've made for my business. The weekly masterclasses and 1-on-1 sessions accelerated my growth exponentially."
-    }
+      image:
+        "https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg",
+      text: "Best investment I've made for my business. The weekly masterclasses and 1-on-1 sessions accelerated my growth exponentially.",
+    },
   ];
 
   const upcomingEvents = [
@@ -175,20 +183,20 @@ const TrifidClub = () => {
       date: "Dec 15",
       title: "Digital Marketing Masterclass",
       speaker: "Jane Doe, Marketing Expert",
-      type: "Masterclass"
+      type: "Masterclass",
     },
     {
       date: "Dec 20",
       title: "Networking Mixer",
       speaker: "DMS Community",
-      type: "Event"
+      type: "Event",
     },
     {
       date: "Dec 25",
       title: "Year-End Business Review",
       speaker: "Business Coaches",
-      type: "Workshop"
-    }
+      type: "Workshop",
+    },
   ];
 
   const containerVariants = {
@@ -262,7 +270,9 @@ const TrifidClub = () => {
               DMS Club
             </h1>
             <p className="text-xl sm:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join our exclusive community of innovators and creators. Get access to premium resources, networking opportunities, and insider insights to accelerate your business growth.
+              Join our exclusive community of innovators and creators. Get
+              access to premium resources, networking opportunities, and insider
+              insights to accelerate your business growth.
             </p>
           </motion.div>
 
@@ -302,7 +312,9 @@ const TrifidClub = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-full flex items-center justify-center mx-auto mb-3">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-neon-yellow mb-1">{stat.number}</div>
+                <div className="text-3xl font-bold text-neon-yellow mb-1">
+                  {stat.number}
+                </div>
                 <div className="text-foreground/80 text-sm">{stat.label}</div>
               </motion.div>
             ))}
@@ -351,7 +363,7 @@ const TrifidClub = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <CardContent className="p-6">
                     <h3 className="text-2xl font-semibold mb-3 text-foreground group-hover:text-neon-blue transition-colors duration-300">
                       {feature.title}
@@ -402,17 +414,29 @@ const TrifidClub = () => {
                     </span>
                   </div>
                 )}
-                
-                <Card className={`bg-space-light/50 border-2 ${plan.borderColor} hover:border-neon-blue/70 transition-all duration-300 ${selectedPlan === plan.id ? 'ring-2 ring-neon-blue' : ''} h-full`}>
+
+                <Card
+                  className={`bg-space-light/50 border-2 ${plan.borderColor} hover:border-neon-blue/70 transition-all duration-300 ${selectedPlan === plan.id ? "ring-2 ring-neon-blue" : ""} h-full`}
+                >
                   <CardContent className="p-8">
                     <div className="text-center mb-8">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${plan.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <div
+                        className={`w-16 h-16 bg-gradient-to-r ${plan.color} rounded-full flex items-center justify-center mx-auto mb-4`}
+                      >
                         <plan.icon className="w-8 h-8 text-white" />
                       </div>
-                      <h3 className="text-2xl font-bold text-foreground mb-2">{plan.name}</h3>
+                      <h3 className="text-2xl font-bold text-foreground mb-2">
+                        {plan.name}
+                      </h3>
                       <div className="mb-4">
-                        <span className="text-4xl font-bold text-neon-blue">{plan.price}</span>
-                        {plan.period && <span className="text-foreground/60 ml-2">/{plan.period}</span>}
+                        <span className="text-4xl font-bold text-neon-blue">
+                          {plan.price}
+                        </span>
+                        {plan.period && (
+                          <span className="text-foreground/60 ml-2">
+                            /{plan.period}
+                          </span>
+                        )}
                       </div>
                       {plan.originalPrice && (
                         <div className="text-foreground/60 line-through text-lg mb-2">
@@ -434,11 +458,11 @@ const TrifidClub = () => {
                       onClick={() => setSelectedPlan(plan.id)}
                       className={`w-full ${
                         selectedPlan === plan.id
-                          ? 'bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue'
-                          : 'bg-space-dark hover:bg-space-light border border-neon-blue/50'
+                          ? "bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue"
+                          : "bg-space-dark hover:bg-space-light border border-neon-blue/50"
                       } text-white font-semibold py-3 rounded-full transition-all duration-300`}
                     >
-                      {selectedPlan === plan.id ? 'Selected' : 'Choose Plan'}
+                      {selectedPlan === plan.id ? "Selected" : "Choose Plan"}
                     </Button>
                   </CardContent>
                 </Card>
@@ -484,16 +508,25 @@ const TrifidClub = () => {
                         className="w-12 h-12 rounded-full mr-4 object-cover"
                       />
                       <div>
-                        <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                        <p className="text-foreground/60 text-sm">{testimonial.company}</p>
+                        <h4 className="font-semibold text-foreground">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-foreground/60 text-sm">
+                          {testimonial.company}
+                        </p>
                       </div>
                     </div>
                     <div className="flex mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-neon-yellow fill-current" />
+                        <Star
+                          key={i}
+                          className="w-4 h-4 text-neon-yellow fill-current"
+                        />
                       ))}
                     </div>
-                    <p className="text-foreground/80 italic">"{testimonial.text}"</p>
+                    <p className="text-foreground/80 italic">
+                      "{testimonial.text}"
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -519,7 +552,7 @@ const TrifidClub = () => {
               <p className="text-foreground/80 mb-8">
                 Exclusive events and masterclasses for DMS Club members
               </p>
-              
+
               <div className="space-y-6">
                 {upcomingEvents.map((event, index) => (
                   <motion.div
@@ -529,12 +562,20 @@ const TrifidClub = () => {
                   >
                     <div className="flex items-center">
                       <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-lg flex flex-col items-center justify-center mr-4">
-                        <span className="text-white font-bold text-sm">{event.date.split(' ')[0]}</span>
-                        <span className="text-white text-xs">{event.date.split(' ')[1]}</span>
+                        <span className="text-white font-bold text-sm">
+                          {event.date.split(" ")[0]}
+                        </span>
+                        <span className="text-white text-xs">
+                          {event.date.split(" ")[1]}
+                        </span>
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-foreground mb-1">{event.title}</h3>
-                        <p className="text-foreground/60 text-sm mb-1">{event.speaker}</p>
+                        <h3 className="font-semibold text-foreground mb-1">
+                          {event.title}
+                        </h3>
+                        <p className="text-foreground/60 text-sm mb-1">
+                          {event.speaker}
+                        </p>
                         <span className="bg-neon-blue/20 text-neon-blue px-2 py-1 rounded text-xs font-medium">
                           {event.type}
                         </span>
@@ -557,61 +598,93 @@ const TrifidClub = () => {
                   <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-neon-blue to-neon-yellow bg-clip-text text-transparent">
                     Join DMS Club Today
                   </h3>
-                  
+
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <Label htmlFor="name" className="text-foreground/90">Full Name *</Label>
+                      <Label htmlFor="name" className="text-foreground/90">
+                        Full Name *
+                      </Label>
                       <Input
                         id="name"
                         value={formData.name}
-                        onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            name: e.target.value,
+                          }))
+                        }
                         required
                         className="bg-space-light border-space-light focus:border-neon-blue"
                         placeholder="Your full name"
                       />
                     </div>
-                    
+
                     <div>
-                      <Label htmlFor="email" className="text-foreground/90">Email Address *</Label>
+                      <Label htmlFor="email" className="text-foreground/90">
+                        Email Address *
+                      </Label>
                       <Input
                         id="email"
                         type="email"
                         value={formData.email}
-                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            email: e.target.value,
+                          }))
+                        }
                         required
                         className="bg-space-light border-space-light focus:border-neon-blue"
                         placeholder="your.email@example.com"
                       />
                     </div>
-                    
+
                     <div>
-                      <Label htmlFor="phone" className="text-foreground/90">Phone Number *</Label>
+                      <Label htmlFor="phone" className="text-foreground/90">
+                        Phone Number *
+                      </Label>
                       <Input
                         id="phone"
                         value={formData.phone}
-                        onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            phone: e.target.value,
+                          }))
+                        }
                         required
                         className="bg-space-light border-space-light focus:border-neon-blue"
                         placeholder="+254 700 123 456"
                       />
                     </div>
-                    
+
                     <div>
-                      <Label htmlFor="company" className="text-foreground/90">Company/Business</Label>
+                      <Label htmlFor="company" className="text-foreground/90">
+                        Company/Business
+                      </Label>
                       <Input
                         id="company"
                         value={formData.company}
-                        onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            company: e.target.value,
+                          }))
+                        }
                         className="bg-space-light border-space-light focus:border-neon-blue"
                         placeholder="Your company name"
                       />
                     </div>
-                    
+
                     <div className="bg-neon-blue/10 p-4 rounded-lg border border-neon-blue/20">
-                      <p className="text-sm text-foreground/80 mb-2">Selected Plan:</p>
-                      <p className="font-semibold text-neon-blue capitalize">{selectedPlan}</p>
+                      <p className="text-sm text-foreground/80 mb-2">
+                        Selected Plan:
+                      </p>
+                      <p className="font-semibold text-neon-blue capitalize">
+                        {selectedPlan}
+                      </p>
                     </div>
-                    
+
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
@@ -620,10 +693,11 @@ const TrifidClub = () => {
                       Join DMS Club
                     </Button>
                   </form>
-                  
+
                   <div className="mt-6 p-4 bg-neon-yellow/10 rounded-lg border border-neon-yellow/20">
                     <p className="text-xs text-foreground/70 text-center">
-                      🚀 Join 1,000+ successful entrepreneurs in DMS Club. Cancel anytime.
+                      🚀 Join 1,000+ successful entrepreneurs in DMS Club.
+                      Cancel anytime.
                     </p>
                   </div>
                 </CardContent>

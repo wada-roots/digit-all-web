@@ -80,7 +80,9 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               className="text-gray-700 hover:text-green-600 p-2"
-              onClick={() => window.open("https://wa.me/254700123456", "_blank")}
+              onClick={() =>
+                window.open("https://wa.me/254700123456", "_blank")
+              }
             >
               <MessageCircle className="h-5 w-5" />
             </Button>
@@ -102,7 +104,9 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               className="text-gray-700 hover:text-green-600 p-2"
-              onClick={() => window.open("https://wa.me/254700123456", "_blank")}
+              onClick={() =>
+                window.open("https://wa.me/254700123456", "_blank")
+              }
             >
               <MessageCircle className="h-5 w-5" />
             </Button>

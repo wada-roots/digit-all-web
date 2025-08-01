@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
-import { 
-  Code, 
-  Smartphone, 
-  Globe, 
-  Zap, 
-  Star, 
-  ArrowRight, 
+import {
+  Code,
+  Smartphone,
+  Globe,
+  Zap,
+  Star,
+  ArrowRight,
   Check,
   Layers,
   Palette,
   Rocket,
   Users,
-  Trophy
+  Trophy,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -45,34 +45,55 @@ const WebDevelopment = () => {
       icon: Globe,
       title: "Website Development",
       description: "Custom websites that convert visitors into customers",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Secure"],
+      features: [
+        "Responsive Design",
+        "SEO Optimized",
+        "Fast Loading",
+        "Secure",
+      ],
       price: "From Ksh 15,000",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg"
+      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg",
     },
     {
       icon: Smartphone,
       title: "Mobile App Development",
       description: "Native iOS & Android apps that users love",
-      features: ["Cross Platform", "Native Performance", "App Store Ready", "Push Notifications"],
+      features: [
+        "Cross Platform",
+        "Native Performance",
+        "App Store Ready",
+        "Push Notifications",
+      ],
       price: "From Ksh 50,000",
-      image: "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-147413.jpeg"
+      image:
+        "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-147413.jpeg",
     },
     {
       icon: Layers,
       title: "UI/UX Design",
       description: "Beautiful interfaces that provide amazing user experiences",
-      features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
+      features: [
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Design Systems",
+      ],
       price: "From Ksh 20,000",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg"
+      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg",
     },
     {
       icon: Code,
       title: "Custom Development",
       description: "Tailored solutions for your unique business needs",
-      features: ["API Integration", "Database Design", "Cloud Deployment", "Maintenance"],
+      features: [
+        "API Integration",
+        "Database Design",
+        "Cloud Deployment",
+        "Maintenance",
+      ],
       price: "From Ksh 30,000",
-      image: "https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg"
-    }
+      image: "https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg",
+    },
   ];
 
   const portfolio = [
@@ -82,23 +103,24 @@ const WebDevelopment = () => {
       description: "Complete online store with payment integration",
       image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg",
       tech: ["React", "Node.js", "MongoDB"],
-      url: "https://preview--foods-and-bakery.lovable.app/"
+      url: "https://preview--foods-and-bakery.lovable.app/",
     },
     {
       title: "Fitness Mobile App",
       category: "Mobile App",
       description: "Cross-platform fitness tracking application",
-      image: "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg",
+      image:
+        "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg",
       tech: ["React Native", "Firebase", "Redux"],
-      url: "#"
+      url: "#",
     },
     {
       title: "Restaurant Website",
-      category: "Web Development", 
+      category: "Web Development",
       description: "Modern restaurant site with online ordering",
       image: "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg",
       tech: ["Next.js", "Tailwind", "Stripe"],
-      url: "https://preview--sugar-spice-swahili-bites.lovable.app/"
+      url: "https://preview--sugar-spice-swahili-bites.lovable.app/",
     },
     {
       title: "Business Dashboard",
@@ -106,31 +128,33 @@ const WebDevelopment = () => {
       description: "Analytics dashboard for business insights",
       image: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg",
       tech: ["Vue.js", "D3.js", "Express"],
-      url: "#"
+      url: "#",
     },
     {
       title: "Travel Booking App",
       category: "Mobile App",
       description: "Complete travel booking and management app",
-      image: "https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg",
+      image:
+        "https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg",
       tech: ["Flutter", "Firebase", "Maps API"],
-      url: "https://preview--vybz-tours-voyage-kenya.lovable.app/"
+      url: "https://preview--vybz-tours-voyage-kenya.lovable.app/",
     },
     {
       title: "Corporate Website",
       category: "Web Development",
       description: "Professional corporate website with CMS",
-      image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+      image:
+        "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
       tech: ["WordPress", "PHP", "MySQL"],
-      url: "#"
-    }
+      url: "#",
+    },
   ];
 
   const stats = [
     { number: "150+", label: "Projects Completed", icon: Trophy },
     { number: "98%", label: "Client Satisfaction", icon: Star },
     { number: "24/7", label: "Support Available", icon: Users },
-    { number: "3+", label: "Years Experience", icon: Rocket }
+    { number: "3+", label: "Years Experience", icon: Rocket },
   ];
 
   return (
@@ -172,7 +196,9 @@ const WebDevelopment = () => {
               Web & App Development
             </h1>
             <p className="text-xl sm:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We build digital experiences that users love and businesses depend on. From concept to deployment, we create solutions that drive results.
+              We build digital experiences that users love and businesses depend
+              on. From concept to deployment, we create solutions that drive
+              results.
             </p>
           </motion.div>
 
@@ -212,7 +238,9 @@ const WebDevelopment = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-full flex items-center justify-center mx-auto mb-3">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-neon-yellow mb-1">{stat.number}</div>
+                <div className="text-3xl font-bold text-neon-yellow mb-1">
+                  {stat.number}
+                </div>
                 <div className="text-foreground/80 text-sm">{stat.label}</div>
               </motion.div>
             ))}
@@ -234,7 +262,8 @@ const WebDevelopment = () => {
               Our Services
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              Comprehensive development services to bring your digital vision to life
+              Comprehensive development services to bring your digital vision to
+              life
             </p>
           </motion.div>
 
@@ -261,7 +290,7 @@ const WebDevelopment = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <CardContent className="p-6">
                     <h3 className="text-2xl font-semibold mb-3 text-foreground group-hover:text-neon-blue transition-colors duration-300">
                       {service.title}
@@ -269,18 +298,21 @@ const WebDevelopment = () => {
                     <p className="text-foreground/80 mb-4 leading-relaxed">
                       {service.description}
                     </p>
-                    
+
                     <div className="mb-6">
                       <div className="grid grid-cols-2 gap-2">
                         {service.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center text-sm text-foreground/80">
+                          <div
+                            key={idx}
+                            className="flex items-center text-sm text-foreground/80"
+                          >
                             <Check className="w-4 h-4 text-neon-yellow mr-2" />
                             {feature}
                           </div>
                         ))}
                       </div>
                     </div>
-                    
+
                     <div className="flex items-center justify-between">
                       <span className="text-neon-blue font-bold text-lg">
                         {service.price}
@@ -346,14 +378,17 @@ const WebDevelopment = () => {
                       <Button
                         size="sm"
                         className="bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30"
-                        onClick={() => project.url !== "#" && window.open(project.url, "_blank")}
+                        onClick={() =>
+                          project.url !== "#" &&
+                          window.open(project.url, "_blank")
+                        }
                       >
                         <Globe className="w-4 h-4 mr-2" />
                         View
                       </Button>
                     </div>
                   </div>
-                  
+
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-neon-blue transition-colors duration-300">
                       {project.title}
@@ -361,7 +396,7 @@ const WebDevelopment = () => {
                     <p className="text-foreground/80 mb-4 text-sm leading-relaxed">
                       {project.description}
                     </p>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, idx) => (
                         <span
@@ -393,9 +428,10 @@ const WebDevelopment = () => {
             Ready to Build Something Amazing?
           </h2>
           <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project and turn your vision into reality. Get a free consultation and project estimate.
+            Let's discuss your project and turn your vision into reality. Get a
+            free consultation and project estimate.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"

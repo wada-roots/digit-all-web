@@ -16,7 +16,7 @@ import {
   TrendingUp,
   Award,
   Clock,
-  Shield
+  Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,7 +41,9 @@ const Services = () => {
 
   const handleSubmit = (serviceType: string, data: any) => {
     console.log(`${serviceType} quote request:`, data);
-    alert(`Thank you for your ${serviceType} quote request! We'll get back to you within 24 hours.`);
+    alert(
+      `Thank you for your ${serviceType} quote request! We'll get back to you within 24 hours.`,
+    );
     setActivePopup(null);
   };
 
@@ -78,27 +80,28 @@ const Services = () => {
       price: "From Ksh 15,000",
       features: [
         "Responsive Design",
-        "SEO Optimized", 
+        "SEO Optimized",
         "Fast Loading Speed",
         "Mobile Friendly",
         "Content Management",
-        "Security Features"
+        "Security Features",
       ],
       deliverables: [
         "Custom Website Design",
-        "Domain & Hosting Setup", 
+        "Domain & Hosting Setup",
         "SSL Certificate",
         "Google Analytics",
         "Contact Forms",
-        "Social Media Integration"
-      ]
+        "Social Media Integration",
+      ],
     },
     {
       id: "app",
       icon: Smartphone,
       title: "App Development",
       description: "Native mobile apps for iOS and Android platforms",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F337f0569c1864af4bf5811ca10e0776f?format=webp&width=800",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F337f0569c1864af4bf5811ca10e0776f?format=webp&width=800",
       price: "From Ksh 50,000",
       features: [
         "Cross-Platform Development",
@@ -106,7 +109,7 @@ const Services = () => {
         "App Store Optimization",
         "Push Notifications",
         "Offline Functionality",
-        "Cloud Integration"
+        "Cloud Integration",
       ],
       deliverables: [
         "iOS & Android Apps",
@@ -114,15 +117,17 @@ const Services = () => {
         "User Authentication",
         "Database Integration",
         "API Development",
-        "App Maintenance"
-      ]
+        "App Maintenance",
+      ],
     },
     {
       id: "social-media",
       icon: Share2,
       title: "Social Media Marketing",
-      description: "Boost your online presence with strategic social media campaigns",
-      image: "https://images.pexels.com/photos/13883892/pexels-photo-13883892.jpeg",
+      description:
+        "Boost your online presence with strategic social media campaigns",
+      image:
+        "https://images.pexels.com/photos/13883892/pexels-photo-13883892.jpeg",
       price: "From Ksh 25,000/month",
       features: [
         "Content Creation",
@@ -130,7 +135,7 @@ const Services = () => {
         "Community Management",
         "Influencer Outreach",
         "Analytics & Reporting",
-        "Paid Advertising"
+        "Paid Advertising",
       ],
       deliverables: [
         "Monthly Content Calendar",
@@ -138,14 +143,15 @@ const Services = () => {
         "Engagement Management",
         "Performance Reports",
         "Brand Growth Strategy",
-        "Campaign Optimization"
-      ]
+        "Campaign Optimization",
+      ],
     },
     {
       id: "seo",
       icon: Search,
       title: "SEO Services",
-      description: "Rank higher on Google and drive organic traffic to your business",
+      description:
+        "Rank higher on Google and drive organic traffic to your business",
       image: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
       price: "From Ksh 20,000/month",
       features: [
@@ -154,7 +160,7 @@ const Services = () => {
         "Technical SEO",
         "Link Building",
         "Local SEO",
-        "SEO Audits"
+        "SEO Audits",
       ],
       deliverables: [
         "SEO Strategy Plan",
@@ -162,15 +168,16 @@ const Services = () => {
         "Keyword Rankings",
         "Content Optimization",
         "Backlink Building",
-        "Traffic Growth"
-      ]
+        "Traffic Growth",
+      ],
     },
     {
       id: "photography",
       icon: Camera,
       title: "Photography & Videography",
       description: "Professional visual content that tells your brand story",
-      image: "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
+      image:
+        "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
       price: "From Ksh 30,000/project",
       features: [
         "Product Photography",
@@ -178,7 +185,7 @@ const Services = () => {
         "Event Coverage",
         "Promotional Content",
         "Drone Photography",
-        "Video Editing"
+        "Video Editing",
       ],
       deliverables: [
         "High-Quality Images",
@@ -186,15 +193,17 @@ const Services = () => {
         "Edited Content",
         "Multiple Formats",
         "Commercial License",
-        "Quick Turnaround"
-      ]
+        "Quick Turnaround",
+      ],
     },
     {
       id: "business-cards",
       icon: CreditCard,
       title: "Business Cards",
-      description: "Premium business card designs that make lasting impressions",
-      image: "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg",
+      description:
+        "Premium business card designs that make lasting impressions",
+      image:
+        "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg",
       price: "From Ksh 5,000",
       features: [
         "Custom Design",
@@ -202,7 +211,7 @@ const Services = () => {
         "Multiple Finishes",
         "Quick Delivery",
         "Design Revisions",
-        "Bulk Printing"
+        "Bulk Printing",
       ],
       deliverables: [
         "Custom Card Design",
@@ -210,59 +219,67 @@ const Services = () => {
         "Multiple Variations",
         "Business Card Printing",
         "Design Source Files",
-        "Brand Guidelines"
-      ]
-    }
+        "Brand Guidelines",
+      ],
+    },
   ];
 
   const processSteps = [
     {
       step: "01",
       title: "Discovery & Planning",
-      description: "We understand your business goals, target audience, and project requirements to create a tailored strategy.",
-      icon: Target
+      description:
+        "We understand your business goals, target audience, and project requirements to create a tailored strategy.",
+      icon: Target,
     },
     {
-      step: "02", 
+      step: "02",
       title: "Design & Development",
-      description: "Our expert team creates stunning designs and develops robust solutions using the latest technologies.",
-      icon: Zap
+      description:
+        "Our expert team creates stunning designs and develops robust solutions using the latest technologies.",
+      icon: Zap,
     },
     {
       step: "03",
       title: "Testing & Launch",
-      description: "Rigorous testing ensures everything works perfectly before we launch your project to the world.",
-      icon: Shield
+      description:
+        "Rigorous testing ensures everything works perfectly before we launch your project to the world.",
+      icon: Shield,
     },
     {
       step: "04",
       title: "Support & Growth",
-      description: "Ongoing support and optimization to ensure your digital presence continues to grow and succeed.",
-      icon: TrendingUp
-    }
+      description:
+        "Ongoing support and optimization to ensure your digital presence continues to grow and succeed.",
+      icon: TrendingUp,
+    },
   ];
 
   const whyChooseUs = [
     {
       icon: Award,
       title: "Expert Team",
-      description: "Skilled professionals with years of experience in digital marketing and development."
+      description:
+        "Skilled professionals with years of experience in digital marketing and development.",
     },
     {
       icon: Clock,
       title: "Fast Delivery",
-      description: "Quick turnaround times without compromising on quality or attention to detail."
+      description:
+        "Quick turnaround times without compromising on quality or attention to detail.",
     },
     {
       icon: Users,
       title: "Client-Focused",
-      description: "Your success is our priority. We work closely with you throughout the entire process."
+      description:
+        "Your success is our priority. We work closely with you throughout the entire process.",
     },
     {
       icon: TrendingUp,
       title: "Proven Results",
-      description: "Track record of delivering measurable results and growing businesses online."
-    }
+      description:
+        "Track record of delivering measurable results and growing businesses online.",
+    },
   ];
 
   return (
@@ -304,7 +321,8 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-xl sm:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive digital solutions to grow your business online. From websites to marketing campaigns, we've got you covered.
+              Comprehensive digital solutions to grow your business online. From
+              websites to marketing campaigns, we've got you covered.
             </p>
           </motion.div>
 
@@ -345,7 +363,8 @@ const Services = () => {
               What We Offer
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              Complete digital solutions designed to elevate your business and drive measurable results
+              Complete digital solutions designed to elevate your business and
+              drive measurable results
             </p>
           </motion.div>
 
@@ -372,42 +391,58 @@ const Services = () => {
                       </div>
                     </div>
                     <div className="absolute bottom-4 left-4 right-4">
-                      <div className="text-2xl font-bold text-white mb-1">{service.title}</div>
-                      <div className="text-neon-yellow font-semibold">{service.price}</div>
+                      <div className="text-2xl font-bold text-white mb-1">
+                        {service.title}
+                      </div>
+                      <div className="text-neon-yellow font-semibold">
+                        {service.price}
+                      </div>
                     </div>
                   </div>
-                  
+
                   <CardContent className="p-6">
                     <p className="text-foreground/80 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <h4 className="font-semibold text-neon-blue mb-3">Features</h4>
+                        <h4 className="font-semibold text-neon-blue mb-3">
+                          Features
+                        </h4>
                         <div className="space-y-2">
                           {service.features.slice(0, 3).map((feature, idx) => (
-                            <div key={idx} className="flex items-center text-sm text-foreground/80">
+                            <div
+                              key={idx}
+                              className="flex items-center text-sm text-foreground/80"
+                            >
                               <Check className="w-4 h-4 text-neon-yellow mr-2 flex-shrink-0" />
                               {feature}
                             </div>
                           ))}
                         </div>
                       </div>
-                      
+
                       <div>
-                        <h4 className="font-semibold text-neon-blue mb-3">Deliverables</h4>
+                        <h4 className="font-semibold text-neon-blue mb-3">
+                          Deliverables
+                        </h4>
                         <div className="space-y-2">
-                          {service.deliverables.slice(0, 3).map((deliverable, idx) => (
-                            <div key={idx} className="flex items-center text-sm text-foreground/80">
-                              <Star className="w-4 h-4 text-neon-yellow mr-2 flex-shrink-0" />
-                              {deliverable}
-                            </div>
-                          ))}
+                          {service.deliverables
+                            .slice(0, 3)
+                            .map((deliverable, idx) => (
+                              <div
+                                key={idx}
+                                className="flex items-center text-sm text-foreground/80"
+                              >
+                                <Star className="w-4 h-4 text-neon-yellow mr-2 flex-shrink-0" />
+                                {deliverable}
+                              </div>
+                            ))}
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="mt-6 pt-6 border-t border-space-light">
                       <Button
                         onClick={() => handleQuoteClick(service.id)}
@@ -439,7 +474,8 @@ const Services = () => {
               Our Process
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              A proven methodology that ensures successful project delivery every time
+              A proven methodology that ensures successful project delivery
+              every time
             </p>
           </motion.div>
 
@@ -461,8 +497,12 @@ const Services = () => {
                     {step.step}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-foreground">{step.title}</h3>
-                <p className="text-foreground/80 text-sm leading-relaxed">{step.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">
+                  {step.title}
+                </h3>
+                <p className="text-foreground/80 text-sm leading-relaxed">
+                  {step.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -483,7 +523,8 @@ const Services = () => {
               Why Choose DMS?
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              We're committed to delivering exceptional results that drive your business forward
+              We're committed to delivering exceptional results that drive your
+              business forward
             </p>
           </motion.div>
 
@@ -501,8 +542,12 @@ const Services = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-full flex items-center justify-center mx-auto mb-4">
                   <reason.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-foreground">{reason.title}</h3>
-                <p className="text-foreground/80 text-sm leading-relaxed">{reason.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">
+                  {reason.title}
+                </h3>
+                <p className="text-foreground/80 text-sm leading-relaxed">
+                  {reason.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -522,9 +567,10 @@ const Services = () => {
             Ready to Grow Your Business?
           </h2>
           <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project and create a custom solution that drives real results for your business.
+            Let's discuss your project and create a custom solution that drives
+            real results for your business.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
@@ -546,28 +592,39 @@ const Services = () => {
       </section>
 
       {/* Service Popups */}
-      <Modal isOpen={activePopup === 'website'} onClose={handleClosePopup}>
-        <WebsitePopup onSubmit={(data) => handleSubmit('Website Development', data)} />
+      <Modal isOpen={activePopup === "website"} onClose={handleClosePopup}>
+        <WebsitePopup
+          onSubmit={(data) => handleSubmit("Website Development", data)}
+        />
       </Modal>
 
-      <Modal isOpen={activePopup === 'app'} onClose={handleClosePopup}>
-        <AppPopup onSubmit={(data) => handleSubmit('App Development', data)} />
+      <Modal isOpen={activePopup === "app"} onClose={handleClosePopup}>
+        <AppPopup onSubmit={(data) => handleSubmit("App Development", data)} />
       </Modal>
 
-      <Modal isOpen={activePopup === 'social-media'} onClose={handleClosePopup}>
-        <SocialMediaPopup onSubmit={(data) => handleSubmit('Social Media Marketing', data)} />
+      <Modal isOpen={activePopup === "social-media"} onClose={handleClosePopup}>
+        <SocialMediaPopup
+          onSubmit={(data) => handleSubmit("Social Media Marketing", data)}
+        />
       </Modal>
 
-      <Modal isOpen={activePopup === 'seo'} onClose={handleClosePopup}>
-        <SEOPopup onSubmit={(data) => handleSubmit('SEO Services', data)} />
+      <Modal isOpen={activePopup === "seo"} onClose={handleClosePopup}>
+        <SEOPopup onSubmit={(data) => handleSubmit("SEO Services", data)} />
       </Modal>
 
-      <Modal isOpen={activePopup === 'photography'} onClose={handleClosePopup}>
-        <PhotographyPopup onSubmit={(data) => handleSubmit('Photography & Videography', data)} />
+      <Modal isOpen={activePopup === "photography"} onClose={handleClosePopup}>
+        <PhotographyPopup
+          onSubmit={(data) => handleSubmit("Photography & Videography", data)}
+        />
       </Modal>
 
-      <Modal isOpen={activePopup === 'business-cards'} onClose={handleClosePopup}>
-        <BusinessCardsPopup onSubmit={(data) => handleSubmit('Business Cards', data)} />
+      <Modal
+        isOpen={activePopup === "business-cards"}
+        onClose={handleClosePopup}
+      >
+        <BusinessCardsPopup
+          onSubmit={(data) => handleSubmit("Business Cards", data)}
+        />
       </Modal>
     </div>
   );

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
   Send,
   MessageCircle,
   Globe,
@@ -15,50 +15,56 @@ import {
   CheckCircle,
   Star,
   Users,
-  Award
+  Award,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    budget: '',
-    message: '',
-    company: ''
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    budget: "",
+    message: "",
+    company: "",
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
+
     // Reset form after 5 seconds
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        budget: '',
-        message: '',
-        company: ''
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        budget: "",
+        message: "",
+        company: "",
       });
     }, 5000);
   };
@@ -68,40 +74,40 @@ const Contact = () => {
       icon: Phone,
       title: "Call Us",
       details: ["+254 700 123 456", "+254 700 654 321"],
-      description: "Available 24/7 for urgent inquiries"
+      description: "Available 24/7 for urgent inquiries",
     },
     {
       icon: Mail,
-      title: "Email Us", 
+      title: "Email Us",
       details: ["info@dms.co.ke", "projects@dms.co.ke"],
-      description: "We respond within 2 hours"
+      description: "We respond within 2 hours",
     },
     {
       icon: MapPin,
       title: "Visit Us",
       details: ["Nairobi, Kenya", "Westlands Business District"],
-      description: "By appointment only"
+      description: "By appointment only",
     },
     {
       icon: Clock,
       title: "Working Hours",
       details: ["Mon - Fri: 8:00 AM - 6:00 PM", "Sat: 9:00 AM - 2:00 PM"],
-      description: "Sunday: Emergency support only"
-    }
+      description: "Sunday: Emergency support only",
+    },
   ];
 
   const socialLinks = [
     { icon: Facebook, name: "Facebook", url: "#", color: "text-blue-500" },
     { icon: Instagram, name: "Instagram", url: "#", color: "text-pink-500" },
     { icon: Linkedin, name: "LinkedIn", url: "#", color: "text-blue-600" },
-    { icon: Twitter, name: "Twitter", url: "#", color: "text-blue-400" }
+    { icon: Twitter, name: "Twitter", url: "#", color: "text-blue-400" },
   ];
 
   const stats = [
     { icon: Users, number: "500+", label: "Happy Clients" },
     { icon: CheckCircle, number: "1000+", label: "Projects Completed" },
     { icon: Award, number: "3+", label: "Years Experience" },
-    { icon: Star, number: "4.9", label: "Average Rating" }
+    { icon: Star, number: "4.9", label: "Average Rating" },
   ];
 
   const containerVariants = {
@@ -166,7 +172,8 @@ const Contact = () => {
               Get in Touch
             </h1>
             <p className="text-xl sm:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Ready to launch your project into orbit? Let's create something extraordinary together.
+              Ready to launch your project into orbit? Let's create something
+              extraordinary together.
             </p>
           </motion.div>
 
@@ -185,7 +192,9 @@ const Contact = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-full flex items-center justify-center mx-auto mb-3">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-neon-yellow mb-1">{stat.number}</div>
+                <div className="text-3xl font-bold text-neon-yellow mb-1">
+                  {stat.number}
+                </div>
                 <div className="text-foreground/80 text-sm">{stat.label}</div>
               </motion.div>
             ))}
@@ -211,7 +220,8 @@ const Contact = () => {
                       Start Your Project
                     </h2>
                     <p className="text-foreground/80">
-                      Tell us about your project and we'll get back to you within 24 hours with a detailed proposal.
+                      Tell us about your project and we'll get back to you
+                      within 24 hours with a detailed proposal.
                     </p>
                   </div>
 
@@ -222,32 +232,49 @@ const Contact = () => {
                       className="text-center py-12"
                     >
                       <CheckCircle className="w-16 h-16 text-neon-yellow mx-auto mb-4" />
-                      <h3 className="text-2xl font-bold text-neon-blue mb-2">Message Sent!</h3>
+                      <h3 className="text-2xl font-bold text-neon-blue mb-2">
+                        Message Sent!
+                      </h3>
                       <p className="text-foreground/80">
-                        Thank you for reaching out. We'll get back to you within 24 hours.
+                        Thank you for reaching out. We'll get back to you within
+                        24 hours.
                       </p>
                     </motion.div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                          <Label htmlFor="name" className="text-foreground/90">Full Name *</Label>
+                          <Label htmlFor="name" className="text-foreground/90">
+                            Full Name *
+                          </Label>
                           <Input
                             id="name"
                             value={formData.name}
-                            onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                            onChange={(e) =>
+                              setFormData((prev) => ({
+                                ...prev,
+                                name: e.target.value,
+                              }))
+                            }
                             required
                             className="bg-space-light border-space-light focus:border-neon-blue"
                             placeholder="Your full name"
                           />
                         </div>
                         <div>
-                          <Label htmlFor="email" className="text-foreground/90">Email Address *</Label>
+                          <Label htmlFor="email" className="text-foreground/90">
+                            Email Address *
+                          </Label>
                           <Input
                             id="email"
                             type="email"
                             value={formData.email}
-                            onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                            onChange={(e) =>
+                              setFormData((prev) => ({
+                                ...prev,
+                                email: e.target.value,
+                              }))
+                            }
                             required
                             className="bg-space-light border-space-light focus:border-neon-blue"
                             placeholder="your.email@example.com"
@@ -257,22 +284,39 @@ const Contact = () => {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                          <Label htmlFor="phone" className="text-foreground/90">Phone Number *</Label>
+                          <Label htmlFor="phone" className="text-foreground/90">
+                            Phone Number *
+                          </Label>
                           <Input
                             id="phone"
                             value={formData.phone}
-                            onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                            onChange={(e) =>
+                              setFormData((prev) => ({
+                                ...prev,
+                                phone: e.target.value,
+                              }))
+                            }
                             required
                             className="bg-space-light border-space-light focus:border-neon-blue"
                             placeholder="+254 700 123 456"
                           />
                         </div>
                         <div>
-                          <Label htmlFor="company" className="text-foreground/90">Company (Optional)</Label>
+                          <Label
+                            htmlFor="company"
+                            className="text-foreground/90"
+                          >
+                            Company (Optional)
+                          </Label>
                           <Input
                             id="company"
                             value={formData.company}
-                            onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
+                            onChange={(e) =>
+                              setFormData((prev) => ({
+                                ...prev,
+                                company: e.target.value,
+                              }))
+                            }
                             className="bg-space-light border-space-light focus:border-neon-blue"
                             placeholder="Your company name"
                           />
@@ -281,45 +325,98 @@ const Contact = () => {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                          <Label htmlFor="service" className="text-foreground/90">Service Needed *</Label>
-                          <Select onValueChange={(value) => setFormData(prev => ({ ...prev, service: value }))}>
+                          <Label
+                            htmlFor="service"
+                            className="text-foreground/90"
+                          >
+                            Service Needed *
+                          </Label>
+                          <Select
+                            onValueChange={(value) =>
+                              setFormData((prev) => ({
+                                ...prev,
+                                service: value,
+                              }))
+                            }
+                          >
                             <SelectTrigger className="bg-space-light border-space-light">
                               <SelectValue placeholder="Select service" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="website">Website Development</SelectItem>
-                              <SelectItem value="app">App Development</SelectItem>
-                              <SelectItem value="social-media">Social Media Marketing</SelectItem>
+                              <SelectItem value="website">
+                                Website Development
+                              </SelectItem>
+                              <SelectItem value="app">
+                                App Development
+                              </SelectItem>
+                              <SelectItem value="social-media">
+                                Social Media Marketing
+                              </SelectItem>
                               <SelectItem value="seo">SEO Services</SelectItem>
-                              <SelectItem value="photography">Photography & Videography</SelectItem>
-                              <SelectItem value="business-cards">Business Cards</SelectItem>
-                              <SelectItem value="consultation">Free Consultation</SelectItem>
+                              <SelectItem value="photography">
+                                Photography & Videography
+                              </SelectItem>
+                              <SelectItem value="business-cards">
+                                Business Cards
+                              </SelectItem>
+                              <SelectItem value="consultation">
+                                Free Consultation
+                              </SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
                         <div>
-                          <Label htmlFor="budget" className="text-foreground/90">Budget Range</Label>
-                          <Select onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}>
+                          <Label
+                            htmlFor="budget"
+                            className="text-foreground/90"
+                          >
+                            Budget Range
+                          </Label>
+                          <Select
+                            onValueChange={(value) =>
+                              setFormData((prev) => ({
+                                ...prev,
+                                budget: value,
+                              }))
+                            }
+                          >
                             <SelectTrigger className="bg-space-light border-space-light">
                               <SelectValue placeholder="Select budget" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="under-50k">Under Ksh 50,000</SelectItem>
-                              <SelectItem value="50k-100k">Ksh 50,000 - 100,000</SelectItem>
-                              <SelectItem value="100k-250k">Ksh 100,000 - 250,000</SelectItem>
-                              <SelectItem value="250k-500k">Ksh 250,000 - 500,000</SelectItem>
-                              <SelectItem value="500k-plus">Ksh 500,000+</SelectItem>
+                              <SelectItem value="under-50k">
+                                Under Ksh 50,000
+                              </SelectItem>
+                              <SelectItem value="50k-100k">
+                                Ksh 50,000 - 100,000
+                              </SelectItem>
+                              <SelectItem value="100k-250k">
+                                Ksh 100,000 - 250,000
+                              </SelectItem>
+                              <SelectItem value="250k-500k">
+                                Ksh 250,000 - 500,000
+                              </SelectItem>
+                              <SelectItem value="500k-plus">
+                                Ksh 500,000+
+                              </SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
                       </div>
 
                       <div>
-                        <Label htmlFor="message" className="text-foreground/90">Project Details *</Label>
+                        <Label htmlFor="message" className="text-foreground/90">
+                          Project Details *
+                        </Label>
                         <Textarea
                           id="message"
                           value={formData.message}
-                          onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                          onChange={(e) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              message: e.target.value,
+                            }))
+                          }
                           required
                           className="bg-space-light border-space-light focus:border-neon-blue min-h-[120px]"
                           placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
@@ -362,7 +459,8 @@ const Contact = () => {
                   Let's Connect
                 </h2>
                 <p className="text-foreground/80 mb-8">
-                  Multiple ways to reach us. Choose what works best for you and we'll respond promptly.
+                  Multiple ways to reach us. Choose what works best for you and
+                  we'll respond promptly.
                 </p>
               </div>
 
@@ -377,21 +475,29 @@ const Contact = () => {
                       <div className="w-12 h-12 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-lg flex items-center justify-center mr-4">
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="text-lg font-semibold text-foreground">{info.title}</h3>
+                      <h3 className="text-lg font-semibold text-foreground">
+                        {info.title}
+                      </h3>
                     </div>
                     <div className="space-y-1 mb-3">
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-foreground/90 font-medium">{detail}</p>
+                        <p key={idx} className="text-foreground/90 font-medium">
+                          {detail}
+                        </p>
                       ))}
                     </div>
-                    <p className="text-foreground/60 text-sm">{info.description}</p>
+                    <p className="text-foreground/60 text-sm">
+                      {info.description}
+                    </p>
                   </motion.div>
                 ))}
               </div>
 
               {/* Social Media */}
               <div className="bg-space-light/30 p-6 rounded-lg border border-space-light">
-                <h3 className="text-xl font-semibold mb-4 text-foreground">Follow Us</h3>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">
+                  Follow Us
+                </h3>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <motion.a
@@ -406,7 +512,8 @@ const Contact = () => {
                   ))}
                 </div>
                 <p className="text-foreground/60 text-sm mt-4">
-                  Stay updated with our latest projects and digital marketing tips
+                  Stay updated with our latest projects and digital marketing
+                  tips
                 </p>
               </div>
 
@@ -414,10 +521,13 @@ const Contact = () => {
               <div className="bg-gradient-to-r from-neon-blue/10 to-neon-yellow/10 p-6 rounded-lg border border-neon-blue/20">
                 <div className="flex items-center mb-3">
                   <MessageCircle className="w-6 h-6 text-neon-blue mr-3" />
-                  <h3 className="text-lg font-semibold text-foreground">Quick Response Guarantee</h3>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    Quick Response Guarantee
+                  </h3>
                 </div>
                 <p className="text-foreground/80 text-sm">
-                  We respond to all inquiries within 2 hours during business hours. For urgent matters, call us directly.
+                  We respond to all inquiries within 2 hours during business
+                  hours. For urgent matters, call us directly.
                 </p>
               </div>
             </motion.div>
@@ -453,9 +563,15 @@ const Contact = () => {
             <div className="h-96 bg-gradient-to-br from-neon-blue/20 to-neon-yellow/20 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="w-16 h-16 text-neon-blue mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-foreground mb-2">Nairobi, Kenya</h3>
-                <p className="text-foreground/80">Westlands Business District</p>
-                <p className="text-sm text-foreground/60 mt-2">By appointment only</p>
+                <h3 className="text-2xl font-bold text-foreground mb-2">
+                  Nairobi, Kenya
+                </h3>
+                <p className="text-foreground/80">
+                  Westlands Business District
+                </p>
+                <p className="text-sm text-foreground/60 mt-2">
+                  By appointment only
+                </p>
               </div>
             </div>
           </motion.div>
