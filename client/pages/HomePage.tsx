@@ -106,79 +106,172 @@ const HomePage = () => {
           />
         </div>
 
-        {/* Persuasive Animated Statements */}
+        {/* Special Offers Cards */}
         <motion.div
-          className="relative z-10 text-center max-w-6xl mx-auto"
+          className="relative z-10 max-w-6xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {/* Main Persuasive Headlines */}
+          {/* Header */}
           <motion.div
-            className="mb-8 sm:mb-12 lg:mb-16"
+            className="text-center mb-12"
             variants={itemVariants}
           >
             <motion.h1
               className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight"
               animate={{
-                scale: [1, 1.02, 1],
-                rotateX: [0, 5, 0],
+                scale: [1, 1.02, 1]
               }}
               transition={{
                 duration: 3,
                 repeat: Infinity,
-                ease: "easeInOut",
+                ease: "easeInOut"
               }}
             >
-              🚀 STOP Losing Customers to Your Competition
+              🔥 LIMITED TIME OFFERS
             </motion.h1>
 
             <motion.p
-              className="text-xl sm:text-2xl text-neon-blue font-semibold mb-6"
+              className="text-xl sm:text-2xl text-neon-blue font-semibold"
               animate={{
-                opacity: [0.7, 1, 0.7],
-                y: [0, -5, 0],
+                opacity: [0.7, 1, 0.7]
               }}
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                delay: 0.5,
+                delay: 0.5
               }}
             >
-              ⚡ Get Results in 24-48 Hours, Not Months
+              ⚡ Get Professional Solutions at Unbeatable Prices
             </motion.p>
+          </motion.div>
 
+          {/* Offer Cards */}
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
+            variants={itemVariants}
+          >
+            {/* Personal Websites Offer */}
             <motion.div
-              className="text-lg sm:text-xl text-foreground/90 space-y-3 max-w-4xl mx-auto"
-              variants={itemVariants}
+              className="bg-gradient-to-br from-space-light/80 to-space-dark/60 backdrop-blur-lg border border-neon-blue/30 rounded-2xl p-6 hover:border-neon-blue/60 transition-all duration-300 group"
+              whileHover={{ scale: 1.02, y: -5 }}
+              transition={{ duration: 0.3 }}
             >
-              <motion.p
-                animate={{ x: [-10, 10, -10] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="font-medium"
-              >
-                💰 <span className="text-neon-yellow">1,247+ businesses</span>{" "}
-                increased revenue by 300% with our proven system
-              </motion.p>
+              <div className="relative h-48 mb-6 rounded-xl overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg"
+                  alt="Personal Website Design"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 to-transparent" />
+                <div className="absolute top-4 left-4">
+                  <span className="bg-neon-yellow text-space-dark px-3 py-1 rounded-full text-sm font-bold">
+                    SPECIAL OFFER
+                  </span>
+                </div>
+              </div>
 
-              <motion.p
-                animate={{ x: [10, -10, 10] }}
-                transition={{ duration: 4, repeat: Infinity, delay: 2 }}
-                className="font-medium"
-              >
-                📈 Our clients dominate their markets while competitors struggle
-                to keep up
-              </motion.p>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-neon-yellow transition-colors duration-300">
+                Personal Website Package
+              </h3>
 
-              <motion.p
-                className="text-neon-blue font-bold text-xl"
-                animate={{
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
+              <p className="text-foreground/80 mb-4 leading-relaxed">
+                Get a stunning, professional personal website that showcases your skills, portfolio, and achievements. Perfect for freelancers, professionals, and personal branding.
+              </p>
+
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-3xl font-bold text-neon-blue">Ksh 10,000</span>
+                  <span className="text-sm text-foreground/60 line-through">Ksh 25,000</span>
+                </div>
+                <ul className="space-y-2 text-sm text-foreground/80">
+                  <li className="flex items-center">
+                    <Star className="w-4 h-4 text-neon-yellow mr-2" />
+                    Responsive Design
+                  </li>
+                  <li className="flex items-center">
+                    <Star className="w-4 h-4 text-neon-yellow mr-2" />
+                    Portfolio Section
+                  </li>
+                  <li className="flex items-center">
+                    <Star className="w-4 h-4 text-neon-yellow mr-2" />
+                    Contact Forms
+                  </li>
+                  <li className="flex items-center">
+                    <Star className="w-4 h-4 text-neon-yellow mr-2" />
+                    SEO Optimized
+                  </li>
+                </ul>
+              </div>
+
+              <Button
+                className="w-full bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
+                onClick={() => handleOrderClick('website')}
               >
-                ⏰ Limited Time: Skip the waitlist & start TODAY
-              </motion.p>
+                Order Now - Save 60%
+              </Button>
+            </motion.div>
+
+            {/* Affiliate Marketing Offer */}
+            <motion.div
+              className="bg-gradient-to-br from-space-light/80 to-space-dark/60 backdrop-blur-lg border border-neon-yellow/30 rounded-2xl p-6 hover:border-neon-yellow/60 transition-all duration-300 group"
+              whileHover={{ scale: 1.02, y: -5 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="relative h-48 mb-6 rounded-xl overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg"
+                  alt="Affiliate Marketing Strategy"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 to-transparent" />
+                <div className="absolute top-4 left-4">
+                  <span className="bg-neon-blue text-white px-3 py-1 rounded-full text-sm font-bold">
+                    HOT DEAL
+                  </span>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-neon-blue transition-colors duration-300">
+                Affiliate Marketing Setup
+              </h3>
+
+              <p className="text-foreground/80 mb-4 leading-relaxed">
+                Launch your affiliate marketing empire with our complete setup package. We'll build your affiliate website, set up tracking, and provide monetization strategies.
+              </p>
+
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-3xl font-bold text-neon-yellow">Ksh 10,000</span>
+                  <span className="text-sm text-foreground/60 line-through">Ksh 30,000</span>
+                </div>
+                <ul className="space-y-2 text-sm text-foreground/80">
+                  <li className="flex items-center">
+                    <Star className="w-4 h-4 text-neon-blue mr-2" />
+                    Affiliate Website
+                  </li>
+                  <li className="flex items-center">
+                    <Star className="w-4 h-4 text-neon-blue mr-2" />
+                    Tracking Setup
+                  </li>
+                  <li className="flex items-center">
+                    <Star className="w-4 h-4 text-neon-blue mr-2" />
+                    Revenue Strategies
+                  </li>
+                  <li className="flex items-center">
+                    <Star className="w-4 h-4 text-neon-blue mr-2" />
+                    Marketing Tools
+                  </li>
+                </ul>
+              </div>
+
+              <Button
+                className="w-full bg-gradient-to-r from-neon-yellow to-neon-blue hover:from-neon-blue hover:to-neon-yellow text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
+                onClick={() => handleOrderClick('affiliate-marketing')}
+              >
+                Start Earning - Save 67%
+              </Button>
             </motion.div>
           </motion.div>
 
@@ -187,9 +280,7 @@ const HomePage = () => {
             className="flex flex-col items-center"
             variants={itemVariants}
           >
-            <p className="text-sm text-neon-blue/80 mb-2 font-semibold">
-              👇 Choose Your Success Package Below
-            </p>
+            <p className="text-sm text-neon-blue/80 mb-2 font-semibold">👇 Explore More Services Below</p>
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
