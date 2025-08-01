@@ -239,7 +239,7 @@ const Templates = () => {
           </p>
           <Button
             size="lg"
-            className="bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white px-8 py-3 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+            className="bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-8 py-3 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
           >
             Request Custom Template
           </Button>
