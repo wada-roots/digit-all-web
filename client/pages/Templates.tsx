@@ -177,7 +177,7 @@ const Templates = () => {
 
                 {/* Template Info */}
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-semibold mb-3 text-foreground group-hover:text-neon-purple transition-colors duration-300">
+                  <h3 className="text-2xl font-semibold mb-3 text-foreground group-hover:text-neon-blue transition-colors duration-300">
                     {template.title}
                   </h3>
                   <p className="text-foreground/80 mb-4 leading-relaxed">
@@ -193,7 +193,7 @@ const Templates = () => {
                       {template.features.map((feature, index) => (
                         <span
                           key={index}
-                          className="bg-space-dark/50 text-neon-blue px-3 py-1 rounded-full text-xs font-medium"
+                          className="bg-space-dark/50 text-neon-yellow px-3 py-1 rounded-full text-xs font-medium"
                         >
                           {feature}
                         </span>
@@ -204,7 +204,7 @@ const Templates = () => {
                   {/* Actions */}
                   <div className="flex gap-3">
                     <Button
-                      className="flex-1 bg-gradient-to-r from-neon-purple to-neon-pink hover:from-neon-pink hover:to-neon-purple text-white shadow-lg transition-all duration-300"
+                      className="flex-1 bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white shadow-lg transition-all duration-300"
                       onClick={() => window.open(template.url, "_blank")}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
@@ -212,7 +212,7 @@ const Templates = () => {
                     </Button>
                     <Button
                       variant="outline"
-                      className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white transition-all duration-300"
+                      className="border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white transition-all duration-300"
                     >
                       Use Template
                     </Button>
