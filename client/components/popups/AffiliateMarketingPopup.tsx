@@ -42,36 +42,35 @@ const AffiliateMarketingPopup = ({ onSubmit }: AffiliateMarketingPopupProps) => 
       {/* Header */}
       <div className="text-center mb-8">
         <div className="w-16 h-16 bg-gradient-to-r from-neon-yellow to-neon-blue rounded-full flex items-center justify-center mx-auto mb-4">
-          <TrendingUp className="w-8 h-8 text-white" />
+          <Handshake className="w-8 h-8 text-white" />
         </div>
         <h2 className="text-3xl font-bold bg-gradient-to-r from-neon-yellow to-neon-blue bg-clip-text text-transparent mb-2">
-          Affiliate Marketing Setup
+          Affiliate Marketing Program
         </h2>
-        <p className="text-foreground/80">Launch your affiliate empire with our proven system</p>
+        <p className="text-foreground/80">Join our affiliate program and start earning today!</p>
         <div className="flex items-center justify-center mt-4 space-x-2">
-          <span className="text-2xl font-bold text-neon-yellow">Ksh 10,000</span>
-          <span className="text-sm text-foreground/60 line-through">Ksh 30,000</span>
-          <span className="bg-neon-blue text-white px-2 py-1 rounded text-xs font-bold">SAVE 67%</span>
+          <span className="text-2xl font-bold text-neon-yellow">FREE TO JOIN</span>
+          <span className="bg-neon-blue text-white px-2 py-1 rounded text-xs font-bold">20% COMMISSION</span>
         </div>
       </div>
 
-      {/* Features */}
+      {/* Benefits */}
       <div className="grid grid-cols-2 gap-4 mb-8">
         <div className="flex items-center space-x-2 text-sm">
-          <Target className="w-4 h-4 text-neon-blue" />
-          <span>Affiliate Website</span>
+          <DollarSign className="w-4 h-4 text-neon-blue" />
+          <span>20% Commission</span>
         </div>
         <div className="flex items-center space-x-2 text-sm">
-          <Globe className="w-4 h-4 text-neon-blue" />
-          <span>Tracking Setup</span>
+          <Users className="w-4 h-4 text-neon-blue" />
+          <span>Monthly Payouts</span>
         </div>
         <div className="flex items-center space-x-2 text-sm">
           <TrendingUp className="w-4 h-4 text-neon-blue" />
-          <span>Revenue Strategies</span>
+          <span>Easy Tracking</span>
         </div>
         <div className="flex items-center space-x-2 text-sm">
-          <Zap className="w-4 h-4 text-neon-blue" />
-          <span>Marketing Tools</span>
+          <Handshake className="w-4 h-4 text-neon-blue" />
+          <span>Free Registration</span>
         </div>
       </div>
 
