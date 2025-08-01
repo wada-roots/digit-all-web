@@ -5,8 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
-import { TrendingUp, Target, Globe, Zap } from 'lucide-react';
+import { TrendingUp, Users, DollarSign, Handshake } from 'lucide-react';
 
 interface AffiliateMarketingPopupProps {
   onSubmit: (data: any) => void;
@@ -14,16 +13,18 @@ interface AffiliateMarketingPopupProps {
 
 const AffiliateMarketingPopup = ({ onSubmit }: AffiliateMarketingPopupProps) => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    experience: '',
-    niche: '',
-    website: '',
-    budget: '',
-    goals: '',
-    timeline: '',
-    services: [] as string[],
+    // Affiliate Details
+    affiliateName: '',
+    affiliateEmail: '',
+    affiliatePhone: '',
+    // Client Details
+    clientName: '',
+    clientEmail: '',
+    clientPhone: '',
+    clientCompany: '',
+    clientService: '',
+    clientBudget: '',
+    notes: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
