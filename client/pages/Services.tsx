@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  Globe, 
-  Smartphone, 
-  Camera, 
-  Search, 
-  Share2, 
+import {
+  Globe,
+  Smartphone,
+  Camera,
+  Search,
+  Share2,
   CreditCard,
   Star,
   ArrowRight,
@@ -19,6 +20,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Modal from "@/components/Modal";
+import SocialMediaPopup from "@/components/popups/SocialMediaPopup";
+import SEOPopup from "@/components/popups/SEOPopup";
+import PhotographyPopup from "@/components/popups/PhotographyPopup";
+import WebsitePopup from "@/components/popups/WebsitePopup";
+import AppPopup from "@/components/popups/AppPopup";
+import BusinessCardsPopup from "@/components/popups/BusinessCardsPopup";
 
 const Services = () => {
   const containerVariants = {
