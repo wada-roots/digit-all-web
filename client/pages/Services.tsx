@@ -166,6 +166,7 @@ const Services = () => {
       ]
     },
     {
+      id: "photography",
       icon: Camera,
       title: "Photography & Videography",
       description: "Professional visual content that tells your brand story",
