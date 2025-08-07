@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronDown, Play, Star, Zap, Rocket, Eye } from "lucide-react";
+import { ChevronDown, Play, Star, Zap, Rocket, Eye, Globe, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Modal from "@/components/Modal";
