@@ -16,6 +16,15 @@ import PersonalWebsitePopup from "@/components/popups/PersonalWebsitePopup";
 
 const HomePage = () => {
   const [activePopup, setActivePopup] = useState<string | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Carousel background images
+  const backgroundImages = [
+    "https://images.pexels.com/photos/1181316/pexels-photo-1181316.jpeg",
+    "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg",
+    "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
+    "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg"
+  ];
 
   const handleOrderClick = (serviceType: string) => {
     setActivePopup(serviceType);
