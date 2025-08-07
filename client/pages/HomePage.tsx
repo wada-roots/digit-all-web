@@ -90,13 +90,25 @@ const HomePage = () => {
     <div className="relative">
       {/* Persuasive Hero Section */}
       <section className="relative py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Animated Background */}
+        {/* Carousel Background */}
         <div className="absolute inset-0">
-          <img
-            src="https://images.pexels.com/photos/1181316/pexels-photo-1181316.jpeg"
-            alt="Tech Background"
-            className="w-full h-full object-cover"
-          />
+          {backgroundImages.map((image, index) => (
+            <motion.img
+              key={index}
+              src={image}
+              alt={`Tech Background ${index + 1}`}
+              className="absolute inset-0 w-full h-full object-cover"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: index === currentImageIndex ? 1 : 0,
+                scale: index === currentImageIndex ? 1.05 : 1
+              }}
+              transition={{
+                duration: 1.5,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
           <div className="absolute inset-0 bg-gradient-to-br from-space-darker/80 via-space-dark/70 to-blue-900/60"></div>
           {/* Animated Stars */}
           <div className="absolute inset-0">
