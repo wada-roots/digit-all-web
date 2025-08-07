@@ -121,12 +121,12 @@ const HomePage = () => {
           initial="hidden"
           animate="visible"
         >
-          {/* Header */}
+          {/* Header with Profile Buttons */}
           <motion.div className="text-center mb-12" variants={itemVariants}>
-            <motion.h1
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight"
+            <motion.h2
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight"
               animate={{
-                scale: [1, 1.02, 1],
+                scale: [1, 1.01, 1],
               }}
               transition={{
                 duration: 3,
@@ -134,11 +134,43 @@ const HomePage = () => {
                 ease: "easeInOut",
               }}
             >
-              🔥 LIMITED TIME OFFERS
-            </motion.h1>
+              Choose Your Professional Profile
+            </motion.h2>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-1"
+              >
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-neon-blue to-blue-600 hover:from-blue-600 hover:to-neon-blue text-white px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+                  onClick={() => window.open('/templates', '_self')}
+                >
+                  <Globe className="w-5 h-5 mr-2" />
+                  Company Profile
+                </Button>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-1"
+              >
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-neon-yellow to-yellow-500 hover:from-yellow-500 hover:to-neon-yellow text-space-dark px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+                  onClick={() => handleOrderClick('app')}
+                >
+                  <Smartphone className="w-5 h-5 mr-2" />
+                  App Development Profile
+                </Button>
+              </motion.div>
+            </div>
 
             <motion.p
-              className="text-xl sm:text-2xl text-neon-blue font-semibold"
+              className="text-lg text-foreground/80 mt-6"
               animate={{
                 opacity: [0.7, 1, 0.7],
               }}
@@ -148,7 +180,7 @@ const HomePage = () => {
                 delay: 0.5,
               }}
             >
-              ⚡ Get Professional Solutions at Unbeatable Prices
+              ⚡ Professional solutions tailored to your business needs
             </motion.p>
           </motion.div>
 
