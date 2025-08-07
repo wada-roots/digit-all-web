@@ -123,8 +123,8 @@ const HomePage = () => {
         >
           {/* Header with Profile Buttons */}
           <motion.div className="text-center mb-12" variants={itemVariants}>
-            <motion.h2
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight"
+            <motion.div
+              className="mb-8"
               animate={{
                 scale: [1, 1.01, 1],
               }}
@@ -134,8 +134,25 @@ const HomePage = () => {
                 ease: "easeInOut",
               }}
             >
-              Choose Your Professional Profile
-            </motion.h2>
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-black mb-2 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight tracking-tight">
+                DIGIT-ALL
+              </h1>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold bg-gradient-to-r from-neon-yellow via-white to-neon-blue bg-clip-text text-transparent leading-tight tracking-wide">
+                MARKETING SOLUTIONS
+              </h2>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-neon-blue mt-2 tracking-widest uppercase">
+                PROFILES
+              </h3>
+
+              {/* Decorative Elements */}
+              <div className="flex justify-center items-center mt-4 space-x-2">
+                <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-neon-blue"></div>
+                <div className="w-2 h-2 bg-neon-yellow rounded-full animate-pulse"></div>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-neon-blue via-neon-yellow to-neon-blue"></div>
+                <div className="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></div>
+                <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-neon-yellow"></div>
+              </div>
+            </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
               <motion.div
