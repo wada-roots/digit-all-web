@@ -26,6 +26,17 @@ const HomePage = () => {
     "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg"
   ];
 
+  // Auto-rotate carousel every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        (prevIndex + 1) % backgroundImages.length
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
+
   const handleOrderClick = (serviceType: string) => {
     setActivePopup(serviceType);
   };
