@@ -100,7 +100,7 @@ const HomePage = () => {
   return (
     <div className="relative">
       {/* Persuasive Hero Section */}
-      <section className="relative py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-8 sm:py-12 lg:py-16 overflow-hidden">
         {/* Carousel Background */}
         <div className="absolute inset-0">
           {backgroundImages.map((image, index) => (
@@ -159,7 +159,7 @@ const HomePage = () => {
 
         {/* Special Offers Cards */}
         <motion.div
-          className="relative z-10 max-w-6xl mx-auto"
+          className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
