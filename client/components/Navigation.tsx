@@ -31,7 +31,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 sm:top-10 w-full z-50 bg-white shadow-md border-b border-gray-200">
+    <nav className="fixed top-0 sm:top-8 w-full z-50 bg-white shadow-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
@@ -81,7 +81,7 @@ const Navigation = () => {
               size="icon"
               className="text-gray-700 hover:text-green-600 p-2"
               onClick={() =>
-                window.open("https://wa.me/254700123456", "_blank")
+                window.open("https://wa.me/254738849148", "_blank")
               }
             >
               <MessageCircle className="h-5 w-5" />
@@ -105,7 +105,7 @@ const Navigation = () => {
               size="icon"
               className="text-gray-700 hover:text-green-600 p-2"
               onClick={() =>
-                window.open("https://wa.me/254700123456", "_blank")
+                window.open("https://wa.me/254738849148", "_blank")
               }
             >
               <MessageCircle className="h-5 w-5" />
