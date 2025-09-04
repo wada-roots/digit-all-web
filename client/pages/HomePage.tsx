@@ -276,7 +276,7 @@ const HomePage = () => {
             >
               <div className="relative h-48 mb-6 rounded-xl overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg"
+                  src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg"
                   alt="Personal Website Design"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
