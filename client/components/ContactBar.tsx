@@ -8,15 +8,15 @@ const ContactBar = () => {
         <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">
           <div className="flex items-center space-x-2">
             <Phone className="h-4 w-4" />
-            <span>+254 700 123 456</span>
+            <span>+254 738 849 148</span>
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="h-4 w-4" />
-            <span>info@dms.co.ke</span>
+            <span>info@digitallke.net</span>
           </div>
           <div className="flex items-center space-x-2">
             <Clock className="h-4 w-4" />
-            <span>Mon - Fri: 8:00 AM - 6:00 PM</span>
+            <span>Mon - Sun: 8:00 AM - 6:00 PM</span>
           </div>
         </div>
 

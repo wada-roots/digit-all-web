@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import ContactBar from "./ContactBar";
 import Navigation from "./Navigation";
@@ -34,7 +35,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi! I'm interested in your services.");
-    window.open(`https://wa.me/1234567890?text=${message}`, "_blank");
+    window.open(`https://wa.me/254738849148?text=${message}`, "_blank");
   };
 
   return (
@@ -43,7 +44,16 @@ const Layout = ({ children }: LayoutProps) => {
       <Navigation />
 
       {/* Main Content */}
-      <main className="pt-28 lg:pt-32">{children}</main>
+      <main className="pt-28 lg:pt-32">
+        <motion.div
+          key={location.pathname}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          {children}
+        </motion.div>
+      </main>
 
       {/* Footer */}
       <Footer />

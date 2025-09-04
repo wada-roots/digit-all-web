@@ -1,7 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronDown, Play, Star, Zap, Rocket, Eye } from "lucide-react";
+import {
+  ChevronDown,
+  Play,
+  Star,
+  Zap,
+  Rocket,
+  Eye,
+  Globe,
+  Smartphone,
+  Share2,
+  Camera,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Modal from "@/components/Modal";
@@ -16,6 +27,26 @@ import PersonalWebsitePopup from "@/components/popups/PersonalWebsitePopup";
 
 const HomePage = () => {
   const [activePopup, setActivePopup] = useState<string | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Carousel background images
+  const backgroundImages = [
+    "https://images.pexels.com/photos/1181316/pexels-photo-1181316.jpeg",
+    "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg",
+    "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
+    "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
+  ];
+
+  // Auto-rotate carousel every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % backgroundImages.length,
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
 
   const handleOrderClick = (serviceType: string) => {
     setActivePopup(serviceType);
@@ -70,13 +101,25 @@ const HomePage = () => {
     <div className="relative">
       {/* Persuasive Hero Section */}
       <section className="relative py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Animated Background */}
+        {/* Carousel Background */}
         <div className="absolute inset-0">
-          <img
-            src="https://images.pexels.com/photos/1181316/pexels-photo-1181316.jpeg"
-            alt="Tech Background"
-            className="w-full h-full object-cover"
-          />
+          {backgroundImages.map((image, index) => (
+            <motion.img
+              key={index}
+              src={image}
+              alt={`Tech Background ${index + 1}`}
+              className="absolute inset-0 w-full h-full object-cover"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: index === currentImageIndex ? 1 : 0,
+                scale: index === currentImageIndex ? 1.05 : 1,
+              }}
+              transition={{
+                duration: 1.5,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
           <div className="absolute inset-0 bg-gradient-to-br from-space-darker/80 via-space-dark/70 to-blue-900/60"></div>
           {/* Animated Stars */}
           <div className="absolute inset-0">
@@ -121,12 +164,12 @@ const HomePage = () => {
           initial="hidden"
           animate="visible"
         >
-          {/* Header */}
+          {/* Header with Profile Buttons */}
           <motion.div className="text-center mb-12" variants={itemVariants}>
-            <motion.h1
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight"
+            <motion.div
+              className="mb-8"
               animate={{
-                scale: [1, 1.02, 1],
+                scale: [1, 1.01, 1],
               }}
               transition={{
                 duration: 3,
@@ -134,11 +177,90 @@ const HomePage = () => {
                 ease: "easeInOut",
               }}
             >
-              🔥 LIMITED TIME OFFERS
-            </motion.h1>
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-black mb-2 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight tracking-tight">
+                DIGIT-ALL
+              </h1>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold bg-gradient-to-r from-neon-yellow via-white to-neon-blue bg-clip-text text-transparent leading-tight tracking-wide">
+                MARKETING SOLUTIONS
+              </h2>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-neon-blue mt-2 tracking-widest uppercase">
+                PROFILES
+              </h3>
+
+              {/* Decorative Elements */}
+              <div className="flex justify-center items-center mt-4 space-x-2">
+                <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-neon-blue"></div>
+                <div className="w-2 h-2 bg-neon-yellow rounded-full animate-pulse"></div>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-neon-blue via-neon-yellow to-neon-blue"></div>
+                <div className="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></div>
+                <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-neon-yellow"></div>
+              </div>
+            </motion.div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center max-w-3xl mx-auto">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-1"
+              >
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-neon-blue to-blue-600 hover:from-blue-600 hover:to-neon-blue text-white px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+                  onClick={() => window.open("/templates", "_self")}
+                >
+                  <Globe className="w-5 h-5 mr-2" />
+                  Company Profile
+                </Button>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-1"
+              >
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-neon-yellow to-yellow-500 hover:from-yellow-500 hover:to-neon-yellow text-space-dark px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+                  onClick={() => handleOrderClick("app")}
+                >
+                  <Smartphone className="w-5 h-5 mr-2" />
+                  Apps and Web Development Profile
+                </Button>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-1"
+              >
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-blue-500 to-neon-blue hover:from-neon-blue hover:to-blue-500 text-white px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+                  onClick={() => handleOrderClick("social-media")}
+                >
+                  <Share2 className="w-5 h-5 mr-2" />
+                  Social Media Management Profile
+                </Button>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-1"
+              >
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-pink-500 to-neon-yellow hover:from-neon-yellow hover:to-pink-500 text-space-dark px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+                  onClick={() => handleOrderClick("photography")}
+                >
+                  <Camera className="w-5 h-5 mr-2" />
+                  Photography & Videography Profile
+                </Button>
+              </motion.div>
+            </div>
 
             <motion.p
-              className="text-xl sm:text-2xl text-neon-blue font-semibold"
+              className="text-lg text-foreground/80 mt-6"
               animate={{
                 opacity: [0.7, 1, 0.7],
               }}
@@ -148,7 +270,7 @@ const HomePage = () => {
                 delay: 0.5,
               }}
             >
-              ⚡ Get Professional Solutions at Unbeatable Prices
+              ⚡ Professional solutions tailored to your business needs
             </motion.p>
           </motion.div>
 
@@ -165,7 +287,7 @@ const HomePage = () => {
             >
               <div className="relative h-48 mb-6 rounded-xl overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg"
+                  src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg"
                   alt="Personal Website Design"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
@@ -372,7 +494,7 @@ const HomePage = () => {
               {
                 id: "website",
                 image:
-                  "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg",
+                  "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
                 title: "Website Development",
                 description: "Lightning-fast, mobile-responsive websites",
                 caption: "Get your website template in 10 minutes",
@@ -381,7 +503,7 @@ const HomePage = () => {
               {
                 id: "app",
                 image:
-                  "https://images.pexels.com/photos/7947951/pexels-photo-7947951.jpeg",
+                  "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
                 title: "App Development",
                 description: "Native iOS & Android apps that scale",
                 caption: "80% of your app is done with our templates",
