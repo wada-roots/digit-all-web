@@ -229,7 +229,7 @@ const HomePage = () => {
                   onClick={() => handleOrderClick("app")}
                 >
                   <Smartphone className="w-5 h-5 mr-2" />
-                  Apps and Web Development Profile
+                  Apps Dev Profile
                 </Button>
               </motion.div>
 
@@ -241,10 +241,10 @@ const HomePage = () => {
                 <Button
                   size="lg"
                   className="w-full bg-gradient-to-r from-blue-500 to-neon-blue hover:from-neon-blue hover:to-blue-500 text-white px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                  onClick={() => handleOrderClick("social-media")}
+                  onClick={() => handleOrderClick("website")}
                 >
-                  <Share2 className="w-5 h-5 mr-2" />
-                  Social Media Management Profile
+                  <Rocket className="w-5 h-5 mr-2" />
+                  Web Development Profile
                 </Button>
               </motion.div>
 
