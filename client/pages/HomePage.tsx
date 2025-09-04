@@ -206,7 +206,7 @@ const HomePage = () => {
                 <Button
                   size="lg"
                   className="w-full bg-gradient-to-r from-neon-blue to-blue-600 hover:from-blue-600 hover:to-neon-blue text-white px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                  onClick={() => window.open("/templates", "_self")}
+                  onClick={() => window.open('https://cdn.builder.io/o/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F2dc8aff0d06b4cfea5c3a84b990b5847?alt=media&token=66510cc4-d5bb-4a73-8cef-08db9ab46e2f&apiKey=afa4cdfd9cfb4fbfb22388ee70a44e49', '_blank')}
                 >
                   <Globe className="w-5 h-5 mr-2" />
                   Company Profile
