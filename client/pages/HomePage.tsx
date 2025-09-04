@@ -229,7 +229,7 @@ const HomePage = () => {
                   onClick={() => handleOrderClick("app")}
                 >
                   <Smartphone className="w-5 h-5 mr-2" />
-                  Apps Dev Profile
+                  Apps Development Profile
                 </Button>
               </motion.div>
 
