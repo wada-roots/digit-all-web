@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronDown, Play, Star, Zap, Rocket, Eye, Globe, Smartphone } from "lucide-react";
+import { ChevronDown, Play, Star, Zap, Rocket, Eye, Globe, Smartphone, Share2, Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Modal from "@/components/Modal";
@@ -186,7 +186,7 @@ const HomePage = () => {
               </div>
             </motion.div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center max-w-3xl mx-auto">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -213,7 +213,37 @@ const HomePage = () => {
                   onClick={() => handleOrderClick('app')}
                 >
                   <Smartphone className="w-5 h-5 mr-2" />
-                  App Development Profile
+                  Apps and Web Development Profile
+                </Button>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-1"
+              >
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-blue-500 to-neon-blue hover:from-neon-blue hover:to-blue-500 text-white px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+                  onClick={() => handleOrderClick('social-media')}
+                >
+                  <Share2 className="w-5 h-5 mr-2" />
+                  Social Media Management Profile
+                </Button>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-1"
+              >
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-pink-500 to-neon-yellow hover:from-neon-yellow hover:to-pink-500 text-space-dark px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+                  onClick={() => handleOrderClick('photography')}
+                >
+                  <Camera className="w-5 h-5 mr-2" />
+                  Photography & Videography Profile
                 </Button>
               </motion.div>
             </div>
