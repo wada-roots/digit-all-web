@@ -1,7 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronDown, Play, Star, Zap, Rocket, Eye, Globe, Smartphone, Share2, Camera } from "lucide-react";
+import {
+  ChevronDown,
+  Play,
+  Star,
+  Zap,
+  Rocket,
+  Eye,
+  Globe,
+  Smartphone,
+  Share2,
+  Camera,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Modal from "@/components/Modal";
@@ -23,14 +34,14 @@ const HomePage = () => {
     "https://images.pexels.com/photos/1181316/pexels-photo-1181316.jpeg",
     "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg",
     "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
-    "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg"
+    "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
   ];
 
   // Auto-rotate carousel every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        (prevIndex + 1) % backgroundImages.length
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % backgroundImages.length,
       );
     }, 5000);
 
@@ -101,11 +112,11 @@ const HomePage = () => {
               initial={{ opacity: 0 }}
               animate={{
                 opacity: index === currentImageIndex ? 1 : 0,
-                scale: index === currentImageIndex ? 1.05 : 1
+                scale: index === currentImageIndex ? 1.05 : 1,
               }}
               transition={{
                 duration: 1.5,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             />
           ))}
@@ -195,7 +206,7 @@ const HomePage = () => {
                 <Button
                   size="lg"
                   className="w-full bg-gradient-to-r from-neon-blue to-blue-600 hover:from-blue-600 hover:to-neon-blue text-white px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                  onClick={() => window.open('/templates', '_self')}
+                  onClick={() => window.open("/templates", "_self")}
                 >
                   <Globe className="w-5 h-5 mr-2" />
                   Company Profile
@@ -210,7 +221,7 @@ const HomePage = () => {
                 <Button
                   size="lg"
                   className="w-full bg-gradient-to-r from-neon-yellow to-yellow-500 hover:from-yellow-500 hover:to-neon-yellow text-space-dark px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                  onClick={() => handleOrderClick('app')}
+                  onClick={() => handleOrderClick("app")}
                 >
                   <Smartphone className="w-5 h-5 mr-2" />
                   Apps and Web Development Profile
@@ -225,7 +236,7 @@ const HomePage = () => {
                 <Button
                   size="lg"
                   className="w-full bg-gradient-to-r from-blue-500 to-neon-blue hover:from-neon-blue hover:to-blue-500 text-white px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                  onClick={() => handleOrderClick('social-media')}
+                  onClick={() => handleOrderClick("social-media")}
                 >
                   <Share2 className="w-5 h-5 mr-2" />
                   Social Media Management Profile
@@ -240,7 +251,7 @@ const HomePage = () => {
                 <Button
                   size="lg"
                   className="w-full bg-gradient-to-r from-pink-500 to-neon-yellow hover:from-neon-yellow hover:to-pink-500 text-space-dark px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                  onClick={() => handleOrderClick('photography')}
+                  onClick={() => handleOrderClick("photography")}
                 >
                   <Camera className="w-5 h-5 mr-2" />
                   Photography & Videography Profile
