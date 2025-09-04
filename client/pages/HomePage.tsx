@@ -483,7 +483,7 @@ const HomePage = () => {
               {
                 id: "website",
                 image:
-                  "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg",
+                  "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
                 title: "Website Development",
                 description: "Lightning-fast, mobile-responsive websites",
                 caption: "Get your website template in 10 minutes",
@@ -492,7 +492,7 @@ const HomePage = () => {
               {
                 id: "app",
                 image:
-                  "https://images.pexels.com/photos/7947951/pexels-photo-7947951.jpeg",
+                  "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
                 title: "App Development",
                 description: "Native iOS & Android apps that scale",
                 caption: "80% of your app is done with our templates",
