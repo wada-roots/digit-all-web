@@ -105,11 +105,11 @@ const Footer = () => {
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <Phone className="w-4 h-4 text-neon-blue mr-3" />
-                    <span className="text-foreground/90">+254 700 123 456</span>
+                    <span className="text-foreground/90">+254 738 849 148</span>
                   </div>
                   <div className="flex items-center">
                     <Mail className="w-4 h-4 text-neon-blue mr-3" />
-                    <span className="text-foreground/90">info@dms.co.ke</span>
+                    <span className="text-foreground/90">info@digitallke.net</span>
                   </div>
                   <div className="flex items-center">
                     <MapPin className="w-4 h-4 text-neon-blue mr-3" />
@@ -207,7 +207,7 @@ const Footer = () => {
                   <Button
                     className="w-full bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white font-semibold py-2 rounded-full transition-all duration-300"
                     onClick={() =>
-                      window.open("https://wa.me/254700123456", "_blank")
+                      window.open("https://wa.me/254738849148", "_blank")
                     }
                   >
                     <MessageCircle className="w-4 h-4 mr-2" />
