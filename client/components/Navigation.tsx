@@ -35,11 +35,11 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
+          <Link to="/" className="shrink">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fad7ac88088ca4b6199701f15e8ea1f6d?format=webp&width=800"
               alt="DMS Logo"
-              className="h-10 w-auto"
+              className="h-8 sm:h-10 w-auto"
             />
           </Link>
 
@@ -79,7 +79,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="text-gray-700 hover:text-green-600 p-2"
+              className="text-gray-900 hover:text-green-600 p-2"
               onClick={() =>
                 window.open("https://wa.me/254738849148", "_blank")
               }
@@ -94,7 +94,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="text-gray-700 hover:text-blue-600 p-2"
+              className="text-gray-900 hover:text-blue-600 p-2"
             >
               <Search className="h-5 w-5" />
             </Button>
@@ -103,7 +103,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="text-gray-700 hover:text-green-600 p-2"
+              className="text-gray-900 hover:text-green-600 p-2"
               onClick={() =>
                 window.open("https://wa.me/254738849148", "_blank")
               }
@@ -116,7 +116,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 p-2"
+              className="text-gray-900 hover:text-blue-600 p-2"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
