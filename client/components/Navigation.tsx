@@ -90,15 +90,6 @@ const Navigation = () => {
 
           {/* Mobile actions and menu button */}
           <div className="lg:hidden flex items-center space-x-1">
-            {/* Search Icon - Visible on mobile */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-gray-900 hover:text-blue-600 p-2"
-            >
-              <Search className="h-5 w-5" />
-            </Button>
-
             {/* WhatsApp Icon - Visible on mobile */}
             <Button
               variant="ghost"
@@ -109,6 +100,15 @@ const Navigation = () => {
               }
             >
               <MessageCircle className="h-5 w-5" />
+            </Button>
+
+            {/* Search Icon - Visible on mobile */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-gray-900 hover:text-blue-600 p-2"
+            >
+              <Search className="h-5 w-5" />
             </Button>
 
             {/* Mobile menu button */}
