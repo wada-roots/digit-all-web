@@ -14,7 +14,6 @@ import {
   Heart,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import { motion } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
