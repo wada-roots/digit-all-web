@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Construction, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-import { motion } from 'framer-motion';
 
 interface PlaceholderPageProps {
   title: string;
