@@ -165,43 +165,61 @@ const HomePage = () => {
           animate="visible"
         >
           {/* Header with Profile Buttons */}
-          <motion.div className="text-center mb-12" variants={itemVariants}>
-            <motion.div
-              className="mb-8"
-              animate={{
-                scale: [1, 1.01, 1],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-black mb-2 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight tracking-tight">
-                DEAL
-              </h1>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold bg-gradient-to-r from-neon-yellow via-white to-neon-blue bg-clip-text text-transparent leading-tight tracking-wide">
-                MOJA SAFI
-              </h2>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-neon-blue mt-2 tracking-widest uppercase">
-                PROFILES
-              </h3>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-12">
+            {/* Left Content */}
+            <motion.div className="flex-1 text-center lg:text-left" variants={itemVariants}>
+              <motion.div
+                className="mb-8"
+                animate={{
+                  scale: [1, 1.01, 1],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black mb-2 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight tracking-tight">
+                  DEAL
+                </h1>
+                <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold bg-gradient-to-r from-neon-yellow via-white to-neon-blue bg-clip-text text-transparent leading-tight tracking-wide">
+                  MOJA SAFI
+                </h2>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-neon-blue mt-2 tracking-widest uppercase">
+                  PROFILES
+                </h3>
 
-              {/* Decorative Elements */}
-              <div className="flex justify-center items-center mt-4 space-x-2">
-                <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-neon-blue"></div>
-                <div className="w-2 h-2 bg-neon-yellow rounded-full animate-pulse"></div>
-                <div className="w-16 h-0.5 bg-gradient-to-r from-neon-blue via-neon-yellow to-neon-blue"></div>
-                <div className="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></div>
-                <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-neon-yellow"></div>
-              </div>
+                {/* Decorative Elements */}
+                <div className="flex justify-center lg:justify-start items-center mt-4 space-x-2">
+                  <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-neon-blue"></div>
+                  <div className="w-2 h-2 bg-neon-yellow rounded-full animate-pulse"></div>
+                  <div className="w-16 h-0.5 bg-gradient-to-r from-neon-blue via-neon-yellow to-neon-blue"></div>
+                  <div className="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></div>
+                  <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-neon-yellow"></div>
+                </div>
+              </motion.div>
+
+              <motion.p
+                className="text-lg text-foreground/80"
+                animate={{
+                  opacity: [0.7, 1, 0.7],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  delay: 0.5,
+                }}
+              >
+                ⚡ Professional solutions tailored to your business needs
+              </motion.p>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center max-w-3xl mx-auto">
+            {/* Right Profile Buttons */}
+            <motion.div className="flex-1 flex flex-col gap-4 w-full lg:w-auto" variants={itemVariants}>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex-1"
+                className="w-full"
               >
                 <Button
                   size="lg"
@@ -218,12 +236,10 @@ const HomePage = () => {
                 </Button>
               </motion.div>
 
-
-
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex-1"
+                className="w-full"
               >
                 <Button
                   size="lg"
@@ -234,24 +250,8 @@ const HomePage = () => {
                   Digital Marketing
                 </Button>
               </motion.div>
-
-
-            </div>
-
-            <motion.p
-              className="text-lg text-foreground/80 mt-6"
-              animate={{
-                opacity: [0.7, 1, 0.7],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                delay: 0.5,
-              }}
-            >
-              ⚡ Professional solutions tailored to your business needs
-            </motion.p>
-          </motion.div>
+            </motion.div>
+          </div>
 
           {/* Offer Cards */}
           <motion.div
