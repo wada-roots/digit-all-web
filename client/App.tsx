@@ -42,40 +42,38 @@ const App = () => (
       <BrowserRouter>
         <AuthProvider>
           <Layout>
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/solutions/digital-marketing" element={<DigitalMarketingSolutions />} />
-                <Route path="/solutions/web-seo-ecommerce" element={<WebSEOEcommerceSolutions />} />
-                <Route path="/solutions/media-creatives" element={<MediaCreativesSolutions />} />
-                <Route path="/solutions/software-development" element={<WebDevelopment />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/templates" element={<Templates />} />
-                <Route
-                  path="/business-card-templates"
-                  element={<BusinessCardTemplates />}
-                />
-                <Route path="/login" element={<Login />} />
-                <Route
-                  path="/affiliates"
-                  element={
-                    <ProtectedRoute>
-                      <AffiliateDashboard />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/kk"
-                  element={
-                    <AdminRoute>
-                      <AdminDashboard />
-                    </AdminRoute>
-                  }
-                />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/solutions/digital-marketing" element={<DigitalMarketingSolutions />} />
+              <Route path="/solutions/web-seo-ecommerce" element={<WebSEOEcommerceSolutions />} />
+              <Route path="/solutions/media-creatives" element={<MediaCreativesSolutions />} />
+              <Route path="/solutions/software-development" element={<WebDevelopment />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/templates" element={<Templates />} />
+              <Route
+                path="/business-card-templates"
+                element={<BusinessCardTemplates />}
+              />
+              <Route path="/login" element={<Login />} />
+              <Route
+                path="/affiliates"
+                element={
+                  <ProtectedRoute>
+                    <AffiliateDashboard />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/kk"
+                element={
+                  <AdminRoute>
+                    <AdminDashboard />
+                  </AdminRoute>
+                }
+              />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
           </Layout>
         </AuthProvider>
       </BrowserRouter>
