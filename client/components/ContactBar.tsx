@@ -16,7 +16,7 @@ const ContactBar = () => {
           </div>
           <div className="flex items-center space-x-2">
             <Clock className="h-4 w-4" />
-            <span>Mon - Sun: 8:00 AM - 6:00 PM</span>
+            <span>24/7</span>
           </div>
         </div>
 
