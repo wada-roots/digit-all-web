@@ -1,4 +1,4 @@
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
@@ -6,13 +6,6 @@ import ContactBar from "./ContactBar";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import { Button } from "./ui/button";
-
-const FallbackLoader = () => (
-  <div className="flex flex-col items-center justify-center min-h-[60vh]">
-    <div className="animate-spin rounded-full h-16 w-16 border-4 border-space-light border-t-neon-blue border-r-neon-yellow mb-4"></div>
-    <p className="text-foreground/70 text-sm">Loading page...</p>
-  </div>
-);
 
 interface LayoutProps {
   children: React.ReactNode;
