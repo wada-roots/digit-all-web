@@ -9,20 +9,20 @@ import { AuthProvider } from "@/context/AuthContext";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 import { AdminRoute } from "@/components/auth/AdminRoute";
 
-// Lazy load pages
-const HomePage = lazy(() => import("./pages/HomePage"));
-const Services = lazy(() => import("./pages/Services"));
-const WebDevelopment = lazy(() => import("./pages/WebDevelopment"));
-const DigitalMarketingSolutions = lazy(() => import("./pages/DigitalMarketingSolutions"));
-const WebSEOEcommerceSolutions = lazy(() => import("./pages/WebSEOEcommerceSolutions"));
-const MediaCreativesSolutions = lazy(() => import("./pages/MediaCreativesSolutions"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Templates = lazy(() => import("./pages/Templates"));
-const BusinessCardTemplates = lazy(() => import("./pages/BusinessCardTemplates"));
-const NotFound = lazy(() => import("./pages/NotFound"));
-const AffiliateDashboard = lazy(() => import("./pages/AffiliateDashboard"));
-const Login = lazy(() => import("./pages/Login"));
-const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
+// Import pages
+import HomePage from "./pages/HomePage";
+import Services from "./pages/Services";
+import WebDevelopment from "./pages/WebDevelopment";
+import DigitalMarketingSolutions from "./pages/DigitalMarketingSolutions";
+import WebSEOEcommerceSolutions from "./pages/WebSEOEcommerceSolutions";
+import MediaCreativesSolutions from "./pages/MediaCreativesSolutions";
+import Contact from "./pages/Contact";
+import Templates from "./pages/Templates";
+import BusinessCardTemplates from "./pages/BusinessCardTemplates";
+import NotFound from "./pages/NotFound";
+import AffiliateDashboard from "./pages/AffiliateDashboard";
+import Login from "./pages/Login";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const queryClient = new QueryClient();
 
