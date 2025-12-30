@@ -193,7 +193,7 @@ const WebDevelopment = () => {
         >
           <motion.div variants={itemVariants}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight">
-              Web & App Development
+              Software Development
             </h1>
             <p className="text-xl sm:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               We build digital experiences that users love and businesses depend
@@ -281,6 +281,7 @@ const WebDevelopment = () => {
                     <img
                       src={service.image}
                       alt={service.title}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 to-transparent" />
@@ -366,6 +367,7 @@ const WebDevelopment = () => {
                     <img
                       src={project.image}
                       alt={project.title}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 to-transparent" />

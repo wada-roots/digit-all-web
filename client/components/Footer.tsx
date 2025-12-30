@@ -90,7 +90,7 @@ const Footer = () => {
               >
                 <div className="mb-6">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fad7ac88088ca4b6199701f15e8ea1f6d?format=webp&width=800"
+                    src="/logo.png"
                     alt="DMS Logo"
                     className="h-12 w-auto mb-4"
                   />
