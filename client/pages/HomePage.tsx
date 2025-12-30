@@ -178,10 +178,10 @@ const HomePage = () => {
               }}
             >
               <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-black mb-2 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight tracking-tight">
-                DIGIT-ALL
+                DEAL
               </h1>
               <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold bg-gradient-to-r from-neon-yellow via-white to-neon-blue bg-clip-text text-transparent leading-tight tracking-wide">
-                MARKETING SOLUTIONS
+                MOJA SAFI
               </h2>
               <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-neon-blue mt-2 tracking-widest uppercase">
                 PROFILES
@@ -218,20 +218,7 @@ const HomePage = () => {
                 </Button>
               </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex-1"
-              >
-                <Button
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-neon-yellow to-yellow-500 hover:from-yellow-500 hover:to-neon-yellow text-space-dark px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                  onClick={() => handleOrderClick("app")}
-                >
-                  <Smartphone className="w-5 h-5 mr-2" />
-                  Apps Development Profile
-                </Button>
-              </motion.div>
+
 
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -244,24 +231,11 @@ const HomePage = () => {
                   onClick={() => handleOrderClick("website")}
                 >
                   <Rocket className="w-5 h-5 mr-2" />
-                  Web Development Profile
+                  Digital Marketing
                 </Button>
               </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex-1"
-              >
-                <Button
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-pink-500 to-neon-yellow hover:from-neon-yellow hover:to-pink-500 text-space-dark px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                  onClick={() => handleOrderClick("photography")}
-                >
-                  <Camera className="w-5 h-5 mr-2" />
-                  Photography & Videography Profile
-                </Button>
-              </motion.div>
+
             </div>
 
             <motion.p
@@ -294,6 +268,7 @@ const HomePage = () => {
                 <img
                   src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg"
                   alt="Personal Website Design"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 to-transparent" />
@@ -317,10 +292,10 @@ const HomePage = () => {
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-3xl font-bold text-neon-blue">
-                    Ksh 10,000
+                    $99
                   </span>
                   <span className="text-sm text-foreground/60 line-through">
-                    Ksh 25,000
+                    $199
                   </span>
                 </div>
                 <ul className="space-y-2 text-sm text-foreground/80">
@@ -361,6 +336,7 @@ const HomePage = () => {
                 <img
                   src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg"
                   alt="Affiliate Marketing Strategy"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 to-transparent" />
@@ -413,7 +389,7 @@ const HomePage = () => {
 
               <Button
                 className="w-full bg-gradient-to-r from-neon-yellow to-neon-blue hover:from-neon-blue hover:to-neon-yellow text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
-                onClick={() => handleOrderClick("affiliate-marketing")}
+                onClick={() => window.location.href = "/login"}
               >
                 START EARNING!!
               </Button>
@@ -500,8 +476,8 @@ const HomePage = () => {
                 id: "website",
                 image:
                   "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
-                title: "Website Development",
-                description: "Lightning-fast, mobile-responsive websites",
+                title: "Software Development",
+                description: "Lightning-fast, mobile-responsive websites & apps",
                 caption: "Get your website template in 10 minutes",
                 price: "From $1,299",
               },
@@ -536,6 +512,7 @@ const HomePage = () => {
                     <img
                       src={service.image}
                       alt={service.title}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 to-transparent" />
@@ -562,12 +539,11 @@ const HomePage = () => {
                         <Button
                           size="sm"
                           onClick={() => handleOrderClick(service.id)}
-                          className={`bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-4 py-2 text-sm rounded-full shadow-lg transition-all duration-300 ${
-                            service.id === "social-media" ||
+                          className={`bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-4 py-2 text-sm rounded-full shadow-lg transition-all duration-300 ${service.id === "social-media" ||
                             service.id === "seo"
-                              ? "flex-1"
-                              : "flex-1"
-                          }`}
+                            ? "flex-1"
+                            : "flex-1"
+                            }`}
                         >
                           Order Now
                         </Button>
