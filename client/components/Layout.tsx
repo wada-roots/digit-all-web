@@ -44,8 +44,15 @@ const Layout = ({ children }: LayoutProps) => {
       <Navigation />
 
       {/* Main Content */}
-      <main className="pt-16 sm:pt-24 lg:pt-28 min-h-screen">
-        {children}
+      <main className="pt-16 sm:pt-24 lg:pt-28">
+        <motion.div
+          key={location.pathname}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
+          {children}
+        </motion.div>
       </main>
 
       {/* Footer */}
