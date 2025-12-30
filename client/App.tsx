@@ -28,9 +28,9 @@ const queryClient = new QueryClient();
 
 // Simple Loader Component
 const PageLoader = () => (
-  <div className="flex flex-col items-center justify-center min-h-screen bg-space-dark">
-    <div className="animate-spin rounded-full h-16 w-16 border-4 border-space-light border-t-neon-blue border-r-neon-yellow mb-4"></div>
-    <p className="text-foreground/70 text-sm">Loading...</p>
+  <div className="flex flex-col items-center justify-center min-h-screen pt-32">
+    <div className="animate-spin rounded-full h-20 w-20 border-4 border-neon-blue/30 border-t-neon-blue border-r-neon-yellow mb-4"></div>
+    <p className="text-neon-blue font-semibold">Loading page...</p>
   </div>
 );
 
