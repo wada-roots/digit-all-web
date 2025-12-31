@@ -30,6 +30,14 @@ const Navigation = () => {
     { name: "Get in Touch", href: "/contact" },
   ];
 
+  const staticNavItems = [
+    { name: "Home", href: "/" },
+    { name: "Digital Marketing", href: "/solutions/digital-marketing" },
+    { name: "Media & Creatives", href: "/solutions/media-creatives" },
+    { name: "Software Development", href: "/solutions/web-seo-ecommerce" },
+    { name: "Get in Touch", href: "/contact" },
+  ];
+
   const solutionsCategories = [
     {
       title: "Digital Marketing",
