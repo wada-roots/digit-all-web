@@ -34,42 +34,105 @@ const Navigation = () => {
     {
       title: "Digital Marketing",
       items: [
-        { name: "Digital Marketing Services", href: "/solutions/digital-marketing" },
-        { name: "Sponsored Content & Banners", href: "/solutions/digital-marketing#banners" },
-        { name: "Public Relations Services", href: "/solutions/digital-marketing#pr" },
-        { name: "Events Digital Marketing", href: "/solutions/digital-marketing#events" },
-        { name: "Influencer Marketing", href: "/solutions/digital-marketing#influencer" },
-        { name: "Social Media Marketing", href: "/solutions/digital-marketing#social-media" },
-        { name: "Google/PPC Advertising", href: "/solutions/digital-marketing#google-ppc" },
-        { name: "YouTube Advertising", href: "/solutions/digital-marketing#youtube" },
+        {
+          name: "Digital Marketing Services",
+          href: "/solutions/digital-marketing",
+        },
+        {
+          name: "Sponsored Content & Banners",
+          href: "/solutions/digital-marketing#banners",
+        },
+        {
+          name: "Public Relations Services",
+          href: "/solutions/digital-marketing#pr",
+        },
+        {
+          name: "Events Digital Marketing",
+          href: "/solutions/digital-marketing#events",
+        },
+        {
+          name: "Influencer Marketing",
+          href: "/solutions/digital-marketing#influencer",
+        },
+        {
+          name: "Social Media Marketing",
+          href: "/solutions/digital-marketing#social-media",
+        },
+        {
+          name: "Google/PPC Advertising",
+          href: "/solutions/digital-marketing#google-ppc",
+        },
+        {
+          name: "YouTube Advertising",
+          href: "/solutions/digital-marketing#youtube",
+        },
         { name: "Shopping Ads", href: "/solutions/digital-marketing#shopping" },
-        { name: "TikTok Advertising", href: "/solutions/digital-marketing#tiktok" },
+        {
+          name: "TikTok Advertising",
+          href: "/solutions/digital-marketing#tiktok",
+        },
         { name: "Email Marketing", href: "/solutions/digital-marketing#email" },
       ],
     },
     {
       title: "Websites, SEO & Ecommerce",
       items: [
-        { name: "Web Hosting & Domain Registration", href: "/solutions/web-seo-ecommerce#hosting" },
+        {
+          name: "Web Hosting & Domain Registration",
+          href: "/solutions/web-seo-ecommerce#hosting",
+        },
         { name: "Website Design", href: "/solutions/web-seo-ecommerce#design" },
-        { name: "Search Engine Optimization (SEO)", href: "/solutions/web-seo-ecommerce#seo" },
-        { name: "eCommerce Website Design", href: "/solutions/web-seo-ecommerce#ecommerce" },
-        { name: "Website Maintenance", href: "/solutions/web-seo-ecommerce#maintenance" },
-        { name: "Content Writing Services", href: "/solutions/web-seo-ecommerce#content" },
+        {
+          name: "Search Engine Optimization (SEO)",
+          href: "/solutions/web-seo-ecommerce#seo",
+        },
+        {
+          name: "eCommerce Website Design",
+          href: "/solutions/web-seo-ecommerce#ecommerce",
+        },
+        {
+          name: "Website Maintenance",
+          href: "/solutions/web-seo-ecommerce#maintenance",
+        },
+        {
+          name: "Content Writing Services",
+          href: "/solutions/web-seo-ecommerce#content",
+        },
       ],
     },
     {
       title: "BTL, Media & Creatives",
       items: [
-        { name: "Billboard Advertising", href: "/solutions/media-creatives#billboard" },
-        { name: "Roadshows & Activations", href: "/solutions/media-creatives#roadshows" },
-        { name: "Print Media Advertising", href: "/solutions/media-creatives#print" },
-        { name: "Experiential Marketing", href: "/solutions/media-creatives#experiential" },
-        { name: "Printing Services", href: "/solutions/media-creatives#printing" },
+        {
+          name: "Billboard Advertising",
+          href: "/solutions/media-creatives#billboard",
+        },
+        {
+          name: "Roadshows & Activations",
+          href: "/solutions/media-creatives#roadshows",
+        },
+        {
+          name: "Print Media Advertising",
+          href: "/solutions/media-creatives#print",
+        },
+        {
+          name: "Experiential Marketing",
+          href: "/solutions/media-creatives#experiential",
+        },
+        {
+          name: "Printing Services",
+          href: "/solutions/media-creatives#printing",
+        },
         { name: "Radio Advertising", href: "/solutions/media-creatives#radio" },
         { name: "Graphic Design", href: "/solutions/media-creatives#design" },
-        { name: "Photography Services", href: "/solutions/media-creatives#photography" },
-        { name: "Video Creation & Editing", href: "/solutions/media-creatives#video" },
+        {
+          name: "Photography Services",
+          href: "/solutions/media-creatives#photography",
+        },
+        {
+          name: "Video Creation & Editing",
+          href: "/solutions/media-creatives#video",
+        },
       ],
     },
   ];
