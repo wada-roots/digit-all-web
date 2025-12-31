@@ -60,10 +60,14 @@ const Layout = ({ children }: LayoutProps) => {
       {/* WhatsApp Float Button */}
       <Button
         onClick={handleWhatsAppClick}
-        className="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 group"
+        className="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group bg-transparent hover:bg-transparent border-none p-0"
         size="icon"
       >
-        <MessageCircle className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" />
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F3bb87a8f7c16426e87aba954a47669e9?format=webp&width=800"
+          alt="WhatsApp"
+          className="h-14 w-14 group-hover:scale-110 transition-transform duration-300"
+        />
       </Button>
 
       {/* Scroll Indicator */}
