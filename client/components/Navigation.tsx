@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Search, MessageCircle, ChevronDown } from "lucide-react";
+import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navigation = () => {
