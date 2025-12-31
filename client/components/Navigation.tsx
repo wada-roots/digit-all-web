@@ -158,8 +158,13 @@ const Navigation = () => {
               onClick={() =>
                 window.open("https://wa.me/254738849148", "_blank")
               }
+              className="p-0 bg-transparent hover:bg-transparent"
             >
-              <MessageCircle className="h-5 w-5 text-green-600" />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F3bb87a8f7c16426e87aba954a47669e9?format=webp&width=800"
+                alt="WhatsApp"
+                className="h-5 w-5"
+              />
             </Button>
 
             <Button
