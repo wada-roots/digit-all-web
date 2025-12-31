@@ -77,7 +77,7 @@ const Navigation = () => {
   return (
     <nav className="fixed top-8 w-full z-50 bg-white shadow-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-[86px]">
+        <div className="flex justify-between items-center h-[49px] mt-[33px]">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <img src="/logo.png" alt="DMS Logo" className="h-10 w-auto" />
