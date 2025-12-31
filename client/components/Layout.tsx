@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
 import ContactBar from "./ContactBar";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
