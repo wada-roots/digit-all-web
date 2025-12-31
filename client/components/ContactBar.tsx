@@ -2,7 +2,7 @@ import { Phone, Mail, Clock } from "lucide-react";
 
 const ContactBar = () => {
   return (
-    <div className="fixed top-0 w-full z-50 bg-blue-600 text-white py-2 px-4 sm:px-6 lg:px-8">
+    <div className="fixed top-0 w-full z-50 bg-blue-600 text-white py-1 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm gap-2 sm:gap-0">
         {/* Contact Info */}
         <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">
