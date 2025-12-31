@@ -185,9 +185,6 @@ const HomePage = () => {
                 <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold bg-gradient-to-r from-neon-yellow via-white to-neon-blue bg-clip-text text-transparent leading-tight tracking-wide">
                   MOJA SAFI
                 </h2>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-neon-blue mt-2 tracking-widest uppercase">
-                  PROFILES
-                </h3>
 
                 {/* Decorative Elements */}
                 <div className="flex justify-center lg:justify-start items-center mt-4 space-x-2">
@@ -216,6 +213,9 @@ const HomePage = () => {
 
             {/* Right Profile Buttons */}
             <motion.div className="flex-1 flex flex-col gap-4 w-full lg:w-auto" variants={itemVariants}>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-neon-blue tracking-widest uppercase text-center lg:text-left">
+                PROFILES
+              </h3>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
