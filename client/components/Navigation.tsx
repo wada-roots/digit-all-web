@@ -85,20 +85,17 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-1">
-            {/* Static Links */}
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors rounded-md ${
-                  location.pathname === item.href
-                    ? "text-neon-blue bg-blue-50"
-                    : "text-gray-700 hover:text-neon-blue hover:bg-gray-50"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {/* Home Link */}
+            <Link
+              to="/"
+              className={`px-3 py-2 text-sm font-medium transition-colors rounded-md ${
+                location.pathname === "/"
+                  ? "text-neon-blue bg-blue-50"
+                  : "text-gray-700 hover:text-neon-blue hover:bg-gray-50"
+              }`}
+            >
+              Home
+            </Link>
 
             {/* Solutions Dropdown */}
             <div className="relative group">
@@ -132,6 +129,21 @@ const Navigation = () => {
                 </div>
               </div>
             </div>
+
+            {/* Other Navigation Items */}
+            {navItems.slice(1).map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`px-3 py-2 text-sm font-medium transition-colors rounded-md ${
+                  location.pathname === item.href
+                    ? "text-neon-blue bg-blue-50"
+                    : "text-gray-700 hover:text-neon-blue hover:bg-gray-50"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile Menu */}
