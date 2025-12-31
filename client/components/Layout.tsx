@@ -44,7 +44,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Navigation />
 
       {/* Main Content */}
-      <main className="pt-16 sm:pt-24 lg:pt-28">
+      <main className="pt-20 sm:pt-32 lg:pt-36">
         <motion.div
           key={location.pathname}
           initial={{ opacity: 0 }}
