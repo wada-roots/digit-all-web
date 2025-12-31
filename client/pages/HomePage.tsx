@@ -122,7 +122,7 @@ const HomePage = () => {
           ))}
           <div className="absolute inset-0 bg-gradient-to-br from-space-darker/80 via-space-dark/70 to-blue-900/60"></div>
           {/* Animated Stars */}
-          <div className="absolute inset-0">
+          <div className="absolute left-0 right-0 bottom-0 -top-[13px]">
             {[...Array(30)].map((_, i) => (
               <motion.div
                 key={i}
