@@ -175,16 +175,13 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden mt-2 bg-white border-t border-gray-200">
-            {/* Mobile Static Links */}
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-neon-blue font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {/* Mobile Home Link */}
+            <Link
+              to="/"
+              className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-neon-blue font-medium"
+            >
+              Home
+            </Link>
 
             {/* Mobile Solutions Dropdown */}
             <div className="border-t border-gray-200">
@@ -221,6 +218,17 @@ const Navigation = () => {
                 </div>
               )}
             </div>
+
+            {/* Mobile Other Navigation Items */}
+            {navItems.slice(1).map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-neon-blue font-medium border-t border-gray-200"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
         )}
       </div>
