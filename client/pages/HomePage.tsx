@@ -41,6 +41,119 @@ const HomePage = () => {
     "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
   ];
 
+  // Portfolio data organized by categories
+  const portfolioData = [
+    {
+      id: "websites",
+      title: "Websites",
+      description: "Custom responsive websites we've built",
+      icon: Code2,
+      items: [
+        {
+          name: "Example Website 1",
+          description: "E-commerce platform with advanced features",
+          thumbnail: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+          url: "https://example.com",
+          type: "website",
+        },
+        {
+          name: "Example Website 2",
+          description: "Corporate business website",
+          thumbnail: "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
+          url: "https://example.com",
+          type: "website",
+        },
+        {
+          name: "Example Website 3",
+          description: "Service-based company site",
+          thumbnail: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg",
+          url: "https://example.com",
+          type: "website",
+        },
+      ],
+    },
+    {
+      id: "social-media",
+      title: "Social Media Marketing",
+      description: "Managed social media accounts with impressive growth",
+      icon: Share2,
+      items: [
+        {
+          name: "Client Facebook Page",
+          description: "Achieved 250K followers with organic growth",
+          thumbnail: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
+          url: "https://facebook.com",
+          platform: "Facebook",
+        },
+        {
+          name: "Client Instagram Account",
+          description: "E-commerce focused with 150K engaged followers",
+          thumbnail: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
+          url: "https://instagram.com",
+          platform: "Instagram",
+        },
+        {
+          name: "Client LinkedIn Profile",
+          description: "B2B content strategy driving 50K followers",
+          thumbnail: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+          url: "https://linkedin.com",
+          platform: "LinkedIn",
+        },
+      ],
+    },
+    {
+      id: "youtube",
+      title: "YouTube Management",
+      description: "YouTube channels we manage and optimize",
+      icon: Radio,
+      items: [
+        {
+          name: "Channel 1: Tech Reviews",
+          description: "500K+ subscribers | 2M+ monthly views",
+          thumbnail: "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg",
+          url: "https://youtube.com",
+          subscribers: "500K+",
+        },
+        {
+          name: "Channel 2: Business Tips",
+          description: "250K+ subscribers | 1M+ monthly views",
+          thumbnail: "https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg",
+          url: "https://youtube.com",
+          subscribers: "250K+",
+        },
+      ],
+    },
+    {
+      id: "videography",
+      title: "Videography & Video Production",
+      description: "Professional video content creation and editing",
+      icon: Film,
+      items: [
+        {
+          name: "Corporate Promotional Video",
+          description: "High-quality brand awareness video",
+          thumbnail: "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
+          url: "https://youtube.com",
+          type: "video",
+        },
+        {
+          name: "Product Showcase Video",
+          description: "Product demo with motion graphics",
+          thumbnail: "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg",
+          url: "https://youtube.com",
+          type: "video",
+        },
+        {
+          name: "Customer Testimonial Video",
+          description: "Authentic client success stories",
+          thumbnail: "https://images.pexels.com/photos/3178829/pexels-photo-3178829.jpeg",
+          url: "https://youtube.com",
+          type: "video",
+        },
+      ],
+    },
+  ];
+
   // Auto-rotate carousel every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
