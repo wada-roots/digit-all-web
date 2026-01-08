@@ -12,6 +12,10 @@ import {
   Smartphone,
   Share2,
   Camera,
+  ExternalLink,
+  Code2,
+  Radio,
+  Film,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
