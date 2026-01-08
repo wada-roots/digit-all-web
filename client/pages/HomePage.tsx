@@ -694,6 +694,135 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-space-dark/50 to-space-darker/50 border-t border-neon-blue/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-neon-blue to-neon-yellow bg-clip-text text-transparent">
+              Our Portfolio
+            </h2>
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+              🎯 Proven results across diverse industries. Browse samples of work we've delivered to satisfied clients.
+            </p>
+          </motion.div>
+
+          <div className="space-y-16">
+            {portfolioData.map((category, categoryIndex) => {
+              const IconComponent = category.icon;
+              return (
+                <motion.div
+                  key={categoryIndex}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="mb-8">
+                    <div className="flex items-center gap-4 mb-4">
+                      <IconComponent className="w-8 h-8 text-neon-blue" />
+                      <h3 className="text-3xl font-bold text-foreground">
+                        {category.title}
+                      </h3>
+                    </div>
+                    <p className="text-foreground/70 text-lg">
+                      {category.description}
+                    </p>
+                  </div>
+
+                  <div className={`grid grid-cols-1 ${category.id === "youtube" ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3"} gap-8`}>
+                    {category.items.map((item, itemIndex) => (
+                      <motion.div
+                        key={itemIndex}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: itemIndex * 0.1 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                      >
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group block h-full"
+                        >
+                          <Card className="bg-space-light/50 border-space-light hover:border-neon-blue/50 transition-all duration-300 overflow-hidden h-full flex flex-col">
+                            <div className="relative overflow-hidden bg-space-dark h-48">
+                              <img
+                                src={item.thumbnail}
+                                alt={item.name}
+                                loading="lazy"
+                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-space-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <ExternalLink className="w-8 h-8 text-neon-yellow" />
+                              </div>
+                            </div>
+                            <CardContent className="p-6 flex-1 flex flex-col">
+                              <h4 className="text-lg font-semibold text-foreground mb-2 group-hover:text-neon-blue transition-colors duration-300">
+                                {item.name}
+                              </h4>
+                              <p className="text-foreground/70 text-sm mb-4 flex-1">
+                                {item.description}
+                              </p>
+                              {item.platform && (
+                                <div className="flex items-center gap-2 text-neon-blue text-sm font-semibold">
+                                  <Share2 className="w-4 h-4" />
+                                  {item.platform}
+                                </div>
+                              )}
+                              {item.subscribers && (
+                                <div className="flex items-center gap-2 text-neon-yellow text-sm font-semibold">
+                                  <Radio className="w-4 h-4" />
+                                  {item.subscribers}
+                                </div>
+                              )}
+                              {(item.type === "website" || item.type === "video") && (
+                                <div className="flex items-center gap-2 text-neon-blue text-sm font-semibold mt-2">
+                                  <ExternalLink className="w-4 h-4" />
+                                  View Live
+                                </div>
+                              )}
+                            </CardContent>
+                          </Card>
+                        </a>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <motion.div
+            className="mt-16 text-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-foreground/80 text-lg mb-6">
+              Ready to see your business shine with our proven expertise?
+            </p>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+              asChild
+            >
+              <Link to="/contact">
+                Get Started Today
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Service Popups */}
       <Modal isOpen={activePopup === "social-media"} onClose={handleClosePopup}>
         <SocialMediaPopup
