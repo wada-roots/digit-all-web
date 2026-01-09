@@ -24,6 +24,7 @@ const Portfolio = () => {
   const portfolioCategories = [
     { id: "all", title: "All Projects", icon: "🎯" },
     { id: "websites", title: "Websites", icon: Code2 },
+    { id: "apps", title: "Apps", icon: Smartphone },
     { id: "social-media", title: "Social Media", icon: Share2 },
     { id: "youtube", title: "YouTube", icon: Radio },
     { id: "videography", title: "Videography", icon: Film },
