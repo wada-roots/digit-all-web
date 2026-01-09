@@ -808,17 +808,28 @@ const HomePage = () => {
             viewport={{ once: true }}
           >
             <p className="text-foreground/80 text-lg mb-6">
-              Ready to see your business shine with our proven expertise?
+              Impressed with what you see? Let's create something amazing together!
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-              asChild
-            >
-              <Link to="/contact">
-                Get Started Today
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+                asChild
+              >
+                <Link to="/portfolio">
+                  View Full Portfolio
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-neon-yellow to-neon-blue hover:from-neon-blue hover:to-neon-yellow text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+                asChild
+              >
+                <Link to="/contact">
+                  Get in Touch
+                </Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
