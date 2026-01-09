@@ -12,7 +12,7 @@ const ContactBar = () => {
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="h-4 w-4" />
-            <span>info@digitallke.net</span>
+            <span>info@dealmojasafi.com</span>
           </div>
           <div className="flex items-center space-x-2">
             <Clock className="h-4 w-4" />

@@ -109,7 +109,7 @@ const Footer = () => {
                   </div>
                   <div className="flex items-center">
                     <Mail className="w-4 h-4 text-neon-blue mr-3" />
-                    <span className="text-foreground/90">info@digitallke.net</span>
+                    <span className="text-foreground/90">info@dealmojasafi.com</span>
                   </div>
                   <div className="flex items-center">
                     <MapPin className="w-4 h-4 text-neon-blue mr-3" />
@@ -232,9 +232,8 @@ const Footer = () => {
                     Working Hours
                   </h4>
                   <div className="text-sm text-foreground/80 space-y-1">
-                    <div>Mon - Fri: 8:00 AM - 6:00 PM</div>
-                    <div>Saturday: 9:00 AM - 2:00 PM</div>
-                    <div>Sunday: Emergency support only</div>
+                    <div>24/7 - Monday to Sunday</div>
+                    <div className="text-neon-yellow font-semibold mt-2">Always available for you!</div>
                   </div>
                 </div>
               </motion.div>

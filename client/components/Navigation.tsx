@@ -212,29 +212,15 @@ const Navigation = () => {
 
           {/* Mobile Menu */}
           <div className="lg:hidden flex items-center space-x-2">
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" className="text-gray-700">
               <Search className="h-5 w-5" />
             </Button>
 
             <Button
               variant="ghost"
               size="icon"
-              onClick={() =>
-                window.open("https://wa.me/254738849148", "_blank")
-              }
-              className="p-0 bg-transparent hover:bg-transparent"
-            >
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F3bb87a8f7c16426e87aba954a47669e9?format=webp&width=800"
-                alt="WhatsApp"
-                className="h-5 w-5"
-              />
-            </Button>
-
-            <Button
-              variant="ghost"
-              size="icon"
               onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700"
             >
               {isOpen ? <X /> : <Menu />}
             </Button>
