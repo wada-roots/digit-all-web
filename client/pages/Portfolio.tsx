@@ -102,6 +102,120 @@ const Portfolio = () => {
       testimonialAuthor: "Emma Rodriguez, Sales Manager",
     },
 
+    // Apps
+    {
+      id: "app-1",
+      category: "apps",
+      title: "Fitness Tracking Mobile App",
+      client: "FitLife Solutions",
+      description:
+        "iOS & Android fitness tracking app with real-time workout monitoring, social features, and nutrition tracking",
+      longDescription:
+        "Comprehensive fitness app for iOS and Android platforms. Features include real-time workout tracking with GPS integration, social community features for challenges, AI-powered nutrition recommendations, progress analytics, and integration with popular wearables.",
+      thumbnail:
+        "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+      url: "https://apps.apple.com/example-fitlife",
+      features: [
+        "Real-time Workout Tracking",
+        "GPS Integration",
+        "Social Challenges",
+        "Nutrition AI",
+        "Wearable Integration",
+        "Analytics Dashboard",
+      ],
+      platform: "iOS & Android",
+      stats: { downloads: "500K+", rating: "4.8★", activeUsers: "150K+" },
+      industry: "Health & Fitness",
+      completionDate: "Sep 2023",
+      testimonial:
+        "The app exceeded our expectations. Users love the community features!",
+      testimonialAuthor: "Dr. Sarah Mitchell, CEO FitLife",
+    },
+    {
+      id: "app-2",
+      category: "apps",
+      title: "E-Commerce Shopping App",
+      client: "ShopHub Retail",
+      description:
+        "Feature-rich mobile shopping app with AR try-on, personalized recommendations, and seamless checkout",
+      longDescription:
+        "Advanced e-commerce mobile application for iOS and Android. Includes augmented reality (AR) virtual try-on features, AI-powered product recommendations, one-click checkout, order tracking, and customer support chatbot integration.",
+      thumbnail:
+        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      url: "https://play.google.com/store/apps/example-shophub",
+      features: [
+        "AR Virtual Try-On",
+        "AI Recommendations",
+        "One-Click Checkout",
+        "Order Tracking",
+        "Chatbot Support",
+        "Wishlist & Reviews",
+      ],
+      platform: "iOS & Android",
+      stats: { downloads: "2M+", rating: "4.7★", transactions: "$50M+" },
+      industry: "Retail & E-Commerce",
+      completionDate: "Jul 2023",
+      testimonial:
+        "The AR feature increased conversion rates by 45%. Outstanding work!",
+      testimonialAuthor: "James Cooper, VP Sales ShopHub",
+    },
+    {
+      id: "app-3",
+      category: "apps",
+      title: "Project Management Collaboration App",
+      client: "TeamFlow Pro",
+      description:
+        "Enterprise project management app with real-time collaboration, task automation, and team analytics",
+      longDescription:
+        "Enterprise-grade project management application for iOS, Android, and web. Features include real-time collaboration on tasks and documents, automated workflow management, team analytics and productivity insights, time tracking, and integration with popular tools like Slack and Google Workspace.",
+      thumbnail:
+        "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+      url: "https://teamflowpro.com/app",
+      features: [
+        "Real-time Collaboration",
+        "Task Automation",
+        "Team Analytics",
+        "Time Tracking",
+        "Slack Integration",
+        "Advanced Permissions",
+      ],
+      platform: "iOS, Android & Web",
+      stats: { teams: "10K+", dailyActive: "250K+", satisfaction: "96%" },
+      industry: "Enterprise Software",
+      completionDate: "Jun 2023",
+      testimonial:
+        "Transformed how our team collaborates. Couldn't imagine working without it!",
+      testimonialAuthor: "Lisa Zhang, Founder TeamFlow Pro",
+    },
+    {
+      id: "app-4",
+      category: "apps",
+      title: "Food Delivery Platform App",
+      client: "QuickBites Express",
+      description:
+        "Full-featured food delivery app with restaurant management, real-time tracking, and payment integration",
+      longDescription:
+        "Comprehensive food delivery platform app for customers and restaurant partners. Includes real-time order tracking with GPS, multiple payment options, restaurant partner dashboard for order management, customer reviews and ratings system, loyalty rewards program, and push notifications.",
+      thumbnail:
+        "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
+      url: "https://apps.apple.com/example-quickbites",
+      features: [
+        "Real-time GPS Tracking",
+        "Multiple Payment Options",
+        "Restaurant Dashboard",
+        "Rating System",
+        "Loyalty Program",
+        "Push Notifications",
+      ],
+      platform: "iOS & Android",
+      stats: { orders: "1M+/month", restaurants: "5K+", users: "1M+" },
+      industry: "Food & Delivery",
+      completionDate: "Apr 2023",
+      testimonial:
+        "The app handles millions of orders smoothly. Exceptional technical execution!",
+      testimonialAuthor: "Ahmed Patel, CEO QuickBites",
+    },
+
     // Social Media
     {
       id: "social-1",
