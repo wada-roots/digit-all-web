@@ -52,21 +52,24 @@ const HomePage = () => {
         {
           name: "Example Website 1",
           description: "E-commerce platform with advanced features",
-          thumbnail: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
           url: "https://example.com",
           type: "website",
         },
         {
           name: "Example Website 2",
           description: "Corporate business website",
-          thumbnail: "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
           url: "https://example.com",
           type: "website",
         },
         {
           name: "Example Website 3",
           description: "Service-based company site",
-          thumbnail: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg",
           url: "https://example.com",
           type: "website",
         },
@@ -81,21 +84,24 @@ const HomePage = () => {
         {
           name: "Client Facebook Page",
           description: "Achieved 250K followers with organic growth",
-          thumbnail: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
           url: "https://facebook.com",
           platform: "Facebook",
         },
         {
           name: "Client Instagram Account",
           description: "E-commerce focused with 150K engaged followers",
-          thumbnail: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
           url: "https://instagram.com",
           platform: "Instagram",
         },
         {
           name: "Client LinkedIn Profile",
           description: "B2B content strategy driving 50K followers",
-          thumbnail: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
           url: "https://linkedin.com",
           platform: "LinkedIn",
         },
@@ -110,14 +116,16 @@ const HomePage = () => {
         {
           name: "Channel 1: Tech Reviews",
           description: "500K+ subscribers | 2M+ monthly views",
-          thumbnail: "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg",
           url: "https://youtube.com",
           subscribers: "500K+",
         },
         {
           name: "Channel 2: Business Tips",
           description: "250K+ subscribers | 1M+ monthly views",
-          thumbnail: "https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg",
           url: "https://youtube.com",
           subscribers: "250K+",
         },
@@ -132,21 +140,24 @@ const HomePage = () => {
         {
           name: "Corporate Promotional Video",
           description: "High-quality brand awareness video",
-          thumbnail: "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
           url: "https://youtube.com",
           type: "video",
         },
         {
           name: "Product Showcase Video",
           description: "Product demo with motion graphics",
-          thumbnail: "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg",
           url: "https://youtube.com",
           type: "video",
         },
         {
           name: "Customer Testimonial Video",
           description: "Authentic client success stories",
-          thumbnail: "https://images.pexels.com/photos/3178829/pexels-photo-3178829.jpeg",
+          thumbnail:
+            "https://images.pexels.com/photos/3178829/pexels-photo-3178829.jpeg",
           url: "https://youtube.com",
           type: "video",
         },
@@ -227,10 +238,10 @@ const HomePage = () => {
               }}
             />
           ))}
-          
+
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-space-darker/92 via-space-dark/88 to-blue-900/75"></div>
-          
+
           {/* Animated Background Elements */}
           <motion.div
             className="absolute top-1/4 -left-40 w-96 h-96 bg-neon-blue/20 rounded-full blur-3xl"
@@ -240,7 +251,12 @@ const HomePage = () => {
           <motion.div
             className="absolute bottom-1/4 -right-40 w-full h-96 bg-neon-yellow/15 rounded-full blur-3xl"
             animate={{ x: [0, -50, 0], y: [0, -50, 0] }}
-            transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 3,
+            }}
           />
         </div>
 
@@ -262,7 +278,9 @@ const HomePage = () => {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-neon-blue/10 border border-neon-blue/30 rounded-full px-4 py-2 w-fit">
                 <div className="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></div>
-                <span className="text-neon-blue font-semibold text-sm">Trusted by 500+ Businesses</span>
+                <span className="text-neon-blue font-semibold text-sm">
+                  Trusted by 500+ Businesses
+                </span>
               </div>
 
               {/* Headline */}
@@ -277,7 +295,8 @@ const HomePage = () => {
                   </span>
                 </h1>
                 <p className="text-xl text-foreground/80 max-w-lg leading-relaxed font-medium">
-                  Professional web design, marketing solutions, and software development to elevate your business.
+                  Professional web design, marketing solutions, and software
+                  development to elevate your business.
                 </p>
               </div>
 
@@ -287,22 +306,34 @@ const HomePage = () => {
                   whileHover={{ scale: 1.05 }}
                   className="bg-white/5 border border-neon-blue/20 rounded-lg p-3 sm:p-4 backdrop-blur-sm hover:border-neon-blue/50 transition-all"
                 >
-                  <p className="text-2xl sm:text-3xl font-bold text-neon-yellow">500+</p>
-                  <p className="text-xs sm:text-sm text-foreground/70">Happy Clients</p>
+                  <p className="text-2xl sm:text-3xl font-bold text-neon-yellow">
+                    500+
+                  </p>
+                  <p className="text-xs sm:text-sm text-foreground/70">
+                    Happy Clients
+                  </p>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className="bg-white/5 border border-neon-yellow/20 rounded-lg p-3 sm:p-4 backdrop-blur-sm hover:border-neon-yellow/50 transition-all"
                 >
-                  <p className="text-2xl sm:text-3xl font-bold text-neon-blue">1000+</p>
-                  <p className="text-xs sm:text-sm text-foreground/70">Projects Done</p>
+                  <p className="text-2xl sm:text-3xl font-bold text-neon-blue">
+                    1000+
+                  </p>
+                  <p className="text-xs sm:text-sm text-foreground/70">
+                    Projects Done
+                  </p>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   className="bg-white/5 border border-neon-blue/20 rounded-lg p-3 sm:p-4 backdrop-blur-sm hover:border-neon-blue/50 transition-all"
                 >
-                  <p className="text-2xl sm:text-3xl font-bold text-neon-yellow">98%</p>
-                  <p className="text-xs sm:text-sm text-foreground/70">Satisfaction</p>
+                  <p className="text-2xl sm:text-3xl font-bold text-neon-yellow">
+                    98%
+                  </p>
+                  <p className="text-xs sm:text-sm text-foreground/70">
+                    Satisfaction
+                  </p>
                 </motion.div>
               </div>
 
@@ -349,12 +380,29 @@ const HomePage = () => {
               className="space-y-6"
             >
               <div className="space-y-4">
-                <h3 className="text-neon-blue font-semibold text-lg">Our Services</h3>
-                
+                <h3 className="text-neon-blue font-semibold text-lg">
+                  Our Services
+                </h3>
+
                 {[
-                  { icon: "🌐", title: "Web Design", desc: "Stunning responsive websites", color: "neon-blue" },
-                  { icon: "📱", title: "App Development", desc: "Native iOS & Android apps", color: "neon-yellow" },
-                  { icon: "📊", title: "Digital Marketing", desc: "Growth-focused strategies", color: "neon-blue" },
+                  {
+                    icon: "🌐",
+                    title: "Web Design",
+                    desc: "Stunning responsive websites",
+                    color: "neon-blue",
+                  },
+                  {
+                    icon: "📱",
+                    title: "App Development",
+                    desc: "Native iOS & Android apps",
+                    color: "neon-yellow",
+                  },
+                  {
+                    icon: "📊",
+                    title: "Digital Marketing",
+                    desc: "Growth-focused strategies",
+                    color: "neon-blue",
+                  },
                 ].map((service, idx) => (
                   <motion.div
                     key={idx}
@@ -362,10 +410,16 @@ const HomePage = () => {
                     className="bg-gradient-to-r from-white/10 to-white/5 border border-neon-blue/20 hover:border-neon-blue/50 rounded-lg p-4 backdrop-blur-sm transition-all duration-300 cursor-pointer group"
                   >
                     <div className="flex items-start gap-4">
-                      <span className="text-3xl group-hover:scale-125 transition-transform">{service.icon}</span>
+                      <span className="text-3xl group-hover:scale-125 transition-transform">
+                        {service.icon}
+                      </span>
                       <div className="flex-1">
-                        <p className="font-semibold text-neon-yellow group-hover:text-neon-blue transition-colors">{service.title}</p>
-                        <p className="text-sm text-foreground/70 group-hover:text-foreground/90">{service.desc}</p>
+                        <p className="font-semibold text-neon-yellow group-hover:text-neon-blue transition-colors">
+                          {service.title}
+                        </p>
+                        <p className="text-sm text-foreground/70 group-hover:text-foreground/90">
+                          {service.desc}
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -379,13 +433,17 @@ const HomePage = () => {
               >
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-neon-yellow text-lg">★</span>
+                    <span key={i} className="text-neon-yellow text-lg">
+                      ★
+                    </span>
                   ))}
                 </div>
                 <p className="text-foreground/90 mb-4 italic">
                   "Exceptional service and amazing results. Highly recommended!"
                 </p>
-                <p className="font-semibold text-neon-blue">— Sarah Johnson, CEO</p>
+                <p className="font-semibold text-neon-blue">
+                  — Sarah Johnson, CEO
+                </p>
               </motion.div>
             </motion.div>
           </div>
@@ -397,7 +455,9 @@ const HomePage = () => {
             transition={{ duration: 2, repeat: Infinity }}
           >
             <div className="flex flex-col items-center gap-2">
-              <p className="text-sm text-foreground/60 font-semibold">Scroll to explore</p>
+              <p className="text-sm text-foreground/60 font-semibold">
+                Scroll to explore
+              </p>
               <ChevronDown className="w-5 h-5 text-neon-blue" />
             </div>
           </motion.div>
@@ -420,7 +480,11 @@ const HomePage = () => {
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 viewport={{ once: true }}
               >
-                <p className={`text-4xl font-bold mb-2 ${idx % 2 === 0 ? "text-neon-blue" : "text-neon-yellow"}`}>{stat.num}</p>
+                <p
+                  className={`text-4xl font-bold mb-2 ${idx % 2 === 0 ? "text-neon-blue" : "text-neon-yellow"}`}
+                >
+                  {stat.num}
+                </p>
                 <p className="text-foreground/70 font-medium">{stat.label}</p>
               </motion.div>
             ))}
@@ -441,7 +505,9 @@ const HomePage = () => {
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-neon-blue to-neon-yellow bg-clip-text text-transparent">
               Limited Time Offers
             </h2>
-            <p className="text-xl text-foreground/70">Save up to 60% on our premium services</p>
+            <p className="text-xl text-foreground/70">
+              Save up to 60% on our premium services
+            </p>
           </motion.div>
 
           <motion.div
@@ -478,16 +544,25 @@ const HomePage = () => {
               </h3>
 
               <p className="text-foreground/80 mb-4 leading-relaxed">
-                The personal website is perfect for every profession. Get a stunning, professional website that showcases your skills and achievements!
+                The personal website is perfect for every profession. Get a
+                stunning, professional website that showcases your skills and
+                achievements!
               </p>
 
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-3xl font-bold text-neon-blue">$99</span>
-                  <span className="text-sm text-foreground/60 line-through">$199</span>
+                  <span className="text-sm text-foreground/60 line-through">
+                    $199
+                  </span>
                 </div>
                 <ul className="space-y-2 text-sm text-foreground/80">
-                  {["Responsive Design", "Portfolio Section", "Contact Forms", "SEO Optimized"].map((feature, idx) => (
+                  {[
+                    "Responsive Design",
+                    "Portfolio Section",
+                    "Contact Forms",
+                    "SEO Optimized",
+                  ].map((feature, idx) => (
                     <li key={idx} className="flex items-center">
                       <Star className="w-4 h-4 text-neon-yellow mr-2" />
                       {feature}
@@ -531,16 +606,27 @@ const HomePage = () => {
               </h3>
 
               <p className="text-foreground/80 mb-4 leading-relaxed">
-                Earn with our Affiliate Marketing program by referring us to clients. Send potential client details and start earning commissions!
+                Earn with our Affiliate Marketing program by referring us to
+                clients. Send potential client details and start earning
+                commissions!
               </p>
 
               <div className="mb-6">
                 <div className="text-center mb-4">
-                  <span className="text-2xl font-bold text-neon-yellow">FREE TO JOIN</span>
-                  <p className="text-sm text-foreground/70 mt-1">Earn up to 20% commission per referral</p>
+                  <span className="text-2xl font-bold text-neon-yellow">
+                    FREE TO JOIN
+                  </span>
+                  <p className="text-sm text-foreground/70 mt-1">
+                    Earn up to 20% commission per referral
+                  </p>
                 </div>
                 <ul className="space-y-2 text-sm text-foreground/80">
-                  {["Free Registration", "20% Commission", "Monthly Payouts", "Easy Referral Process"].map((feature, idx) => (
+                  {[
+                    "Free Registration",
+                    "20% Commission",
+                    "Monthly Payouts",
+                    "Easy Referral Process",
+                  ].map((feature, idx) => (
                     <li key={idx} className="flex items-center">
                       <Star className="w-4 h-4 text-neon-blue mr-2" />
                       {feature}
@@ -551,7 +637,7 @@ const HomePage = () => {
 
               <Button
                 className="w-full bg-gradient-to-r from-neon-yellow to-neon-blue hover:from-neon-blue hover:to-neon-yellow text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
-                onClick={() => window.location.href = "/login"}
+                onClick={() => (window.location.href = "/login")}
               >
                 START EARNING!!
               </Button>
@@ -592,7 +678,8 @@ const HomePage = () => {
             {[
               {
                 id: "social-media",
-                image: "https://images.pexels.com/photos/13883892/pexels-photo-13883892.jpeg",
+                image:
+                  "https://images.pexels.com/photos/13883892/pexels-photo-13883892.jpeg",
                 title: "Social Media Marketing",
                 description: "Boost your online presence with 10x engagement",
                 caption: "Get your social media strategy in 24 hours",
@@ -600,7 +687,8 @@ const HomePage = () => {
               },
               {
                 id: "seo",
-                image: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
+                image:
+                  "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
                 title: "Search Engine Optimization",
                 description: "Rank #1 on Google within 90 days",
                 caption: "80% of your SEO work is done automatically",
@@ -608,7 +696,8 @@ const HomePage = () => {
               },
               {
                 id: "photography",
-                image: "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
+                image:
+                  "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
                 title: "Photography & Videography",
                 description: "Professional content that converts",
                 caption: "Get your brand photoshoot in one session",
@@ -616,15 +705,18 @@ const HomePage = () => {
               },
               {
                 id: "website",
-                image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+                image:
+                  "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
                 title: "Software Development",
-                description: "Lightning-fast, mobile-responsive websites & apps",
+                description:
+                  "Lightning-fast, mobile-responsive websites & apps",
                 caption: "Get your website template in 10 minutes",
                 price: "From $1,299",
               },
               {
                 id: "app",
-                image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+                image:
+                  "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
                 title: "App Development",
                 description: "Native iOS & Android apps that scale",
                 caption: "80% of your app is done with our templates",
@@ -632,7 +724,8 @@ const HomePage = () => {
               },
               {
                 id: "business-cards",
-                image: "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg",
+                image:
+                  "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg",
                 title: "Business Cards",
                 description: "Premium designs that make lasting impressions",
                 caption: "Get your business cards designed in 2 hours",
@@ -662,11 +755,17 @@ const HomePage = () => {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
-                    <p className="text-foreground/80 mb-4 text-sm leading-relaxed">{service.description}</p>
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">
+                      {service.title}
+                    </h3>
+                    <p className="text-foreground/80 mb-4 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-neon-blue font-bold text-lg">{service.price}</span>
+                        <span className="text-neon-blue font-bold text-lg">
+                          {service.price}
+                        </span>
                       </div>
                       <div className="flex gap-2">
                         <Button
@@ -676,19 +775,26 @@ const HomePage = () => {
                         >
                           Order Now
                         </Button>
-                        {service.id !== "social-media" && service.id !== "seo" && (
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            asChild
-                            className="border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white px-4 py-2 text-sm rounded-full transition-all duration-300"
-                          >
-                            <Link to={service.id === "business-cards" ? "/business-card-templates" : "/templates"}>
-                              <Eye className="w-4 h-4 mr-1" />
-                              Templates
-                            </Link>
-                          </Button>
-                        )}
+                        {service.id !== "social-media" &&
+                          service.id !== "seo" && (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              asChild
+                              className="border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white px-4 py-2 text-sm rounded-full transition-all duration-300"
+                            >
+                              <Link
+                                to={
+                                  service.id === "business-cards"
+                                    ? "/business-card-templates"
+                                    : "/templates"
+                                }
+                              >
+                                <Eye className="w-4 h-4 mr-1" />
+                                Templates
+                              </Link>
+                            </Button>
+                          )}
                       </div>
                     </div>
                   </CardContent>
@@ -700,7 +806,10 @@ const HomePage = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-space-dark/50 to-space-darker/50 border-t border-neon-blue/20">
+      <section
+        id="portfolio"
+        className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-space-dark/50 to-space-darker/50 border-t border-neon-blue/20"
+      >
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -713,7 +822,8 @@ const HomePage = () => {
               Our Portfolio
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              🎯 Proven results across diverse industries. Browse samples of work we've delivered.
+              🎯 Proven results across diverse industries. Browse samples of
+              work we've delivered.
             </p>
           </motion.div>
 
@@ -731,12 +841,18 @@ const HomePage = () => {
                   <div className="mb-8">
                     <div className="flex items-center gap-4 mb-4">
                       <IconComponent className="w-8 h-8 text-neon-blue" />
-                      <h3 className="text-3xl font-bold text-foreground">{category.title}</h3>
+                      <h3 className="text-3xl font-bold text-foreground">
+                        {category.title}
+                      </h3>
                     </div>
-                    <p className="text-foreground/70 text-lg">{category.description}</p>
+                    <p className="text-foreground/70 text-lg">
+                      {category.description}
+                    </p>
                   </div>
 
-                  <div className={`grid grid-cols-1 ${category.id === "youtube" ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3"} gap-8`}>
+                  <div
+                    className={`grid grid-cols-1 ${category.id === "youtube" ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3"} gap-8`}
+                  >
                     {category.items.map((item, itemIndex) => (
                       <motion.div
                         key={itemIndex}
@@ -746,7 +862,12 @@ const HomePage = () => {
                         viewport={{ once: true }}
                         whileHover={{ y: -5 }}
                       >
-                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="group block h-full">
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group block h-full"
+                        >
                           <Card className="bg-space-light/50 border-space-light hover:border-neon-blue/50 transition-all duration-300 overflow-hidden h-full flex flex-col">
                             <div className="relative overflow-hidden bg-space-dark h-48">
                               <img
@@ -764,7 +885,9 @@ const HomePage = () => {
                               <h4 className="text-lg font-semibold text-foreground mb-2 group-hover:text-neon-blue transition-colors duration-300">
                                 {item.name}
                               </h4>
-                              <p className="text-foreground/70 text-sm mb-4 flex-1">{item.description}</p>
+                              <p className="text-foreground/70 text-sm mb-4 flex-1">
+                                {item.description}
+                              </p>
                             </CardContent>
                           </Card>
                         </a>
@@ -783,15 +906,15 @@ const HomePage = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <p className="text-foreground/80 text-lg mb-6">Ready to see your business shine with our expertise?</p>
+            <p className="text-foreground/80 text-lg mb-6">
+              Ready to see your business shine with our expertise?
+            </p>
             <Button
               size="lg"
               className="bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
               asChild
             >
-              <Link to="/portfolio">
-                View Full Portfolio
-              </Link>
+              <Link to="/portfolio">View Full Portfolio</Link>
             </Button>
           </motion.div>
         </div>
@@ -799,7 +922,9 @@ const HomePage = () => {
 
       {/* Service Popups */}
       <Modal isOpen={activePopup === "social-media"} onClose={handleClosePopup}>
-        <SocialMediaPopup onSubmit={(data) => handleSubmit("Social Media Marketing", data)} />
+        <SocialMediaPopup
+          onSubmit={(data) => handleSubmit("Social Media Marketing", data)}
+        />
       </Modal>
 
       <Modal isOpen={activePopup === "seo"} onClose={handleClosePopup}>
@@ -807,27 +932,46 @@ const HomePage = () => {
       </Modal>
 
       <Modal isOpen={activePopup === "photography"} onClose={handleClosePopup}>
-        <PhotographyPopup onSubmit={(data) => handleSubmit("Photography & Videography", data)} />
+        <PhotographyPopup
+          onSubmit={(data) => handleSubmit("Photography & Videography", data)}
+        />
       </Modal>
 
       <Modal isOpen={activePopup === "website"} onClose={handleClosePopup}>
-        <WebsitePopup onSubmit={(data) => handleSubmit("Website Development", data)} />
+        <WebsitePopup
+          onSubmit={(data) => handleSubmit("Website Development", data)}
+        />
       </Modal>
 
       <Modal isOpen={activePopup === "app"} onClose={handleClosePopup}>
         <AppPopup onSubmit={(data) => handleSubmit("App Development", data)} />
       </Modal>
 
-      <Modal isOpen={activePopup === "business-cards"} onClose={handleClosePopup}>
-        <BusinessCardsPopup onSubmit={(data) => handleSubmit("Business Cards", data)} />
+      <Modal
+        isOpen={activePopup === "business-cards"}
+        onClose={handleClosePopup}
+      >
+        <BusinessCardsPopup
+          onSubmit={(data) => handleSubmit("Business Cards", data)}
+        />
       </Modal>
 
-      <Modal isOpen={activePopup === "affiliate-marketing"} onClose={handleClosePopup}>
-        <AffiliateMarketingPopup onSubmit={(data) => handleSubmit("Affiliate Marketing", data)} />
+      <Modal
+        isOpen={activePopup === "affiliate-marketing"}
+        onClose={handleClosePopup}
+      >
+        <AffiliateMarketingPopup
+          onSubmit={(data) => handleSubmit("Affiliate Marketing", data)}
+        />
       </Modal>
 
-      <Modal isOpen={activePopup === "personal-website"} onClose={handleClosePopup}>
-        <PersonalWebsitePopup onSubmit={(data) => handleSubmit("Personal Website", data)} />
+      <Modal
+        isOpen={activePopup === "personal-website"}
+        onClose={handleClosePopup}
+      >
+        <PersonalWebsitePopup
+          onSubmit={(data) => handleSubmit("Personal Website", data)}
+        />
       </Modal>
     </div>
   );

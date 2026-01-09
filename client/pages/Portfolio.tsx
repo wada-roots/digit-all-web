@@ -61,7 +61,8 @@ const Portfolio = () => {
       category: "websites",
       title: "Corporate Business Portal",
       client: "TechVenture Solutions",
-      description: "Enterprise business website with CMS integration and lead capture",
+      description:
+        "Enterprise business website with CMS integration and lead capture",
       longDescription:
         "Enterprise-level website for a B2B consulting firm. Includes automated lead capture forms, CMS for easy content updates, analytics integration, and multi-language support.",
       thumbnail:
@@ -75,7 +76,8 @@ const Portfolio = () => {
       ],
       industry: "Technology & Consulting",
       completionDate: "Feb 2024",
-      testimonial: "Professional and effective. The lead generation increased by 40%.",
+      testimonial:
+        "Professional and effective. The lead generation increased by 40%.",
       testimonialAuthor: "Michael Chen, Marketing Director",
     },
     {
@@ -83,7 +85,8 @@ const Portfolio = () => {
       category: "websites",
       title: "Real Estate Marketplace",
       client: "PropertyPro Ltd",
-      description: "Advanced real estate platform with virtual tours and booking system",
+      description:
+        "Advanced real estate platform with virtual tours and booking system",
       longDescription:
         "Complete real estate solution with 3D virtual tours, interactive maps, automated scheduling, and client CRM integration. Mobile-optimized for property viewing on-the-go.",
       thumbnail:
@@ -149,8 +152,7 @@ const Portfolio = () => {
       ],
       industry: "Education & E-Learning",
       completionDate: "Apr 2024",
-      testimonial:
-        "Student engagement increased by 80%. Excellent platform!",
+      testimonial: "Student engagement increased by 80%. Excellent platform!",
       testimonialAuthor: "Dr. Jennifer Lee, Director EduPro",
     },
 
@@ -274,7 +276,8 @@ const Portfolio = () => {
       category: "social-media",
       title: "Fashion Brand Instagram Growth",
       client: "Luxe Wear Co.",
-      description: "Scaled Instagram presence from 15K to 250K+ followers with organic growth",
+      description:
+        "Scaled Instagram presence from 15K to 250K+ followers with organic growth",
       longDescription:
         "Strategic social media management resulting in exponential growth. Implemented content calendar, influencer partnerships, and community engagement strategies.",
       thumbnail:
@@ -283,8 +286,7 @@ const Portfolio = () => {
       platform: "Instagram",
       stats: { followers: "250K+", engagement: "8.5%", growth: "1,566%" },
       completionDate: "Ongoing since Oct 2023",
-      testimonial:
-        "Exceptional growth and engagement. Highly recommended!",
+      testimonial: "Exceptional growth and engagement. Highly recommended!",
       testimonialAuthor: "Jessica Martinez, Brand Manager",
     },
     {
@@ -311,7 +313,8 @@ const Portfolio = () => {
       category: "social-media",
       title: "Restaurant Group Facebook Management",
       client: "Flavor Haven Restaurants",
-      description: "Multi-location restaurant chain with 180K+ engaged Facebook community",
+      description:
+        "Multi-location restaurant chain with 180K+ engaged Facebook community",
       longDescription:
         "Managed 5 restaurant locations with unified brand voice. Created daily promotions, event promotions, and customer engagement campaigns.",
       thumbnail:
@@ -320,7 +323,8 @@ const Portfolio = () => {
       platform: "Facebook",
       stats: { followers: "180K+", dailyReach: "45K+", engagement: "12%" },
       completionDate: "Ongoing since Aug 2023",
-      testimonial: "Customer engagement and foot traffic increased significantly.",
+      testimonial:
+        "Customer engagement and foot traffic increased significantly.",
       testimonialAuthor: "Robert Lewis, Operations Manager",
     },
 
@@ -330,14 +334,19 @@ const Portfolio = () => {
       category: "youtube",
       title: "Tech Reviews Channel",
       client: "GadgetGeek Media",
-      description: "Technology review channel with 500K+ subscribers and consistent growth",
+      description:
+        "Technology review channel with 500K+ subscribers and consistent growth",
       longDescription:
         "Full-channel management including content strategy, video optimization, thumbnail design, and audience growth. Currently producing 4 videos per week with 2M+ monthly views.",
       thumbnail:
         "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg",
       url: "https://youtube.com/@gadgetgeek",
       platform: "YouTube",
-      stats: { subscribers: "500K+", monthlyViews: "2M+", avgViewDuration: "85%" },
+      stats: {
+        subscribers: "500K+",
+        monthlyViews: "2M+",
+        avgViewDuration: "85%",
+      },
       completionDate: "Ongoing since May 2023",
       testimonial: "Grew from 50K to 500K subscribers in one year.",
       testimonialAuthor: "James Wright, Founder",
@@ -347,14 +356,19 @@ const Portfolio = () => {
       category: "youtube",
       title: "Business Tips & Entrepreneurship",
       client: "BuildYourEmpire",
-      description: "Entrepreneurship channel with 250K+ subscribers and strong engagement",
+      description:
+        "Entrepreneurship channel with 250K+ subscribers and strong engagement",
       longDescription:
         "Educational content channel focused on business strategy and entrepreneurship. Managed all aspects from content creation to community management.",
       thumbnail:
         "https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg",
       url: "https://youtube.com/@buildyourempire",
       platform: "YouTube",
-      stats: { subscribers: "250K+", monthlyViews: "1M+", avgViewDuration: "78%" },
+      stats: {
+        subscribers: "250K+",
+        monthlyViews: "1M+",
+        avgViewDuration: "78%",
+      },
       completionDate: "Ongoing since Jul 2023",
       testimonial:
         "Professional content strategy that resonates with our audience.",
@@ -367,7 +381,8 @@ const Portfolio = () => {
       category: "videography",
       title: "Corporate Brand Documentary",
       client: "Global Enterprises Inc.",
-      description: "Professional 5-minute brand documentary showcasing company culture and values",
+      description:
+        "Professional 5-minute brand documentary showcasing company culture and values",
       longDescription:
         "High-production corporate video featuring office tours, employee interviews, and company mission statement. Shot in 4K with professional color grading and music.",
       thumbnail:
@@ -377,8 +392,7 @@ const Portfolio = () => {
       duration: "5 minutes",
       production: "4K | 24fps | Drone Footage",
       completionDate: "Dec 2023",
-      testimonial:
-        "The documentary perfectly captured our company's essence.",
+      testimonial: "The documentary perfectly captured our company's essence.",
       testimonialAuthor: "Amanda Foster, HR Director",
     },
     {
@@ -406,7 +420,8 @@ const Portfolio = () => {
       category: "videography",
       title: "Customer Testimonial Series",
       client: "ServicePro Solutions",
-      description: "Series of 10 short customer testimonial videos (30-60 seconds each)",
+      description:
+        "Series of 10 short customer testimonial videos (30-60 seconds each)",
       longDescription:
         "Professional testimonial video series showcasing real customer success stories. Each video is optimized for social media and features authentic client experiences.",
       thumbnail:
@@ -416,7 +431,8 @@ const Portfolio = () => {
       duration: "30-60 seconds each",
       production: "4K | Professional Interviews",
       completionDate: "Oct 2023",
-      testimonial: "These testimonials significantly improved our conversion rate.",
+      testimonial:
+        "These testimonials significantly improved our conversion rate.",
       testimonialAuthor: "Linda Chang, Sales Director",
     },
   ];
@@ -448,9 +464,9 @@ const Portfolio = () => {
               Our Portfolio
             </h1>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto mb-8">
-              Discover the diverse range of projects we've completed for satisfied
-              clients across various industries. From websites to social media campaigns
-              to professional video production.
+              Discover the diverse range of projects we've completed for
+              satisfied clients across various industries. From websites to
+              social media campaigns to professional video production.
             </p>
           </motion.div>
 
@@ -513,7 +529,8 @@ const Portfolio = () => {
             ))}
           </div>
           <p className="text-center text-foreground/60 text-sm mt-4">
-            Showing {filteredItems.length} project{filteredItems.length !== 1 ? "s" : ""}
+            Showing {filteredItems.length} project
+            {filteredItems.length !== 1 ? "s" : ""}
           </p>
         </div>
       </section>
@@ -560,7 +577,7 @@ const Portfolio = () => {
                         <div className="absolute top-4 right-4">
                           <span className="bg-neon-blue/80 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold">
                             {portfolioCategories.find(
-                              (c) => c.id === item.category
+                              (c) => c.id === item.category,
                             )?.title || item.category}
                           </span>
                         </div>
@@ -584,7 +601,10 @@ const Portfolio = () => {
                         {item.stats && (
                           <div className="grid grid-cols-2 gap-2 mb-4 text-xs text-neon-blue">
                             {Object.entries(item.stats).map(([key, value]) => (
-                              <div key={key} className="border border-neon-blue/30 rounded p-2">
+                              <div
+                                key={key}
+                                className="border border-neon-blue/30 rounded p-2"
+                              >
                                 <p className="font-semibold text-neon-yellow">
                                   {value}
                                 </p>
@@ -631,7 +651,8 @@ const Portfolio = () => {
               className="text-center py-16"
             >
               <p className="text-xl text-foreground/60">
-                No projects found matching "{searchTerm}". Try a different search.
+                No projects found matching "{searchTerm}". Try a different
+                search.
               </p>
               <Button
                 onClick={() => {
@@ -690,9 +711,11 @@ const Portfolio = () => {
                     </div>
                   </div>
                   <span className="bg-neon-blue/20 text-neon-blue px-4 py-2 rounded-full font-semibold text-sm">
-                    {portfolioCategories.find(
-                      (c) => c.id === selectedItem.category
-                    )?.title}
+                    {
+                      portfolioCategories.find(
+                        (c) => c.id === selectedItem.category,
+                      )?.title
+                    }
                   </span>
                 </div>
 
@@ -730,19 +753,21 @@ const Portfolio = () => {
                       Project Stats
                     </h3>
                     <div className="grid grid-cols-2 gap-4">
-                      {Object.entries(selectedItem.stats).map(([key, value]) => (
-                        <div
-                          key={key}
-                          className="bg-space-dark/50 border border-neon-blue/30 rounded-lg p-4"
-                        >
-                          <p className="text-2xl font-bold text-neon-yellow">
-                            {value}
-                          </p>
-                          <p className="text-foreground/60 text-sm capitalize mt-1">
-                            {key.replace(/([A-Z])/g, " $1").trim()}
-                          </p>
-                        </div>
-                      ))}
+                      {Object.entries(selectedItem.stats).map(
+                        ([key, value]) => (
+                          <div
+                            key={key}
+                            className="bg-space-dark/50 border border-neon-blue/30 rounded-lg p-4"
+                          >
+                            <p className="text-2xl font-bold text-neon-yellow">
+                              {value}
+                            </p>
+                            <p className="text-foreground/60 text-sm capitalize mt-1">
+                              {key.replace(/([A-Z])/g, " $1").trim()}
+                            </p>
+                          </div>
+                        ),
+                      )}
                     </div>
                   </div>
                 )}
