@@ -27,7 +27,7 @@ const Navigation = () => {
     { name: "Digital Marketing", href: "/solutions/digital-marketing" },
     { name: "Media & Creatives", href: "/solutions/media-creatives" },
     { name: "Software Development", href: "/solutions/web-seo-ecommerce" },
-    { name: "Portfolio", href: "/#portfolio" },
+    { name: "Portfolio", href: "/portfolio" },
     { name: "Get in Touch", href: "/contact" },
   ];
 
