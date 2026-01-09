@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronDown,
   Play,
@@ -175,7 +175,6 @@ const HomePage = () => {
 
   const handleSubmit = (serviceType: string, data: any) => {
     console.log(`${serviceType} form submitted:`, data);
-    // Here you would typically send the data to your backend
     alert(
       `Thank you for your ${serviceType} inquiry! We'll get back to you within 24 hours.`,
     );
@@ -205,20 +204,11 @@ const HomePage = () => {
     },
   };
 
-  const floatingAnimation = {
-    y: [0, -20, 0],
-    transition: {
-      duration: 6,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
-  };
-
   return (
     <div className="relative">
-      {/* Persuasive Hero Section */}
-      <section className="relative py-8 sm:py-12 lg:py-16 overflow-hidden">
-        {/* Carousel Background */}
+      {/* Modern Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background */}
         <div className="absolute inset-0">
           {backgroundImages.map((image, index) => (
             <motion.img
@@ -232,154 +222,241 @@ const HomePage = () => {
                 scale: index === currentImageIndex ? 1.05 : 1,
               }}
               transition={{
-                duration: 1.5,
+                duration: 2,
                 ease: "easeInOut",
               }}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-space-darker/80 via-space-dark/70 to-blue-900/60"></div>
-          {/* Animated Stars */}
-          <div className="absolute left-0 right-0 bottom-0 -top-[13px]">
-            {[...Array(30)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-1 h-1 bg-white rounded-full"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                }}
-                animate={{
-                  opacity: [0.3, 1, 0.3],
-                  scale: [0.5, 1, 0.5],
-                }}
-                transition={{
-                  duration: 2 + Math.random() * 2,
-                  repeat: Infinity,
-                  delay: Math.random() * 2,
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Gradient Orbs */}
+          
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-space-darker/92 via-space-dark/88 to-blue-900/75"></div>
+          
+          {/* Animated Background Elements */}
           <motion.div
-            className="absolute top-1/4 left-1/4 w-64 h-64 bg-neon-blue/20 rounded-full blur-3xl"
-            animate={{ x: [0, 100, 0], y: [0, -50, 0] }}
-            transition={{ duration: 20, repeat: Infinity }}
+            className="absolute top-1/4 -left-40 w-96 h-96 bg-neon-blue/20 rounded-full blur-3xl"
+            animate={{ x: [0, 50, 0], y: [0, 50, 0] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-yellow/20 rounded-full blur-3xl"
-            animate={{ x: [0, -100, 0], y: [0, 50, 0] }}
-            transition={{ duration: 25, repeat: Infinity, delay: 5 }}
+            className="absolute bottom-1/4 -right-40 w-full h-96 bg-neon-yellow/15 rounded-full blur-3xl"
+            animate={{ x: [0, -50, 0], y: [0, -50, 0] }}
+            transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 3 }}
           />
         </div>
 
-        {/* Special Offers Cards */}
+        {/* Content */}
         <motion.div
-          className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+          className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
         >
-          {/* Header with Profile Buttons */}
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-12">
-            {/* Left Content */}
-            <motion.div className="flex-1 text-center lg:text-left" variants={itemVariants}>
-              <motion.div
-                className="mb-8"
-                animate={{
-                  scale: [1, 1.01, 1],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black mb-2 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight tracking-tight">
-                  DEAL
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Side */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-8"
+            >
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-neon-blue/10 border border-neon-blue/30 rounded-full px-4 py-2 w-fit">
+                <div className="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></div>
+                <span className="text-neon-blue font-semibold text-sm">Trusted by 500+ Businesses</span>
+              </div>
+
+              {/* Headline */}
+              <div className="space-y-4">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight">
+                  <span className="bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent">
+                    Transform Your
+                  </span>
+                  <br />
+                  <span className="bg-gradient-to-r from-neon-yellow via-neon-blue to-white bg-clip-text text-transparent">
+                    Digital Presence
+                  </span>
                 </h1>
-                <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold bg-gradient-to-r from-neon-yellow via-white to-neon-blue bg-clip-text text-transparent leading-tight tracking-wide">
-                  MOJA SAFI
-                </h2>
+                <p className="text-xl text-foreground/80 max-w-lg leading-relaxed font-medium">
+                  Professional web design, marketing solutions, and software development to elevate your business.
+                </p>
+              </div>
 
-                {/* Decorative Elements */}
-                <div className="flex justify-center lg:justify-start items-center mt-4 space-x-2">
-                  <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-neon-blue"></div>
-                  <div className="w-2 h-2 bg-neon-yellow rounded-full animate-pulse"></div>
-                  <div className="w-16 h-0.5 bg-gradient-to-r from-neon-blue via-neon-yellow to-neon-blue"></div>
-                  <div className="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></div>
-                  <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-neon-yellow"></div>
-                </div>
-              </motion.div>
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-white/5 border border-neon-blue/20 rounded-lg p-3 sm:p-4 backdrop-blur-sm hover:border-neon-blue/50 transition-all"
+                >
+                  <p className="text-2xl sm:text-3xl font-bold text-neon-yellow">500+</p>
+                  <p className="text-xs sm:text-sm text-foreground/70">Happy Clients</p>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-white/5 border border-neon-yellow/20 rounded-lg p-3 sm:p-4 backdrop-blur-sm hover:border-neon-yellow/50 transition-all"
+                >
+                  <p className="text-2xl sm:text-3xl font-bold text-neon-blue">1000+</p>
+                  <p className="text-xs sm:text-sm text-foreground/70">Projects Done</p>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-white/5 border border-neon-blue/20 rounded-lg p-3 sm:p-4 backdrop-blur-sm hover:border-neon-blue/50 transition-all"
+                >
+                  <p className="text-2xl sm:text-3xl font-bold text-neon-yellow">98%</p>
+                  <p className="text-xs sm:text-sm text-foreground/70">Satisfaction</p>
+                </motion.div>
+              </div>
 
-              <motion.p
-                className="text-lg text-foreground/80"
-                animate={{
-                  opacity: [0.7, 1, 0.7],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  delay: 0.5,
-                }}
-              >
-                ⚡ Professional solutions tailored to your business needs
-              </motion.p>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex-1"
+                >
+                  <Button
+                    size="lg"
+                    className="w-full bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white font-bold py-6 text-lg rounded-full shadow-lg transition-all duration-300"
+                  >
+                    Get Started Now
+                    <Zap className="ml-2 w-5 h-5" />
+                  </Button>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex-1"
+                >
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="w-full border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white font-bold py-6 text-lg rounded-full transition-all duration-300"
+                    asChild
+                  >
+                    <Link to="/portfolio">
+                      View Our Work
+                      <ExternalLink className="ml-2 w-5 h-5" />
+                    </Link>
+                  </Button>
+                </motion.div>
+              </div>
             </motion.div>
 
-            {/* Right Profile Buttons */}
-            <motion.div className="flex-1 flex flex-col gap-4 w-full lg:w-auto" variants={itemVariants}>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-neon-blue tracking-widest uppercase text-center lg:text-left">
-                PROFILES
-              </h3>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full"
-              >
-                <Button
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-neon-blue to-blue-600 hover:from-blue-600 hover:to-neon-blue text-white px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                  onClick={() =>
-                    window.open(
-                      "https://cdn.builder.io/o/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F2dc8aff0d06b4cfea5c3a84b990b5847?alt=media&token=66510cc4-d5bb-4a73-8cef-08db9ab46e2f&apiKey=afa4cdfd9cfb4fbfb22388ee70a44e49",
-                      "_blank",
-                    )
-                  }
-                >
-                  <Globe className="w-5 h-5 mr-2" />
-                  Company Profile
-                </Button>
-              </motion.div>
+            {/* Right Side - Service Cards */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="space-y-6"
+            >
+              <div className="space-y-4">
+                <h3 className="text-neon-blue font-semibold text-lg">Our Services</h3>
+                
+                {[
+                  { icon: "🌐", title: "Web Design", desc: "Stunning responsive websites", color: "neon-blue" },
+                  { icon: "📱", title: "App Development", desc: "Native iOS & Android apps", color: "neon-yellow" },
+                  { icon: "📊", title: "Digital Marketing", desc: "Growth-focused strategies", color: "neon-blue" },
+                ].map((service, idx) => (
+                  <motion.div
+                    key={idx}
+                    whileHover={{ x: 10 }}
+                    className="bg-gradient-to-r from-white/10 to-white/5 border border-neon-blue/20 hover:border-neon-blue/50 rounded-lg p-4 backdrop-blur-sm transition-all duration-300 cursor-pointer group"
+                  >
+                    <div className="flex items-start gap-4">
+                      <span className="text-3xl group-hover:scale-125 transition-transform">{service.icon}</span>
+                      <div className="flex-1">
+                        <p className="font-semibold text-white group-hover:text-neon-blue transition-colors">{service.title}</p>
+                        <p className="text-sm text-foreground/70 group-hover:text-foreground/90">{service.desc}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
 
+              {/* Testimonial Card */}
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full"
+                whileHover={{ y: -5 }}
+                className="bg-gradient-to-br from-neon-blue/20 to-neon-yellow/20 border border-neon-blue/30 rounded-xl p-6 backdrop-blur-sm"
               >
-                <Button
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-blue-500 to-neon-blue hover:from-neon-blue hover:to-blue-500 text-white px-6 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                  onClick={() => handleOrderClick("website")}
-                >
-                  <Rocket className="w-5 h-5 mr-2" />
-                  Digital Marketing
-                </Button>
+                <div className="flex items-center gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-neon-yellow text-lg">★</span>
+                  ))}
+                </div>
+                <p className="text-foreground/90 mb-4 italic">
+                  "Exceptional service and amazing results. Highly recommended!"
+                </p>
+                <p className="font-semibold text-neon-blue">— Sarah Johnson, CEO</p>
               </motion.div>
             </motion.div>
           </div>
 
-          {/* Offer Cards */}
+          {/* Scroll Indicator */}
+          <motion.div
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-sm text-foreground/60 font-semibold">Scroll to explore</p>
+              <ChevronDown className="w-5 h-5 text-neon-blue" />
+            </div>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* Quick Stats Section */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-space-darker/50 to-blue-900/30 border-b border-neon-blue/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {[
+              { num: "50+", label: "Industry Awards" },
+              { num: "10+", label: "Years Experience" },
+              { num: "24/7", label: "Customer Support" },
+            ].map((stat, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <p className={`text-4xl font-bold mb-2 ${idx % 2 === 0 ? "text-neon-blue" : "text-neon-yellow"}`}>{stat.num}</p>
+                <p className="text-foreground/70 font-medium">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Limited Offers Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-neon-blue to-neon-yellow bg-clip-text text-transparent">
+              Limited Time Offers
+            </h2>
+            <p className="text-xl text-foreground/70">Save up to 60% on our premium services</p>
+          </motion.div>
+
           <motion.div
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
-            variants={itemVariants}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
             {/* Personal Websites Offer */}
             <motion.div
               className="bg-gradient-to-br from-space-light/80 to-space-dark/60 backdrop-blur-lg border border-neon-blue/30 rounded-2xl p-6 hover:border-neon-blue/60 transition-all duration-300 group"
               whileHover={{ scale: 1.02, y: -5 }}
               transition={{ duration: 0.3 }}
+              variants={itemVariants}
             >
               <div className="relative h-48 mb-6 rounded-xl overflow-hidden">
                 <img
@@ -401,37 +478,21 @@ const HomePage = () => {
               </h3>
 
               <p className="text-foreground/80 mb-4 leading-relaxed">
-                The personal website is perfect for every profession. Get a
-                stunning, professional website that showcases your skills,
-                portfolio, and achievements in just 60 minutes!
+                The personal website is perfect for every profession. Get a stunning, professional website that showcases your skills and achievements!
               </p>
 
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl font-bold text-neon-blue">
-                    $99
-                  </span>
-                  <span className="text-sm text-foreground/60 line-through">
-                    $199
-                  </span>
+                  <span className="text-3xl font-bold text-neon-blue">$99</span>
+                  <span className="text-sm text-foreground/60 line-through">$199</span>
                 </div>
                 <ul className="space-y-2 text-sm text-foreground/80">
-                  <li className="flex items-center">
-                    <Star className="w-4 h-4 text-neon-yellow mr-2" />
-                    Responsive Design
-                  </li>
-                  <li className="flex items-center">
-                    <Star className="w-4 h-4 text-neon-yellow mr-2" />
-                    Portfolio Section
-                  </li>
-                  <li className="flex items-center">
-                    <Star className="w-4 h-4 text-neon-yellow mr-2" />
-                    Contact Forms
-                  </li>
-                  <li className="flex items-center">
-                    <Star className="w-4 h-4 text-neon-yellow mr-2" />
-                    SEO Optimized
-                  </li>
+                  {["Responsive Design", "Portfolio Section", "Contact Forms", "SEO Optimized"].map((feature, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <Star className="w-4 h-4 text-neon-yellow mr-2" />
+                      {feature}
+                    </li>
+                  ))}
                 </ul>
               </div>
 
@@ -448,6 +509,7 @@ const HomePage = () => {
               className="bg-gradient-to-br from-space-light/80 to-space-dark/60 backdrop-blur-lg border border-neon-yellow/30 rounded-2xl p-6 hover:border-neon-yellow/60 transition-all duration-300 group"
               whileHover={{ scale: 1.02, y: -5 }}
               transition={{ duration: 0.3 }}
+              variants={itemVariants}
             >
               <div className="relative h-48 mb-6 rounded-xl overflow-hidden">
                 <img
@@ -469,38 +531,21 @@ const HomePage = () => {
               </h3>
 
               <p className="text-foreground/80 mb-4 leading-relaxed">
-                Earn with our Affiliate Marketing program by just referring us
-                to clients that need our services. Send us potential client
-                details and start earning commissions for every successful
-                referral!
+                Earn with our Affiliate Marketing program by referring us to clients. Send potential client details and start earning commissions!
               </p>
 
               <div className="mb-6">
                 <div className="text-center mb-4">
-                  <span className="text-2xl font-bold text-neon-yellow">
-                    FREE TO JOIN
-                  </span>
-                  <p className="text-sm text-foreground/70 mt-1">
-                    Earn up to 20% commission per referral
-                  </p>
+                  <span className="text-2xl font-bold text-neon-yellow">FREE TO JOIN</span>
+                  <p className="text-sm text-foreground/70 mt-1">Earn up to 20% commission per referral</p>
                 </div>
                 <ul className="space-y-2 text-sm text-foreground/80">
-                  <li className="flex items-center">
-                    <Star className="w-4 h-4 text-neon-blue mr-2" />
-                    Free Registration
-                  </li>
-                  <li className="flex items-center">
-                    <Star className="w-4 h-4 text-neon-blue mr-2" />
-                    20% Commission
-                  </li>
-                  <li className="flex items-center">
-                    <Star className="w-4 h-4 text-neon-blue mr-2" />
-                    Monthly Payouts
-                  </li>
-                  <li className="flex items-center">
-                    <Star className="w-4 h-4 text-neon-blue mr-2" />
-                    Easy Referral Process
-                  </li>
+                  {["Free Registration", "20% Commission", "Monthly Payouts", "Easy Referral Process"].map((feature, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <Star className="w-4 h-4 text-neon-blue mr-2" />
+                      {feature}
+                    </li>
+                  ))}
                 </ul>
               </div>
 
@@ -512,23 +557,7 @@ const HomePage = () => {
               </Button>
             </motion.div>
           </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            className="flex flex-col items-center"
-            variants={itemVariants}
-          >
-            <p className="text-sm text-neon-blue/80 mb-2 font-semibold">
-              👇 Explore More Services Below
-            </p>
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <ChevronDown className="w-6 h-6 text-neon-blue" />
-            </motion.div>
-          </motion.div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Services Packages Section */}
@@ -555,8 +584,7 @@ const HomePage = () => {
               }}
               transition={{ duration: 3, repeat: Infinity }}
             >
-              🎯 Results-driven packages that transform your business into a
-              market leader
+              🎯 Results-driven packages that transform your business
             </motion.p>
           </motion.div>
 
@@ -564,8 +592,7 @@ const HomePage = () => {
             {[
               {
                 id: "social-media",
-                image:
-                  "https://images.pexels.com/photos/13883892/pexels-photo-13883892.jpeg",
+                image: "https://images.pexels.com/photos/13883892/pexels-photo-13883892.jpeg",
                 title: "Social Media Marketing",
                 description: "Boost your online presence with 10x engagement",
                 caption: "Get your social media strategy in 24 hours",
@@ -573,8 +600,7 @@ const HomePage = () => {
               },
               {
                 id: "seo",
-                image:
-                  "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
+                image: "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
                 title: "Search Engine Optimization",
                 description: "Rank #1 on Google within 90 days",
                 caption: "80% of your SEO work is done automatically",
@@ -582,8 +608,7 @@ const HomePage = () => {
               },
               {
                 id: "photography",
-                image:
-                  "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
+                image: "https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg",
                 title: "Photography & Videography",
                 description: "Professional content that converts",
                 caption: "Get your brand photoshoot in one session",
@@ -591,8 +616,7 @@ const HomePage = () => {
               },
               {
                 id: "website",
-                image:
-                  "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+                image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
                 title: "Software Development",
                 description: "Lightning-fast, mobile-responsive websites & apps",
                 caption: "Get your website template in 10 minutes",
@@ -600,8 +624,7 @@ const HomePage = () => {
               },
               {
                 id: "app",
-                image:
-                  "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+                image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
                 title: "App Development",
                 description: "Native iOS & Android apps that scale",
                 caption: "80% of your app is done with our templates",
@@ -609,8 +632,7 @@ const HomePage = () => {
               },
               {
                 id: "business-cards",
-                image:
-                  "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg",
+                image: "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg",
                 title: "Business Cards",
                 description: "Premium designs that make lasting impressions",
                 caption: "Get your business cards designed in 2 hours",
@@ -640,50 +662,33 @@ const HomePage = () => {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-foreground">
-                      {service.title}
-                    </h3>
-                    <p className="text-foreground/80 mb-4 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
+                    <p className="text-foreground/80 mb-4 text-sm leading-relaxed">{service.description}</p>
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-neon-blue font-bold text-lg">
-                          {service.price}
-                        </span>
+                        <span className="text-neon-blue font-bold text-lg">{service.price}</span>
                       </div>
                       <div className="flex gap-2">
                         <Button
                           size="sm"
                           onClick={() => handleOrderClick(service.id)}
-                          className={`bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-4 py-2 text-sm rounded-full shadow-lg transition-all duration-300 ${service.id === "social-media" ||
-                            service.id === "seo"
-                            ? "flex-1"
-                            : "flex-1"
-                            }`}
+                          className="flex-1 bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-4 py-2 text-sm rounded-full shadow-lg transition-all duration-300"
                         >
                           Order Now
                         </Button>
-                        {service.id !== "social-media" &&
-                          service.id !== "seo" && (
-                            <Button
-                              size="sm"
-                              variant="outline"
-                              asChild
-                              className="border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white px-4 py-2 text-sm rounded-full transition-all duration-300"
-                            >
-                              <Link
-                                to={
-                                  service.id === "business-cards"
-                                    ? "/business-card-templates"
-                                    : "/templates"
-                                }
-                              >
-                                <Eye className="w-4 h-4 mr-1" />
-                                Templates
-                              </Link>
-                            </Button>
-                          )}
+                        {service.id !== "social-media" && service.id !== "seo" && (
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            asChild
+                            className="border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white px-4 py-2 text-sm rounded-full transition-all duration-300"
+                          >
+                            <Link to={service.id === "business-cards" ? "/business-card-templates" : "/templates"}>
+                              <Eye className="w-4 h-4 mr-1" />
+                              Templates
+                            </Link>
+                          </Button>
+                        )}
                       </div>
                     </div>
                   </CardContent>
@@ -708,7 +713,7 @@ const HomePage = () => {
               Our Portfolio
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              🎯 Proven results across diverse industries. Browse samples of work we've delivered to satisfied clients.
+              🎯 Proven results across diverse industries. Browse samples of work we've delivered.
             </p>
           </motion.div>
 
@@ -726,13 +731,9 @@ const HomePage = () => {
                   <div className="mb-8">
                     <div className="flex items-center gap-4 mb-4">
                       <IconComponent className="w-8 h-8 text-neon-blue" />
-                      <h3 className="text-3xl font-bold text-foreground">
-                        {category.title}
-                      </h3>
+                      <h3 className="text-3xl font-bold text-foreground">{category.title}</h3>
                     </div>
-                    <p className="text-foreground/70 text-lg">
-                      {category.description}
-                    </p>
+                    <p className="text-foreground/70 text-lg">{category.description}</p>
                   </div>
 
                   <div className={`grid grid-cols-1 ${category.id === "youtube" ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3"} gap-8`}>
@@ -745,12 +746,7 @@ const HomePage = () => {
                         viewport={{ once: true }}
                         whileHover={{ y: -5 }}
                       >
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group block h-full"
-                        >
+                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="group block h-full">
                           <Card className="bg-space-light/50 border-space-light hover:border-neon-blue/50 transition-all duration-300 overflow-hidden h-full flex flex-col">
                             <div className="relative overflow-hidden bg-space-dark h-48">
                               <img
@@ -768,27 +764,7 @@ const HomePage = () => {
                               <h4 className="text-lg font-semibold text-foreground mb-2 group-hover:text-neon-blue transition-colors duration-300">
                                 {item.name}
                               </h4>
-                              <p className="text-foreground/70 text-sm mb-4 flex-1">
-                                {item.description}
-                              </p>
-                              {item.platform && (
-                                <div className="flex items-center gap-2 text-neon-blue text-sm font-semibold">
-                                  <Share2 className="w-4 h-4" />
-                                  {item.platform}
-                                </div>
-                              )}
-                              {item.subscribers && (
-                                <div className="flex items-center gap-2 text-neon-yellow text-sm font-semibold">
-                                  <Radio className="w-4 h-4" />
-                                  {item.subscribers}
-                                </div>
-                              )}
-                              {(item.type === "website" || item.type === "video") && (
-                                <div className="flex items-center gap-2 text-neon-blue text-sm font-semibold mt-2">
-                                  <ExternalLink className="w-4 h-4" />
-                                  View Live
-                                </div>
-                              )}
+                              <p className="text-foreground/70 text-sm mb-4 flex-1">{item.description}</p>
                             </CardContent>
                           </Card>
                         </a>
@@ -807,38 +783,23 @@ const HomePage = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <p className="text-foreground/80 text-lg mb-6">
-              Impressed with what you see? Let's create something amazing together!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                asChild
-              >
-                <Link to="/portfolio">
-                  View Full Portfolio
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-neon-yellow to-neon-blue hover:from-neon-blue hover:to-neon-yellow text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
-                asChild
-              >
-                <Link to="/contact">
-                  Get in Touch
-                </Link>
-              </Button>
-            </div>
+            <p className="text-foreground/80 text-lg mb-6">Ready to see your business shine with our expertise?</p>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg transition-all duration-300"
+              asChild
+            >
+              <Link to="/portfolio">
+                View Full Portfolio
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>
 
       {/* Service Popups */}
       <Modal isOpen={activePopup === "social-media"} onClose={handleClosePopup}>
-        <SocialMediaPopup
-          onSubmit={(data) => handleSubmit("Social Media Marketing", data)}
-        />
+        <SocialMediaPopup onSubmit={(data) => handleSubmit("Social Media Marketing", data)} />
       </Modal>
 
       <Modal isOpen={activePopup === "seo"} onClose={handleClosePopup}>
@@ -846,46 +807,27 @@ const HomePage = () => {
       </Modal>
 
       <Modal isOpen={activePopup === "photography"} onClose={handleClosePopup}>
-        <PhotographyPopup
-          onSubmit={(data) => handleSubmit("Photography & Videography", data)}
-        />
+        <PhotographyPopup onSubmit={(data) => handleSubmit("Photography & Videography", data)} />
       </Modal>
 
       <Modal isOpen={activePopup === "website"} onClose={handleClosePopup}>
-        <WebsitePopup
-          onSubmit={(data) => handleSubmit("Website Development", data)}
-        />
+        <WebsitePopup onSubmit={(data) => handleSubmit("Website Development", data)} />
       </Modal>
 
       <Modal isOpen={activePopup === "app"} onClose={handleClosePopup}>
         <AppPopup onSubmit={(data) => handleSubmit("App Development", data)} />
       </Modal>
 
-      <Modal
-        isOpen={activePopup === "business-cards"}
-        onClose={handleClosePopup}
-      >
-        <BusinessCardsPopup
-          onSubmit={(data) => handleSubmit("Business Cards", data)}
-        />
+      <Modal isOpen={activePopup === "business-cards"} onClose={handleClosePopup}>
+        <BusinessCardsPopup onSubmit={(data) => handleSubmit("Business Cards", data)} />
       </Modal>
 
-      <Modal
-        isOpen={activePopup === "affiliate-marketing"}
-        onClose={handleClosePopup}
-      >
-        <AffiliateMarketingPopup
-          onSubmit={(data) => handleSubmit("Affiliate Marketing", data)}
-        />
+      <Modal isOpen={activePopup === "affiliate-marketing"} onClose={handleClosePopup}>
+        <AffiliateMarketingPopup onSubmit={(data) => handleSubmit("Affiliate Marketing", data)} />
       </Modal>
 
-      <Modal
-        isOpen={activePopup === "personal-website"}
-        onClose={handleClosePopup}
-      >
-        <PersonalWebsitePopup
-          onSubmit={(data) => handleSubmit("Personal Website", data)}
-        />
+      <Modal isOpen={activePopup === "personal-website"} onClose={handleClosePopup}>
+        <PersonalWebsitePopup onSubmit={(data) => handleSubmit("Personal Website", data)} />
       </Modal>
     </div>
   );
