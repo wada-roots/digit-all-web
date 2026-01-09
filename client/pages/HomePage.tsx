@@ -364,7 +364,7 @@ const HomePage = () => {
                     <div className="flex items-start gap-4">
                       <span className="text-3xl group-hover:scale-125 transition-transform">{service.icon}</span>
                       <div className="flex-1">
-                        <p className="font-semibold text-white group-hover:text-neon-blue transition-colors">{service.title}</p>
+                        <p className="font-semibold text-neon-yellow group-hover:text-neon-blue transition-colors">{service.title}</p>
                         <p className="text-sm text-foreground/70 group-hover:text-foreground/90">{service.desc}</p>
                       </div>
                     </div>
