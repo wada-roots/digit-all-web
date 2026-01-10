@@ -259,7 +259,7 @@ const Navigation = () => {
                         <Link
                           key={item.name}
                           to={item.href}
-                          className="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-neon-blue border-b border-gray-100"
+                          className="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-neon-blue border-b border-gray-100 break-words"
                         >
                           {item.name}
                         </Link>
