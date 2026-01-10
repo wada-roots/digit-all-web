@@ -102,7 +102,7 @@ const Navigation = () => {
       ],
     },
     {
-      title: "BTL, Media & Creatives",
+      title: "TTL, Media & Creatives",
       items: [
         {
           name: "Billboard Advertising",
