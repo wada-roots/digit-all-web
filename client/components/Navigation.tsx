@@ -212,10 +212,6 @@ const Navigation = () => {
 
           {/* Mobile Menu */}
           <div className="lg:hidden flex items-center space-x-2">
-            <Button variant="ghost" size="icon" className="text-gray-700">
-              <Search className="h-5 w-5" />
-            </Button>
-
             <Button
               variant="ghost"
               size="icon"
