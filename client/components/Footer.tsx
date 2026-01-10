@@ -32,12 +32,12 @@ const Footer = () => {
   ];
 
   const services = [
-    { name: "Website Development", href: "/services" },
-    { name: "App Development", href: "/services" },
-    { name: "Social Media Marketing", href: "/services" },
-    { name: "SEO Services", href: "/services" },
-    { name: "Photography & Video", href: "/services" },
-    { name: "Business Cards", href: "/services" },
+    { name: "Digital Marketing", href: "/solutions/digital-marketing" },
+    { name: "Web Development & SEO", href: "/solutions/web-seo-ecommerce" },
+    { name: "Media & Creatives", href: "/solutions/media-creatives" },
+    { name: "Social Media Marketing", href: "/solutions/digital-marketing#social-media" },
+    { name: "Video Production", href: "/solutions/media-creatives#video" },
+    { name: "Graphic Design", href: "/solutions/media-creatives#design" },
   ];
 
   const socialLinks = [
