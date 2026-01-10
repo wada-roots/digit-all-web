@@ -24,11 +24,11 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
     { name: "Templates", href: "/templates" },
-    { name: "Web/App Design", href: "/webdevelopment" },
-    { name: "DMS Club", href: "/trifidclub" },
-    { name: "Contact", href: "/contact" },
+    { name: "Get in Touch", href: "/contact" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
   ];
 
   const services = [
