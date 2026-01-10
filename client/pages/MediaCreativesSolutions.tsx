@@ -190,7 +190,7 @@ const MediaCreativesSolutions = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-neon-blue to-neon-yellow bg-clip-text text-transparent leading-tight">
-            BTL, Media & Creatives Solutions
+            TTL, Media & Creatives Solutions
           </h1>
           <p className="text-xl sm:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
             Creative services and below-the-line marketing to engage and inspire
