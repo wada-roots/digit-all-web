@@ -44,25 +44,25 @@ const Footer = () => {
     {
       icon: Facebook,
       name: "Facebook",
-      url: "https://facebook.com/dms",
+      url: "https://www.linkedin.com/company/dealmojasafi/",
       color: "hover:text-blue-500",
     },
     {
       icon: Instagram,
       name: "Instagram",
-      url: "https://instagram.com/dms",
+      url: "https://www.linkedin.com/company/dealmojasafi/",
       color: "hover:text-pink-500",
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/company/dms",
+      url: "https://www.linkedin.com/company/dealmojasafi/",
       color: "hover:text-blue-600",
     },
     {
       icon: Twitter,
       name: "Twitter",
-      url: "https://twitter.com/dms",
+      url: "https://www.linkedin.com/company/dealmojasafi/",
       color: "hover:text-blue-400",
     },
   ];
