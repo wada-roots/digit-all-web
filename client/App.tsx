@@ -12,6 +12,7 @@ import { AdminRoute } from "@/components/auth/AdminRoute";
 // Import pages
 import HomePage from "./pages/HomePage";
 import Portfolio from "./pages/Portfolio";
+import Impact from "./pages/Impact";
 import Services from "./pages/Services";
 import WebDevelopment from "./pages/WebDevelopment";
 import DigitalMarketingSolutions from "./pages/DigitalMarketingSolutions";
