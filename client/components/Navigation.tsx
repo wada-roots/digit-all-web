@@ -24,6 +24,7 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
+    { name: "Impact", href: "/impact" },
     { name: "Digital Marketing", href: "/solutions/digital-marketing" },
     { name: "Media & Creatives", href: "/solutions/media-creatives" },
     { name: "Software Development", href: "/solutions/web-seo-ecommerce" },
