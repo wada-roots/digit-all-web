@@ -33,9 +33,11 @@ const HomePage = () => {
   const [activePopup, setActivePopup] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Carousel background images - Team photo
+  // Carousel background images - 3 quality responsive photos without white background
   const backgroundImages = [
-    "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F6abfcc92b05145a5902ef2eff7d6dfcf?format=webp&width=2560",
+    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop",
+    "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop",
+    "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop",
   ];
 
   // Portfolio data organized by categories
