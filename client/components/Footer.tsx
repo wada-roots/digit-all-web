@@ -119,6 +119,24 @@ const Footer = () => {
                   </div>
                 </div>
 
+                {/* Presence in Countries */}
+                <div className="mt-6 p-4 bg-neon-blue/10 rounded-lg border border-neon-blue/30">
+                  <h4 className="font-semibold text-foreground mb-3">
+                    Global Presence
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="inline-block px-3 py-1 bg-neon-blue/20 text-neon-blue rounded-full text-sm font-medium">
+                      🇰🇪 Kenya
+                    </span>
+                    <span className="inline-block px-3 py-1 bg-neon-yellow/20 text-neon-yellow rounded-full text-sm font-medium">
+                      🇺🇸 USA
+                    </span>
+                    <span className="inline-block px-3 py-1 bg-neon-blue/20 text-neon-blue rounded-full text-sm font-medium">
+                      🇦🇪 UAE
+                    </span>
+                  </div>
+                </div>
+
                 {/* Social Media */}
                 <div className="mt-6">
                   <div className="flex space-x-3">
