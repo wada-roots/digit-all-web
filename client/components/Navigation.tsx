@@ -225,7 +225,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden mt-2 bg-white border-t border-gray-200">
+          <div className="lg:hidden mt-2 bg-white border-t border-gray-200 max-h-[calc(100vh-120px)] overflow-y-auto">
             {/* Mobile Home Link */}
             <Link
               to="/"
