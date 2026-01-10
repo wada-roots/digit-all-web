@@ -35,7 +35,7 @@ const HomePage = () => {
 
   // Carousel background images - Team photo
   const backgroundImages = [
-    "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F6abfcc92b05145a5902ef2eff7d6dfcf?format=webp&width=800",
+    "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F6abfcc92b05145a5902ef2eff7d6dfcf?format=webp&width=2560",
   ];
 
   // Portfolio data organized by categories
