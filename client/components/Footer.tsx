@@ -90,8 +90,8 @@ const Footer = () => {
               >
                 <div className="mb-6">
                   <img
-                    src="/logo.png"
-                    alt="DMS Logo"
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fc81c5b3e09314aa8ac8e826c55c0fd83?format=webp&width=800"
+                    alt="Deal Moja Safi Logo"
                     className="h-12 w-auto mb-4"
                   />
                   <p className="text-foreground/80 leading-relaxed">
