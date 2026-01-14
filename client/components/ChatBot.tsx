@@ -84,7 +84,7 @@ const ChatBot = () => {
     }, 300);
   };
 
-  const handleLiveAgentSubmit = () => {
+  const handleLiveAgentSubmit = async () => {
     if (email && supportMessage) {
       const newMessage = {
         type: "user" as const,
@@ -92,19 +92,70 @@ const ChatBot = () => {
       };
       setMessages([...messages, newMessage]);
 
-      setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
+      try {
+        // Send to Google Sheet
+        const response = await fetch(
+          "https://script.google.com/macros/s/AKfycbyK6yIWrIJLrJhwxRVKonE8aP9OFbX7Yu9n_oGqluEezrEO7slyy7TdtjZSXqI5uWkE1Q/exec",
           {
-            type: "bot",
-            content: `Thanks! Our agent will contact you at ${email} shortly. We typically respond within 1 hour.`,
-          },
-        ]);
-        setEmail("");
-        setPhone("");
-        setSupportMessage("");
-        setTimeout(() => setStep("main"), 2000);
-      }, 300);
+            method: "POST",
+            body: JSON.stringify({
+              name: "Chat Bot Inquiry",
+              email: email,
+              phone: phone,
+              company: "",
+              service: "Live Agent Support",
+              budget: "",
+              message: supportMessage,
+            }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        const result = await response.json();
+
+        setTimeout(() => {
+          if (result.success) {
+            setMessages((prev) => [
+              ...prev,
+              {
+                type: "bot",
+                content: `Thanks! Our agent will contact you at ${email} shortly. We typically respond within 1 hour.`,
+              },
+            ]);
+          } else {
+            setMessages((prev) => [
+              ...prev,
+              {
+                type: "bot",
+                content:
+                  "We received your message but had trouble saving it. Please try again or call us directly at +254 738 849 148.",
+              },
+            ]);
+          }
+          setEmail("");
+          setPhone("");
+          setSupportMessage("");
+          setTimeout(() => setStep("main"), 2000);
+        }, 300);
+      } catch (error) {
+        console.error("Error submitting agent request:", error);
+        setTimeout(() => {
+          setMessages((prev) => [
+            ...prev,
+            {
+              type: "bot",
+              content:
+                "We received your message but had trouble saving it. Please try again or call us directly at +254 738 849 148.",
+            },
+          ]);
+          setEmail("");
+          setPhone("");
+          setSupportMessage("");
+          setTimeout(() => setStep("main"), 2000);
+        }, 300);
+      }
     }
   };
 
