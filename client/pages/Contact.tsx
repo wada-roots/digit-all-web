@@ -49,41 +49,43 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Send form data to Google Apps Script
-      const response = await fetch(
+      // Create FormData for Google Apps Script
+      const formPayload = new FormData();
+      formPayload.append("name", formData.name);
+      formPayload.append("email", formData.email);
+      formPayload.append("phone", formData.phone);
+      formPayload.append("company", formData.company);
+      formPayload.append("service", formData.service);
+      formPayload.append("budget", formData.budget);
+      formPayload.append("message", formData.message);
+
+      // Send form data to Google Apps Script with no-cors mode
+      await fetch(
         "https://script.google.com/macros/s/AKfycbyK6yIWrIJLrJhwxRVKonE8aP9OFbX7Yu9n_oGqluEezrEO7slyy7TdtjZSXqI5uWkE1Q/exec",
         {
           method: "POST",
-          body: JSON.stringify(formData),
-          headers: {
-            "Content-Type": "application/json",
-          },
+          body: formPayload,
+          mode: "no-cors",
         }
       );
 
-      const result = await response.json();
+      // If request completes without throwing, assume success
+      setIsSubmitting(false);
+      setIsSubmitted(true);
 
-      if (result.success) {
-        setIsSubmitting(false);
-        setIsSubmitted(true);
-
-        // Reset form after 5 seconds
-        setTimeout(() => {
-          setIsSubmitted(false);
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            service: "",
-            budget: "",
-            message: "",
-            company: "",
-          });
-        }, 5000);
-      } else {
-        setIsSubmitting(false);
-        alert("Error: " + result.message);
-      }
+      // Reset form after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          budget: "",
+          message: "",
+          company: "",
+        });
+      }, 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
       setIsSubmitting(false);
