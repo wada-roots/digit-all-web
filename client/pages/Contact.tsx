@@ -48,25 +48,47 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      // Send form data to Google Apps Script
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbyK6yIWrIJLrJhwxRVKonE8aP9OFbX7Yu9n_oGqluEezrEO7slyy7TdtjZSXqI5uWkE1Q/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      const result = await response.json();
 
-    // Reset form after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        budget: "",
-        message: "",
-        company: "",
-      });
-    }, 5000);
+      if (result.success) {
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+
+        // Reset form after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            service: "",
+            budget: "",
+            message: "",
+            company: "",
+          });
+        }, 5000);
+      } else {
+        setIsSubmitting(false);
+        alert("Error: " + result.message);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setIsSubmitting(false);
+      alert("Failed to submit form. Please try again.");
+    }
   };
 
   const contactInfo = [
