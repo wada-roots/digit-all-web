@@ -36,7 +36,7 @@ const HomePage = () => {
   // Carousel background images - 3 quality responsive photos related to our solutions
   const backgroundImages = [
     "https://images.pexels.com/photos/3183073/pexels-photo-3183073.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Digital Marketing & Analytics
-    "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Creative Design Work
+    "https://images.pexels.com/photos/3586365/pexels-photo-3586365.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Creative Team & Media Production
     "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Software Development & Technology
   ];
 

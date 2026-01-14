@@ -92,7 +92,8 @@ const Footer = () => {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Feb37744318da4c2f924d7a0d87036b20?format=webp&width=800"
                     alt="Deal Moja Safi Logo"
-                    className="h-12 w-auto mb-4"
+                    className="h-12 w-auto mb-4 bg-transparent"
+                    style={{ mixBlendMode: "multiply" }}
                   />
                   <p className="text-foreground/80 leading-relaxed">
                     We create powerful digital solutions that launch your
