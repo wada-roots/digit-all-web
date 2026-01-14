@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ContactBar from "./ContactBar";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+import ChatBot from "./ChatBot";
 import { Button } from "./ui/button";
 
 interface LayoutProps {
@@ -57,6 +58,9 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Footer */}
       <Footer />
 
+      {/* ChatBot Widget */}
+      <ChatBot />
+
       {/* WhatsApp Float Button */}
       <Button
         onClick={handleWhatsAppClick}
@@ -71,7 +75,7 @@ const Layout = ({ children }: LayoutProps) => {
       </Button>
 
       {/* Scroll Indicator */}
-      <div className="fixed bottom-6 right-6 z-40">
+      <div className="fixed bottom-6 right-24 z-40">
         <div className="w-2 h-16 bg-space-light rounded-full overflow-hidden">
           <div
             className="w-full bg-gradient-to-t from-neon-blue to-neon-yellow rounded-full transition-all duration-300"
