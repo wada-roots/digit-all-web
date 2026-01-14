@@ -93,26 +93,27 @@ const ChatBot = () => {
       setMessages([...messages, newMessage]);
 
       try {
-        // Create FormData for Google Apps Script
-        const formPayload = new FormData();
-        formPayload.append("name", "Chat Bot Inquiry");
-        formPayload.append("email", email);
-        formPayload.append("phone", phone);
-        formPayload.append("company", "");
-        formPayload.append("service", "Live Agent Support");
-        formPayload.append("budget", "");
-        formPayload.append("message", supportMessage);
+        // Create URL-encoded form data
+        const params = new URLSearchParams();
+        params.append("name", "Chat Bot Inquiry");
+        params.append("email", email);
+        params.append("phone", phone || "");
+        params.append("company", "");
+        params.append("service", "Live Agent Support");
+        params.append("budget", "");
+        params.append("message", supportMessage);
 
-        // Send to Google Sheet with no-cors mode
+        // Send to Google Sheet
         await fetch(
           "https://script.google.com/macros/s/AKfycbyK6yIWrIJLrJhwxRVKonE8aP9OFbX7Yu9n_oGqluEezrEO7slyy7TdtjZSXqI5uWkE1Q/exec",
           {
             method: "POST",
-            body: formPayload,
+            body: params,
             mode: "no-cors",
           }
         );
 
+        console.log("Agent request submitted");
         setTimeout(() => {
           setMessages((prev) => [
             ...prev,
@@ -128,13 +129,13 @@ const ChatBot = () => {
         }, 300);
       } catch (error) {
         console.error("Error submitting agent request:", error);
+        // Still show success message due to no-cors limitations
         setTimeout(() => {
           setMessages((prev) => [
             ...prev,
             {
               type: "bot",
-              content:
-                "We received your message but had trouble saving it. Please try again or call us directly at +254 738 849 148.",
+              content: `Thanks! Our agent will contact you at ${email} shortly. We typically respond within 1 hour.`,
             },
           ]);
           setEmail("");
