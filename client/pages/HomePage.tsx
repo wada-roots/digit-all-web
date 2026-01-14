@@ -33,11 +33,11 @@ const HomePage = () => {
   const [activePopup, setActivePopup] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Carousel background images - 3 quality responsive photos without white background
+  // Carousel background images - 3 quality responsive photos related to our solutions
   const backgroundImages = [
-    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop",
-    "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop",
-    "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop",
+    "https://images.pexels.com/photos/3183073/pexels-photo-3183073.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Digital Marketing & Analytics
+    "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Creative Design Work
+    "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Software Development & Technology
   ];
 
   // Portfolio data organized by categories
