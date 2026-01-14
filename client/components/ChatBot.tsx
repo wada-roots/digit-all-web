@@ -1,13 +1,25 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, MessageCircle, Send, Phone, Home, Briefcase, ShoppingCart } from "lucide-react";
+import {
+  X,
+  MessageCircle,
+  Send,
+  Phone,
+  Home,
+  Briefcase,
+  ShoppingCart,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [step, setStep] = useState<"main" | "navigation" | "services" | "support">("main");
-  const [messages, setMessages] = useState<Array<{ type: "bot" | "user"; content: string }>>([
+  const [step, setStep] = useState<
+    "main" | "navigation" | "services" | "support"
+  >("main");
+  const [messages, setMessages] = useState<
+    Array<{ type: "bot" | "user"; content: string }>
+  >([
     {
       type: "bot",
       content: "Hi! 👋 Welcome to Deal Moja Safi. How can I help you today?",
@@ -135,7 +147,8 @@ const ChatBot = () => {
                   setMessages([
                     {
                       type: "bot",
-                      content: "Hi! 👋 Welcome to Deal Moja Safi. How can I help you today?",
+                      content:
+                        "Hi! 👋 Welcome to Deal Moja Safi. How can I help you today?",
                     },
                   ]);
                 }}
@@ -298,7 +311,11 @@ const ChatBot = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-14 h-14 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-shadow"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+        {isOpen ? (
+          <X className="w-6 h-6" />
+        ) : (
+          <MessageCircle className="w-6 h-6" />
+        )}
       </motion.button>
     </div>
   );

@@ -35,7 +35,10 @@ const Footer = () => {
     { name: "Digital Marketing", href: "/solutions/digital-marketing" },
     { name: "Web Development & SEO", href: "/solutions/web-seo-ecommerce" },
     { name: "Media & Creatives", href: "/solutions/media-creatives" },
-    { name: "Social Media Marketing", href: "/solutions/digital-marketing#social-media" },
+    {
+      name: "Social Media Marketing",
+      href: "/solutions/digital-marketing#social-media",
+    },
     { name: "Video Production", href: "/solutions/media-creatives#video" },
     { name: "Graphic Design", href: "/solutions/media-creatives#design" },
   ];
