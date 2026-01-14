@@ -93,47 +93,34 @@ const ChatBot = () => {
       setMessages([...messages, newMessage]);
 
       try {
-        // Send to Google Sheet
-        const response = await fetch(
+        // Create FormData for Google Apps Script
+        const formPayload = new FormData();
+        formPayload.append("name", "Chat Bot Inquiry");
+        formPayload.append("email", email);
+        formPayload.append("phone", phone);
+        formPayload.append("company", "");
+        formPayload.append("service", "Live Agent Support");
+        formPayload.append("budget", "");
+        formPayload.append("message", supportMessage);
+
+        // Send to Google Sheet with no-cors mode
+        await fetch(
           "https://script.google.com/macros/s/AKfycbyK6yIWrIJLrJhwxRVKonE8aP9OFbX7Yu9n_oGqluEezrEO7slyy7TdtjZSXqI5uWkE1Q/exec",
           {
             method: "POST",
-            body: JSON.stringify({
-              name: "Chat Bot Inquiry",
-              email: email,
-              phone: phone,
-              company: "",
-              service: "Live Agent Support",
-              budget: "",
-              message: supportMessage,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-            },
+            body: formPayload,
+            mode: "no-cors",
           }
         );
 
-        const result = await response.json();
-
         setTimeout(() => {
-          if (result.success) {
-            setMessages((prev) => [
-              ...prev,
-              {
-                type: "bot",
-                content: `Thanks! Our agent will contact you at ${email} shortly. We typically respond within 1 hour.`,
-              },
-            ]);
-          } else {
-            setMessages((prev) => [
-              ...prev,
-              {
-                type: "bot",
-                content:
-                  "We received your message but had trouble saving it. Please try again or call us directly at +254 738 849 148.",
-              },
-            ]);
-          }
+          setMessages((prev) => [
+            ...prev,
+            {
+              type: "bot",
+              content: `Thanks! Our agent will contact you at ${email} shortly. We typically respond within 1 hour.`,
+            },
+          ]);
           setEmail("");
           setPhone("");
           setSupportMessage("");
