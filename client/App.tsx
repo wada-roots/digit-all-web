@@ -13,6 +13,7 @@ import { AdminRoute } from "@/components/auth/AdminRoute";
 import HomePage from "./pages/HomePage";
 import Portfolio from "./pages/Portfolio";
 import Impact from "./pages/Impact";
+import Team from "./pages/Team";
 import Services from "./pages/Services";
 import WebDevelopment from "./pages/WebDevelopment";
 import DigitalMarketingSolutions from "./pages/DigitalMarketingSolutions";
@@ -48,6 +49,7 @@ const App = () => (
               <Route path="/" element={<HomePage />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/impact" element={<Impact />} />
+              <Route path="/team" element={<Team />} />
               <Route path="/services" element={<Services />} />
               <Route
                 path="/solutions/digital-marketing"
