@@ -1,22 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   X,
   MessageCircle,
   Send,
   Phone,
-  Home,
-  Briefcase,
-  ShoppingCart,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [step, setStep] = useState<
-    "main" | "navigation" | "services" | "support"
-  >("main");
   const [messages, setMessages] = useState<
     Array<{ type: "bot" | "user"; content: string }>
   >([
@@ -25,9 +18,19 @@ const ChatBot = () => {
       content: "Hi! 👋 Welcome to Deal Moja Safi. How can I help you today?",
     },
   ]);
+  const [userInput, setUserInput] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [supportMessage, setSupportMessage] = useState("");
+  const [showAgentForm, setShowAgentForm] = useState(false);
+
+  // Auto-open on first visit
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("dms_bot_visited");
+    if (!hasVisited) {
+      setIsOpen(true);
+      localStorage.setItem("dms_bot_visited", "true");
+    }
+  }, []);
 
   const handleNavigationClick = (option: string) => {
     const newMessage = {
