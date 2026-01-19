@@ -32,68 +32,75 @@ const ChatBot = () => {
     }
   }, []);
 
-  const handleNavigationClick = (option: string) => {
-    const newMessage = {
+  const handleSendMessage = async () => {
+    if (!userInput.trim()) return;
+
+    // Add user message
+    const newUserMessage = {
       type: "user" as const,
-      content: option,
+      content: userInput,
     };
-    setMessages([...messages, newMessage]);
+    setMessages((prev) => [...prev, newUserMessage]);
+    setUserInput("");
 
-    setTimeout(() => {
-      let botResponse = "";
-      switch (option) {
-        case "Home":
-          botResponse = "Taking you to our home page...";
-          setTimeout(() => (window.location.href = "/"), 1000);
-          break;
-        case "Impact":
-          botResponse = "Exploring our impact and values...";
-          setTimeout(() => (window.location.href = "/impact"), 1000);
-          break;
-        case "Portfolio":
-          botResponse = "Showcasing our recent projects...";
-          setTimeout(() => (window.location.href = "/portfolio"), 1000);
-          break;
-        case "Contact":
-          botResponse = "Opening contact page...";
-          setTimeout(() => (window.location.href = "/contact"), 1000);
-          break;
-        default:
-          botResponse = "Option selected.";
-      }
-      setMessages((prev) => [...prev, { type: "bot", content: botResponse }]);
-    }, 300);
-  };
+    // Check if user wants to talk to an agent
+    const lowerInput = userInput.toLowerCase();
+    if (
+      lowerInput.includes("agent") ||
+      lowerInput.includes("live") ||
+      lowerInput.includes("speak") ||
+      lowerInput.includes("talk") ||
+      lowerInput.includes("contact")
+    ) {
+      setTimeout(() => {
+        setMessages((prev) => [
+          ...prev,
+          {
+            type: "bot",
+            content:
+              "I'd be happy to connect you with our team! Please provide your email and we'll have an agent reach out to you shortly.",
+          },
+        ]);
+        setShowAgentForm(true);
+      }, 300);
+    } else {
+      // Provide helpful bot response
+      setTimeout(() => {
+        let botResponse = "";
 
-  const handleServiceClick = (service: string) => {
-    const newMessage = {
-      type: "user" as const,
-      content: `I'm interested in ${service}`,
-    };
-    setMessages([...messages, newMessage]);
+        if (
+          lowerInput.includes("service") ||
+          lowerInput.includes("solution") ||
+          lowerInput.includes("help")
+        ) {
+          botResponse =
+            "We offer a range of services including Digital Marketing, Web Development & SEO, Media & Creatives, Social Media Management, Video Production, and Graphic Design. What would you like to know more about?";
+        } else if (
+          lowerInput.includes("price") ||
+          lowerInput.includes("cost") ||
+          lowerInput.includes("budget")
+        ) {
+          botResponse =
+            "Our pricing varies based on your specific needs. I recommend speaking with our team for a personalized quote. Would you like to connect with an agent?";
+        } else if (
+          lowerInput.includes("team") ||
+          lowerInput.includes("about")
+        ) {
+          botResponse =
+            "Deal Moja Safi is a leading digital solutions agency. Learn more about our team and values on our Impact page, or feel free to ask any specific questions!";
+        } else {
+          botResponse =
+            "Thanks for your message! If you need more detailed assistance, I can connect you with one of our agents. Just let me know!";
+        }
 
-    const serviceRoutes: Record<string, string> = {
-      "Digital Marketing": "/solutions/digital-marketing",
-      "Web Development & SEO": "/solutions/web-seo-ecommerce",
-      "Media & Creatives": "/solutions/media-creatives",
-      "Social Media": "/solutions/digital-marketing#social-media",
-      "Video Production": "/solutions/media-creatives#video",
-      "Graphic Design": "/solutions/media-creatives#design",
-    };
-
-    setTimeout(() => {
-      const response = `Great! Exploring ${service} services for you. You can also reach out to our team for a custom quote.`;
-      setMessages((prev) => [...prev, { type: "bot", content: response }]);
-    }, 300);
+        setMessages((prev) => [...prev, { type: "bot", content: botResponse }]);
+      }, 300);
+    }
   };
 
   const handleLiveAgentSubmit = async () => {
-    if (email && supportMessage) {
-      const newMessage = {
-        type: "user" as const,
-        content: `Message: ${supportMessage}`,
-      };
-      setMessages([...messages, newMessage]);
+    if (email && userInput) {
+      const messageContent = userInput || "Request for live agent support";
 
       try {
         // Create URL-encoded form data
@@ -104,7 +111,7 @@ const ChatBot = () => {
         params.append("company", "");
         params.append("service", "Live Agent Support");
         params.append("budget", "");
-        params.append("message", supportMessage);
+        params.append("message", messageContent);
 
         // Send to Google Sheet
         await fetch(
@@ -122,13 +129,16 @@ const ChatBot = () => {
             ...prev,
             {
               type: "bot",
-              content: `Thanks! Our agent will contact you at ${email} shortly. We typically respond within 1 hour.`,
+              content: `Perfect! Our agent will contact you at ${email} shortly. We typically respond within 1 hour. 🎉`,
             },
           ]);
           setEmail("");
           setPhone("");
-          setSupportMessage("");
-          setTimeout(() => setStep("main"), 2000);
+          setUserInput("");
+          setShowAgentForm(false);
+          setTimeout(() => {
+            setIsOpen(false);
+          }, 2000);
         }, 300);
       } catch (error) {
         console.error("Error submitting agent request:", error);
@@ -138,33 +148,20 @@ const ChatBot = () => {
             ...prev,
             {
               type: "bot",
-              content: `Thanks! Our agent will contact you at ${email} shortly. We typically respond within 1 hour.`,
+              content: `Perfect! Our agent will contact you at ${email} shortly. We typically respond within 1 hour. 🎉`,
             },
           ]);
           setEmail("");
           setPhone("");
-          setSupportMessage("");
-          setTimeout(() => setStep("main"), 2000);
+          setUserInput("");
+          setShowAgentForm(false);
+          setTimeout(() => {
+            setIsOpen(false);
+          }, 2000);
         }, 300);
       }
     }
   };
-
-  const navigationOptions = [
-    { label: "🏠 Home", value: "Home" },
-    { label: "🎯 Impact", value: "Impact" },
-    { label: "📂 Portfolio", value: "Portfolio" },
-    { label: "📧 Contact", value: "Contact" },
-  ];
-
-  const serviceOptions = [
-    "Digital Marketing",
-    "Web Development & SEO",
-    "Media & Creatives",
-    "Social Media",
-    "Video Production",
-    "Graphic Design",
-  ];
 
   return (
     <div className="fixed bottom-4 right-4 z-40">
