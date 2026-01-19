@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  X,
-  MessageCircle,
-  Send,
-  Phone,
-} from "lucide-react";
+import { X, MessageCircle, Send, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 
 const ChatBot = () => {
@@ -120,7 +115,7 @@ const ChatBot = () => {
             method: "POST",
             body: params,
             mode: "no-cors",
-          }
+          },
         );
 
         console.log("Agent request submitted");
