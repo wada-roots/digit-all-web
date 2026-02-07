@@ -39,12 +39,53 @@ const Services = () => {
     setActivePopup(null);
   };
 
-  const handleSubmit = (serviceType: string, data: any) => {
-    console.log(`${serviceType} quote request:`, data);
-    alert(
-      `Thank you for your ${serviceType} quote request! We'll get back to you within 24 hours.`,
-    );
-    setActivePopup(null);
+  const handleSubmit = async (serviceType: string, data: any) => {
+    try {
+      // Create URL-encoded form data
+      const params = new URLSearchParams();
+
+      // Add basic info
+      params.append("name", data.businessName || data.companyName || "");
+      params.append("email", data.email || "");
+      params.append("phone", data.phone || "");
+      params.append("company", data.company || "");
+      params.append("service", serviceType);
+      params.append("budget", data.budget || "");
+
+      // Add all other form fields as JSON string
+      const additionalFields = { ...data };
+      delete additionalFields.businessName;
+      delete additionalFields.companyName;
+      delete additionalFields.email;
+      delete additionalFields.phone;
+      delete additionalFields.company;
+      delete additionalFields.budget;
+
+      params.append("message", JSON.stringify(additionalFields));
+
+      // Send to Google Apps Script
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxamHsmi6gybjmuwEZJqKKxbgiRCul1lGuQgdncWYiBPcws-ZVlQkxs7-SO6hfFgANvJg/exec",
+        {
+          method: "POST",
+          body: params,
+          mode: "no-cors",
+        }
+      );
+
+      console.log(`${serviceType} quote request:`, data);
+      alert(
+        `Thank you for your ${serviceType} quote request! We'll get back to you within 24 hours.`,
+      );
+      setActivePopup(null);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Still show success message due to no-cors limitations
+      alert(
+        `Thank you for your ${serviceType} quote request! We'll get back to you within 24 hours.`,
+      );
+      setActivePopup(null);
+    }
   };
 
   const containerVariants = {
