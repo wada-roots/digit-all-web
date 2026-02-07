@@ -25,30 +25,56 @@ const WebSEOEcommerceSolutions = () => {
 
   const handleSubmit = async (serviceType: string, data: any) => {
     try {
+      console.log(`${serviceType} form data received:`, data);
+
+      // Validate required fields
+      if (!data.email) {
+        alert("Email is required");
+        return;
+      }
+
       // Create URL-encoded form data
       const params = new URLSearchParams();
 
-      // Add basic info
-      params.append("name", data.businessName || data.companyName || "");
-      params.append("email", data.email || "");
-      params.append("phone", data.phone || "");
-      params.append("company", data.company || "");
+      // Add basic info - handle both businessName and companyName
+      const name = data.businessName || data.companyName || data.name || "";
+      const email = data.email || "";
+      const phone = data.phone || "";
+      const company = data.company || "";
+      const budget = data.budget || "";
+
+      params.append("name", name);
+      params.append("email", email);
+      params.append("phone", phone);
+      params.append("company", company);
       params.append("service", serviceType);
-      params.append("budget", data.budget || "");
+      params.append("budget", budget);
 
       // Add all other form fields as JSON string
       const additionalFields = { ...data };
       delete additionalFields.businessName;
       delete additionalFields.companyName;
+      delete additionalFields.name;
       delete additionalFields.email;
       delete additionalFields.phone;
       delete additionalFields.company;
       delete additionalFields.budget;
 
-      params.append("message", JSON.stringify(additionalFields));
+      const messageJSON = JSON.stringify(additionalFields);
+      params.append("message", messageJSON);
+
+      console.log("Sending to Google Apps Script:", {
+        name,
+        email,
+        phone,
+        company,
+        service: serviceType,
+        budget,
+        message: messageJSON,
+      });
 
       // Send to Google Apps Script
-      await fetch(
+      const response = await fetch(
         "https://script.google.com/macros/s/AKfycbwmdQ2jhIFvoRXwfsqp8Mby6OxwhU_ldyBK7gU04Fy5rylZmvmIVcFfpR2p7UWI7JfkUQ/exec",
         {
           method: "POST",
@@ -57,7 +83,9 @@ const WebSEOEcommerceSolutions = () => {
         }
       );
 
-      console.log(`${serviceType} inquiry:`, data);
+      console.log("Fetch response status:", response.status);
+      console.log(`${serviceType} inquiry submitted successfully`);
+
       alert(
         `Thank you for your ${serviceType} inquiry! We'll get back to you within 24 hours.`,
       );
