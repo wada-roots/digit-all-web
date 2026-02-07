@@ -650,7 +650,7 @@ const Services = () => {
       </Modal>
 
       <Modal isOpen={activePopup === "seo"} onClose={handleClosePopup}>
-        <SEOPopup onSubmit={(data) => handleSubmit("SEO Services", data)} />
+        <SEOPopup onSubmit={(data) => handleSubmit("SEO", data)} />
       </Modal>
 
       <Modal isOpen={activePopup === "photography"} onClose={handleClosePopup}>
