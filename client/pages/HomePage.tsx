@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronDown,
@@ -30,14 +30,15 @@ import AffiliateMarketingPopup from "@/components/popups/AffiliateMarketingPopup
 import PersonalWebsitePopup from "@/components/popups/PersonalWebsitePopup";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [activePopup, setActivePopup] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Carousel background images - 3 quality responsive photos related to our solutions
   const backgroundImages = [
-    "https://images.pexels.com/photos/3183073/pexels-photo-3183073.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Digital Marketing & Analytics
-    "https://images.pexels.com/photos/3586365/pexels-photo-3586365.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Creative Team & Media Production
-    "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Software Development & Technology
+    "https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Digital Marketing & Analytics (Darker)
+    "https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Creative Team & Media Production (Darker)
+    "https://images.pexels.com/photos/5380590/pexels-photo-5380590.jpeg?auto=compress&cs=tinysrgb&w=2560&h=1440&fit=crop", // Software Development & Technology (Darker)
   ];
 
   // Portfolio data organized by categories
@@ -389,23 +390,27 @@ const HomePage = () => {
                     title: "Web Design",
                     desc: "Stunning responsive websites",
                     color: "neon-blue",
+                    link: "/solutions/web-seo-ecommerce",
                   },
                   {
                     icon: "📱",
                     title: "App Development",
                     desc: "Native iOS & Android apps",
                     color: "neon-yellow",
+                    link: "/solutions/software-development",
                   },
                   {
                     icon: "📊",
                     title: "Digital Marketing",
                     desc: "Growth-focused strategies",
                     color: "neon-blue",
+                    link: "/solutions/digital-marketing",
                   },
                 ].map((service, idx) => (
                   <motion.div
                     key={idx}
                     whileHover={{ x: 10 }}
+                    onClick={() => navigate(service.link)}
                     className="bg-gradient-to-r from-white/10 to-white/5 border border-neon-blue/20 hover:border-neon-blue/50 rounded-lg p-4 backdrop-blur-sm transition-all duration-300 cursor-pointer group"
                   >
                     <div className="flex items-start gap-4">
