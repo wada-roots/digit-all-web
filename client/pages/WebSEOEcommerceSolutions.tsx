@@ -349,7 +349,7 @@ const WebSEOEcommerceSolutions = () => {
       {/* Popups */}
       <Modal isOpen={activePopup === "web-design"} onClose={handleClosePopup}>
         <WebsitePopup
-          onSubmit={(data) => handleSubmit("Website Design", data)}
+          onSubmit={(data) => handleSubmit("Website Development", data)}
         />
       </Modal>
 
