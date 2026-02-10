@@ -600,10 +600,10 @@ const HomePage = () => {
               </div>
 
               <Button
-                className="w-full bg-gradient-to-r from-neon-yellow to-neon-blue hover:from-neon-blue hover:to-neon-yellow text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300"
-                onClick={() => (window.location.href = "/login")}
+                disabled
+                className="w-full bg-gradient-to-r from-neon-yellow to-neon-blue text-white font-semibold py-3 rounded-full shadow-lg transition-all duration-300 opacity-60 cursor-not-allowed"
               >
-                START EARNING!!
+                Coming Soon
               </Button>
             </motion.div>
           </motion.div>
