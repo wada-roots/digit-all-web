@@ -348,7 +348,7 @@ const HomePage = () => {
                   className="bg-white/5 border border-neon-blue/20 rounded-lg p-3 sm:p-4 backdrop-blur-sm hover:border-neon-blue/50 transition-all"
                 >
                   <p className="text-2xl sm:text-3xl font-bold text-neon-yellow">
-                    500+
+                    50+
                   </p>
                   <p className="text-xs sm:text-sm text-foreground/70">
                     Happy Clients
@@ -359,7 +359,7 @@ const HomePage = () => {
                   className="bg-white/5 border border-neon-yellow/20 rounded-lg p-3 sm:p-4 backdrop-blur-sm hover:border-neon-yellow/50 transition-all"
                 >
                   <p className="text-2xl sm:text-3xl font-bold text-neon-blue">
-                    1000+
+                    100+
                   </p>
                   <p className="text-xs sm:text-sm text-foreground/70">
                     Projects Done
