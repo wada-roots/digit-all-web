@@ -815,10 +815,10 @@ const HomePage = () => {
                       <div className="flex gap-2">
                         <Button
                           size="sm"
-                          onClick={() => handleOrderClick(service.id)}
+                          asChild
                           className="flex-1 bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white px-4 py-2 text-sm rounded-full shadow-lg transition-all duration-300"
                         >
-                          Order Now
+                          <Link to="/contact#start-project">Order Now</Link>
                         </Button>
                         {service.id !== "social-media" &&
                           service.id !== "seo" && (
