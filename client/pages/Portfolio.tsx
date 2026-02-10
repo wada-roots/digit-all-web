@@ -128,31 +128,6 @@ const Portfolio = () => {
         "Professional presentation of services. Excellent client acquisition tool!",
       testimonialAuthor: "Masaki Magack",
     },
-    {
-      id: "web-5",
-      category: "websites",
-      title: "Educational Learning Platform",
-      client: "EduPro Institute",
-      description:
-        "Comprehensive online learning platform with courses, interactive lessons, and student progress tracking",
-      longDescription:
-        "Full-featured e-learning platform with course management, video streaming, interactive quizzes, progress tracking, and certificates. Supports thousands of concurrent users.",
-      thumbnail:
-        "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg",
-      url: "https://example-edupro.com",
-      features: [
-        "Course Management",
-        "Video Streaming",
-        "Interactive Quizzes",
-        "Progress Tracking",
-        "Certificate Generation",
-        "Student Analytics",
-      ],
-      industry: "Education & E-Learning",
-      completionDate: "Apr 2024",
-      testimonial: "Student engagement increased by 80%. Excellent platform!",
-      testimonialAuthor: "Dr. Jennifer Lee, Director EduPro",
-    },
 
     // Apps
     {
