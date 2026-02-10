@@ -72,6 +72,17 @@ const Contact = () => {
       params.append("budget", formData.budget);
       params.append("message", formData.message);
 
+      // Log the data being sent
+      console.log("Contact Form Data:", {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        service: formData.service,
+        budget: formData.budget,
+        message: formData.message,
+      });
+
       // Send to Google Apps Script
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbwmdQ2jhIFvoRXwfsqp8Mby6OxwhU_ldyBK7gU04Fy5rylZmvmIVcFfpR2p7UWI7JfkUQ/exec",
@@ -82,7 +93,8 @@ const Contact = () => {
         },
       );
 
-      console.log("Form submitted successfully");
+      console.log("Form submitted successfully with service:", formData.service);
+      console.log("Response status:", response.status);
       setIsSubmitting(false);
       setIsSubmitted(true);
 
