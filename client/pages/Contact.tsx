@@ -50,7 +50,13 @@ const Contact = () => {
 
     try {
       // Validate required fields
-      if (!formData.name || !formData.email || !formData.phone || !formData.message || !formData.service) {
+      if (
+        !formData.name ||
+        !formData.email ||
+        !formData.phone ||
+        !formData.message ||
+        !formData.service
+      ) {
         alert("Please fill in all required fields");
         setIsSubmitting(false);
         return;
@@ -73,7 +79,7 @@ const Contact = () => {
           method: "POST",
           body: params,
           mode: "no-cors",
-        }
+        },
       );
 
       console.log("Form submitted successfully");

@@ -128,7 +128,6 @@ const Portfolio = () => {
         "Professional presentation of services. Excellent client acquisition tool!",
       testimonialAuthor: "Masaki Magack",
     },
-
   ];
 
   // Filter items based on category and search

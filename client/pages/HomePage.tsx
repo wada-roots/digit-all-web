@@ -51,7 +51,8 @@ const HomePage = () => {
       items: [
         {
           name: "KimKen Safaris",
-          description: "Safari and tourism booking platform with stunning photography gallery",
+          description:
+            "Safari and tourism booking platform with stunning photography gallery",
           thumbnail:
             "https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg",
           url: "http://kimkensafaris.com/",
@@ -67,7 +68,8 @@ const HomePage = () => {
         },
         {
           name: "Dr. PJ Onyango",
-          description: "Professional medical practice website for gynecological services",
+          description:
+            "Professional medical practice website for gynecological services",
           thumbnail:
             "https://images.pexels.com/photos/263399/pexels-photo-263399.jpeg",
           url: "https://drpjonyangogynae.com/",
@@ -135,7 +137,7 @@ const HomePage = () => {
           method: "POST",
           body: params,
           mode: "no-cors",
-        }
+        },
       );
 
       console.log(`${serviceType} form submitted:`, data);
