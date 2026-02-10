@@ -146,7 +146,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-[49px] mt-[33px]">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <img src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Feb37744318da4c2f924d7a0d87036b20?format=webp&width=800" alt="Deal Moja Safi Logo" className="h-10 w-auto" />
+            <img src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Feb37744318da4c2f924d7a0d87036b20?format=webp&width=800" alt="Deal Moja Safi Logo" className="h-16 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
