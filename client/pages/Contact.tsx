@@ -385,24 +385,24 @@ const Contact = () => {
                               <SelectValue placeholder="Select service" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="website">
+                              <SelectItem value="Website Development">
                                 Website Development
                               </SelectItem>
-                              <SelectItem value="app">
+                              <SelectItem value="App Development">
                                 App Development
                               </SelectItem>
-                              <SelectItem value="social-media">
+                              <SelectItem value="Social Media Marketing">
                                 Social Media Marketing
                               </SelectItem>
-                              <SelectItem value="seo">SEO Services</SelectItem>
-                              <SelectItem value="photography">
+                              <SelectItem value="SEO">SEO</SelectItem>
+                              <SelectItem value="Photography & Videography">
                                 Photography & Videography
                               </SelectItem>
-                              <SelectItem value="business-cards">
+                              <SelectItem value="Business Cards">
                                 Business Cards
                               </SelectItem>
-                              <SelectItem value="consultation">
-                                Free Consultation
+                              <SelectItem value="Chat Bot Inquiry">
+                                General Inquiry
                               </SelectItem>
                             </SelectContent>
                           </Select>
