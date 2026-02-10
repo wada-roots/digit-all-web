@@ -50,27 +50,35 @@ const HomePage = () => {
       icon: Code2,
       items: [
         {
-          name: "Example Website 1",
-          description: "E-commerce platform with advanced features",
+          name: "KimKen Safaris",
+          description: "Safari and tourism booking platform with stunning photography gallery",
           thumbnail:
-            "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
-          url: "https://example.com",
+            "https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg",
+          url: "http://kimkensafaris.com/",
           type: "website",
         },
         {
-          name: "Example Website 2",
-          description: "Corporate business website",
+          name: "Infinite Walls",
+          description: "Interior design and decoration services showcase",
+          thumbnail:
+            "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg",
+          url: "https://infinitewalls.co.ke/",
+          type: "website",
+        },
+        {
+          name: "Dr. PJ Onyango",
+          description: "Professional medical practice website for gynecological services",
+          thumbnail:
+            "https://images.pexels.com/photos/263399/pexels-photo-263399.jpeg",
+          url: "https://drpjonyangogynae.com/",
+          type: "website",
+        },
+        {
+          name: "Masaki Magack",
+          description: "Professional portfolio and services website",
           thumbnail:
             "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
-          url: "https://example.com",
-          type: "website",
-        },
-        {
-          name: "Example Website 3",
-          description: "Service-based company site",
-          thumbnail:
-            "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg",
-          url: "https://example.com",
+          url: "http://masakimagack.co.ke/",
           type: "website",
         },
       ],
