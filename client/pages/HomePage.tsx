@@ -77,7 +77,7 @@ const HomePage = () => {
           name: "Masaki Magack",
           description: "Professional portfolio and services website",
           thumbnail:
-            "https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg",
+            "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F1af6e9dbbdf24ad39b30a6d567f1b053?format=webp&width=800&height=1200",
           url: "http://masakimagack.co.ke/",
           type: "website",
         },
