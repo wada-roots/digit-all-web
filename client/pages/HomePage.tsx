@@ -728,7 +728,7 @@ const HomePage = () => {
                 title: "Social Media Marketing",
                 description: "Boost your online presence with 10x engagement",
                 caption: "Get your social media strategy in 24 hours",
-                price: "From $299/month",
+                price: "From $99/month",
               },
               {
                 id: "seo",
@@ -737,7 +737,7 @@ const HomePage = () => {
                 title: "Search Engine Optimization",
                 description: "Rank #1 on Google within 90 days",
                 caption: "80% of your SEO work is done automatically",
-                price: "From $499/month",
+                price: "From $99/month",
               },
               {
                 id: "photography",
@@ -746,7 +746,7 @@ const HomePage = () => {
                 title: "Photography & Videography",
                 description: "Professional content that converts",
                 caption: "Get your brand photoshoot in one session",
-                price: "From $799/project",
+                price: "From $99/month",
               },
               {
                 id: "website",
@@ -756,7 +756,7 @@ const HomePage = () => {
                 description:
                   "Lightning-fast, mobile-responsive websites & apps",
                 caption: "Get your website template in 10 minutes",
-                price: "From $1,299",
+                price: "From $99/month",
               },
               {
                 id: "app",
@@ -765,7 +765,7 @@ const HomePage = () => {
                 title: "App Development",
                 description: "Native iOS & Android apps that scale",
                 caption: "80% of your app is done with our templates",
-                price: "From $2,999",
+                price: "From $99/month",
               },
               {
                 id: "business-cards",
@@ -774,7 +774,7 @@ const HomePage = () => {
                 title: "Business Cards",
                 description: "Premium designs that make lasting impressions",
                 caption: "Get your business cards designed in 2 hours",
-                price: "From $99",
+                price: "From $99/month",
               },
             ].map((service, index) => (
               <motion.div
