@@ -512,10 +512,9 @@ const HomePage = () => {
       {/* Quick Stats Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-space-darker/50 to-blue-900/30 border-b border-neon-blue/20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
             {[
-              { num: "50+", label: "Industry Awards" },
-              { num: "10+", label: "Years Experience" },
+              { num: "5+", label: "Years Experience" },
               { num: "24/7", label: "Customer Support" },
             ].map((stat, idx) => (
               <motion.div
