@@ -886,6 +886,87 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Team Showcase Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-space-dark/50 to-space-darker/50 border-t border-neon-blue/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-neon-blue to-neon-yellow bg-clip-text text-transparent">
+              Meet Our Expert Team
+            </h2>
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+              Talented professionals dedicated to transforming your business with innovative digital solutions
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              className="relative overflow-hidden rounded-2xl border border-neon-blue/30 shadow-xl"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fe725ba8d35fe4a3c8bbf2fa93e81d647?format=webp&width=800&height=1200"
+                alt="Our team collaborating"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="space-y-6"
+            >
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-neon-blue">
+                  Why Choose Our Team?
+                </h3>
+                <p className="text-foreground/80 mb-4 leading-relaxed">
+                  Our diverse team brings together expertise in digital marketing, web development, design, and business strategy. With years of combined experience, we're committed to delivering exceptional results that exceed expectations.
+                </p>
+              </div>
+
+              <ul className="space-y-3">
+                {[
+                  "Experienced digital innovators",
+                  "Creative problem-solvers",
+                  "Data-driven strategists",
+                  "Customer-focused professionals"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-3 text-foreground/80">
+                    <span className="w-2 h-2 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-full"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300"
+                  asChild
+                >
+                  <Link to="/team">View Full Team</Link>
+                </Button>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Service Popups */}
       <Modal isOpen={activePopup === "social-media"} onClose={handleClosePopup}>
         <SocialMediaPopup
