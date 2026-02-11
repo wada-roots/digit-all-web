@@ -139,8 +139,18 @@ const Team = () => {
     <div className="min-h-screen bg-space-dark text-foreground">
       {/* Hero Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background Elements */}
+        {/* Background Image */}
         <div className="absolute inset-0">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fce4d4d8e590c40d8b037449dea804cd8?format=webp&width=800&height=1200"
+            alt="Team Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-space-darker/90 via-space-dark/80 to-space-dark/85"></div>
+        </div>
+
+        {/* Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-neon-blue/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-neon-yellow/10 rounded-full blur-3xl"></div>
         </div>
