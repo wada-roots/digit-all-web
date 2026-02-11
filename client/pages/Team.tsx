@@ -146,7 +146,7 @@ const Team = () => {
             alt="Team Background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-space-darker/90 via-space-dark/80 to-space-dark/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-space-darker/50 via-space-dark/40 to-space-dark/45"></div>
         </div>
 
         {/* Background Elements */}
@@ -185,51 +185,6 @@ const Team = () => {
             design, and strategy, we bring your vision to life.
           </motion.p>
         </motion.div>
-      </section>
-
-      {/* Core Values Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-space-light/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-neon-blue to-neon-yellow bg-clip-text text-transparent">
-              Our Core Values
-            </h2>
-            <p className="text-foreground/70">
-              What drives us every single day
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {coreValues.map((value, idx) => (
-              <motion.div
-                key={idx}
-                variants={itemVariants}
-                whileHover={{ y: -5 }}
-                className="bg-space-dark p-6 rounded-xl border border-space-light hover:border-neon-blue/50 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-lg flex items-center justify-center mb-4">
-                  <value.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2 text-neon-blue">
-                  {value.title}
-                </h3>
-                <p className="text-foreground/70 text-sm">{value.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
       </section>
 
       {/* Team Members Section */}
@@ -368,6 +323,51 @@ const Team = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-space-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-space-light/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-neon-blue to-neon-yellow bg-clip-text text-transparent">
+              Our Core Values
+            </h2>
+            <p className="text-foreground/70">
+              What drives us every single day
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {coreValues.map((value, idx) => (
+              <motion.div
+                key={idx}
+                variants={itemVariants}
+                whileHover={{ y: -5 }}
+                className="bg-space-dark p-6 rounded-xl border border-space-light hover:border-neon-blue/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-lg flex items-center justify-center mb-4">
+                  <value.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2 text-neon-blue">
+                  {value.title}
+                </h3>
+                <p className="text-foreground/70 text-sm">{value.description}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
