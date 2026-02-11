@@ -29,11 +29,11 @@ const Team = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "Alex Mwangi",
-      role: "Founder & Creative Director",
-      bio: "Visionary leader with 8+ years in digital strategy and creative excellence",
+      name: "Masaki Magack",
+      role: "Founder & CEO",
+      bio: "A 360° digital marketer — For 10 years, he has led digital campaigns that boost visibility and drive ROI. He specialize in media buying (Ads) on Google, Meta, YouTube, LinkedIn, and programmatic platforms.",
       image:
-        "https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2F963a7f4336de4960b25cde8e17e37462?format=webp&width=800",
+        "https://res.cloudinary.com/dqk0axaoc/image/upload/v1770728142/Masaki_qfjra9.jpg",
       social: {
         linkedin: "https://www.linkedin.com/company/dealmojasafi/",
         twitter: "https://twitter.com",
@@ -41,11 +41,11 @@ const Team = () => {
     },
     {
       id: 2,
-      name: "Sarah Kipchoge",
-      role: "Head of Digital Marketing",
-      bio: "Digital marketing expert driving growth through data-driven strategies",
+      name: "Kioko Kelvin",
+      role: "Head Software Engineer",
+      bio: "Kelvin is our tech backbone, specializing in backend web development and app development. From building seamless systems to powering user-friendly apps, he makes sure everything runs smoothly behind the scenes.",
       image:
-        "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+        "https://res.cloudinary.com/dqk0axaoc/image/upload/v1770728716/Kioko_d74far.jpg",
       social: {
         linkedin: "https://www.linkedin.com/company/dealmojasafi/",
         twitter: "https://twitter.com",
@@ -53,11 +53,11 @@ const Team = () => {
     },
     {
       id: 3,
-      name: "James Okonkwo",
-      role: "Senior Web Developer",
-      bio: "Full-stack developer passionate about creating seamless user experiences",
+      name: "Ann Mwendwa",
+      role: "Social Media Manager",
+      bio: "Ann is our trilingual Kenyan journalist turned social-media powerhouse. As a manager, editor, and content strategist, she knows how to make brands shine online. ",
       image:
-        "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+        "https://res.cloudinary.com/dqk0axaoc/image/upload/v1770729157/Ann_xk3vvc.jpg",
       social: {
         linkedin: "https://www.linkedin.com/company/dealmojasafi/",
         twitter: "https://twitter.com",
@@ -65,11 +65,11 @@ const Team = () => {
     },
     {
       id: 4,
-      name: "Grace Nakamura",
-      role: "UX/UI Designer",
-      bio: "Design-focused professional creating beautiful and functional interfaces",
+      name: "James Monchoi",
+      role: "UX/UI & Graphic Designer",
+      bio: "Monchoi is our creative powerhouse. As a graphic designer, he transforms ideas into bold, eye-catching visuals that speak louder than words. ",
       image:
-        "https://images.pexels.com/photos/3945633/pexels-photo-3945633.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+        "https://res.cloudinary.com/dqk0axaoc/image/upload/v1770729483/Jemmo_uvufxj.jpg",
       social: {
         linkedin: "https://www.linkedin.com/company/dealmojasafi/",
         twitter: "https://twitter.com",
@@ -77,11 +77,11 @@ const Team = () => {
     },
     {
       id: 5,
-      name: "David Kariuki",
-      role: "Social Media Strategist",
-      bio: "Content specialist building engaging communities and driving brand awareness",
+      name: "Samuel Matoya",
+      role: "App Developer",
+      bio: "Matoya codes sleek apps by day—and crafts eye‑catching graphics by night",
       image:
-        "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+        "https://res.cloudinary.com/dqk0axaoc/image/upload/v1770730039/Matoya_fo9lnf.jpg",
       social: {
         linkedin: "https://www.linkedin.com/company/dealmojasafi/",
         twitter: "https://twitter.com",

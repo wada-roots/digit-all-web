@@ -147,7 +147,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Feb37744318da4c2f924d7a0d87036b20?format=webp&width=800"
+              src="/logo.png"
               alt="Deal Moja Safi Logo"
               className="h-10 w-auto"
             />
@@ -158,11 +158,10 @@ const Navigation = () => {
             {/* Home Link */}
             <Link
               to="/"
-              className={`px-3 py-2 text-sm font-medium transition-colors rounded-md ${
-                location.pathname === "/"
+              className={`px-3 py-2 text-sm font-medium transition-colors rounded-md ${location.pathname === "/"
                   ? "text-neon-blue bg-blue-50"
                   : "text-gray-700 hover:text-neon-blue hover:bg-gray-50"
-              }`}
+                }`}
             >
               Home
             </Link>
@@ -205,11 +204,10 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors rounded-md ${
-                  location.pathname === item.href
+                className={`px-3 py-2 text-sm font-medium transition-colors rounded-md ${location.pathname === item.href
                     ? "text-neon-blue bg-blue-50"
                     : "text-gray-700 hover:text-neon-blue hover:bg-gray-50"
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -248,9 +246,8 @@ const Navigation = () => {
               >
                 Solutions
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform ${
-                    solutionsOpen ? "rotate-180" : ""
-                  }`}
+                  className={`w-4 h-4 transition-transform ${solutionsOpen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
