@@ -139,8 +139,18 @@ const Team = () => {
     <div className="min-h-screen bg-space-dark text-foreground">
       {/* Hero Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background Elements */}
+        {/* Background Image */}
         <div className="absolute inset-0">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fce4d4d8e590c40d8b037449dea804cd8?format=webp&width=800&height=1200"
+            alt="Team Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-space-darker/90 via-space-dark/80 to-space-dark/85"></div>
+        </div>
+
+        {/* Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-neon-blue/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-neon-yellow/10 rounded-full blur-3xl"></div>
         </div>
@@ -304,6 +314,60 @@ const Team = () => {
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Photos Gallery */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-space-dark/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-neon-blue to-neon-yellow bg-clip-text text-transparent">
+              Our Team in Action
+            </h2>
+            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+              Passionate professionals delivering solutions and making an impact
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              className="relative overflow-hidden rounded-xl border border-neon-blue/30 shadow-lg hover:shadow-xl transition-all duration-300 group"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fe725ba8d35fe4a3c8bbf2fa93e81d647?format=webp&width=800&height=1200"
+                alt="Team collaboration"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-space-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              className="relative overflow-hidden rounded-xl border border-neon-yellow/30 shadow-lg hover:shadow-xl transition-all duration-300 group"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fd9ee7f5609a042bf8cf02e103c9fea13?format=webp&width=800&height=1200"
+                alt="Team success"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-space-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
