@@ -203,7 +203,7 @@ const HomePage = () => {
           ))}
 
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-space-darker/92 via-space-dark/88 to-blue-900/75"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-space-darker/50 via-space-dark/40 to-blue-900/35"></div>
 
           {/* Animated Background Elements */}
           <motion.div
