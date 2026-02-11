@@ -72,20 +72,9 @@ const Contact = () => {
       params.append("budget", formData.budget);
       params.append("message", formData.message);
 
-      // Log the data being sent
-      console.log("Contact Form Data:", {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        company: formData.company,
-        service: formData.service,
-        budget: formData.budget,
-        message: formData.message,
-      });
-
       // Send to Google Apps Script
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxamHsmi6gybjmuwEZJqKKxbgiRCul1lGuQgdncWYiBPcws-ZVlQkxs7-SO6hfFgANvJg/exec",
+        "https://script.google.com/macros/s/AKfycbwmdQ2jhIFvoRXwfsqp8Mby6OxwhU_ldyBK7gU04Fy5rylZmvmIVcFfpR2p7UWI7JfkUQ/exec",
         {
           method: "POST",
           body: params,
@@ -93,8 +82,7 @@ const Contact = () => {
         },
       );
 
-      console.log("Form submitted successfully with service:", formData.service);
-      console.log("Response status:", response.status);
+      console.log("Form submitted successfully");
       setIsSubmitting(false);
       setIsSubmitted(true);
 
@@ -397,24 +385,24 @@ const Contact = () => {
                               <SelectValue placeholder="Select service" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="Website Development">
+                              <SelectItem value="website">
                                 Website Development
                               </SelectItem>
-                              <SelectItem value="App Development">
+                              <SelectItem value="app">
                                 App Development
                               </SelectItem>
-                              <SelectItem value="Social Media Marketing">
+                              <SelectItem value="social-media">
                                 Social Media Marketing
                               </SelectItem>
-                              <SelectItem value="SEO">SEO</SelectItem>
-                              <SelectItem value="Photography & Videography">
+                              <SelectItem value="seo">SEO Services</SelectItem>
+                              <SelectItem value="photography">
                                 Photography & Videography
                               </SelectItem>
-                              <SelectItem value="Business Cards">
+                              <SelectItem value="business-cards">
                                 Business Cards
                               </SelectItem>
-                              <SelectItem value="Chat Bot Inquiry">
-                                General Inquiry
+                              <SelectItem value="consultation">
+                                Free Consultation
                               </SelectItem>
                             </SelectContent>
                           </Select>
