@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Linkedin,
@@ -138,53 +139,117 @@ const Team = () => {
   return (
     <div className="min-h-screen bg-space-dark text-foreground">
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fce4d4d8e590c40d8b037449dea804cd8?format=webp&width=800&height=1200"
-            alt="Team Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-space-darker/50 via-space-dark/40 to-space-dark/45"></div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Side - Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+              className="relative"
+            >
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl border border-neon-blue/30">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fafa4cdfd9cfb4fbfb22388ee70a44e49%2Fce4d4d8e590c40d8b037449dea804cd8?format=webp&width=800&height=1200"
+                  alt="Our Expert Team"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-space-dark/30 via-transparent to-transparent"></div>
+              </div>
+
+              {/* Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-neon-blue/10 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-neon-yellow/10 rounded-full blur-2xl"></div>
+            </motion.div>
+
+            {/* Right Side - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <h1 className="text-5xl sm:text-6xl lg:text-5xl font-black leading-tight">
+                  <span className="bg-gradient-to-r from-neon-blue via-neon-yellow to-neon-blue bg-clip-text text-transparent">
+                    Our Expert Team
+                  </span>
+                </h1>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="space-y-4"
+              >
+                <p className="text-xl text-foreground/90 leading-relaxed font-medium">
+                  Meet the talented professionals behind Deal Moja Safi. We're a diverse
+                  team of digital innovators, creative thinkers, and solution builders
+                  dedicated to transforming your business.
+                </p>
+
+                <p className="text-lg text-foreground/70 leading-relaxed">
+                  With combined expertise spanning digital marketing, web development,
+                  design, and strategy, we bring your vision to life.
+                </p>
+              </motion.div>
+
+              {/* Key Points */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="space-y-3 pt-4"
+              >
+                {[
+                  "Experienced digital innovators",
+                  "Creative problem-solvers",
+                  "Customer-focused professionals"
+                ].map((point, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 + (idx * 0.1) }}
+                    viewport={{ once: true }}
+                    className="flex items-center gap-3"
+                  >
+                    <div className="w-2 h-2 bg-gradient-to-r from-neon-blue to-neon-yellow rounded-full"></div>
+                    <span className="text-foreground/80">{point}</span>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              {/* CTA Button */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
+                className="pt-4"
+              >
+                <Link
+                  to="/contact"
+                  className="inline-block bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  Get in Touch
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
-
-        {/* Background Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-neon-blue/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-neon-yellow/10 rounded-full blur-3xl"></div>
-        </div>
-
-        <motion.div
-          className="relative z-10 max-w-4xl mx-auto text-center"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-neon-blue via-neon-yellow to-neon-blue bg-clip-text text-transparent leading-tight"
-          >
-            Our Expert Team
-          </motion.h1>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed"
-          >
-            Meet the talented professionals behind Deal Moja Safi. We're a diverse
-            team of digital innovators, creative thinkers, and solution builders
-            dedicated to transforming your business.
-          </motion.p>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-foreground/70 mb-12 max-w-2xl mx-auto"
-          >
-            With combined expertise spanning digital marketing, web development,
-            design, and strategy, we bring your vision to life.
-          </motion.p>
-        </motion.div>
       </section>
 
       {/* Team Members Section */}
