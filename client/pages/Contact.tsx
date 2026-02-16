@@ -126,7 +126,12 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Nairobi, Kenya", "Westlands Business District"],
+      details: [
+        "Nairobi Branch",
+        "The Atrium Building, Chaka Road",
+        "P.O. Box 55990–00200",
+        "Nairobi, Kenya",
+      ],
       description: "By appointment only",
     },
     {
@@ -606,10 +611,16 @@ const Contact = () => {
               <div className="text-center">
                 <MapPin className="w-16 h-16 text-neon-blue mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-foreground mb-2">
-                  Nairobi, Kenya
+                  Nairobi Branch
                 </h3>
                 <p className="text-foreground/80">
-                  Westlands Business District
+                  The Atrium Building, Chaka Road
+                </p>
+                <p className="text-foreground/80">
+                  P.O. Box 55990–00200
+                </p>
+                <p className="text-foreground/80">
+                  Nairobi, Kenya
                 </p>
                 <p className="text-sm text-foreground/60 mt-2">
                   By appointment only
