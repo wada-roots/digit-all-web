@@ -150,8 +150,8 @@ const Contact = () => {
   ];
 
   const stats = [
-    { icon: Users, number: "500+", label: "Happy Clients" },
-    { icon: CheckCircle, number: "1000+", label: "Projects Completed" },
+    { icon: Users, number: "50+", label: "Happy Clients" },
+    { icon: CheckCircle, number: "100+", label: "Projects Completed" },
     { icon: Award, number: "3+", label: "Years Experience" },
     { icon: Star, number: "4.9", label: "Average Rating" },
   ];
