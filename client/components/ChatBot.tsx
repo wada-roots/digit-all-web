@@ -309,7 +309,7 @@ const ChatBot = () => {
           ...prev,
           {
             type: "bot",
-            content: "There was a temporary issue connecting. Please try again or email us directly at support@digit-all.com",
+            content: "There was a temporary issue connecting. Please try again or email us directly at support@dealmojasafi.com",
             actions: [
               { label: "Try Again", value: "agent" },
               { label: "Back to Menu", value: "menu" },

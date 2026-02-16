@@ -35,7 +35,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi! I'm interested in your services.");
-    window.open(`https://wa.me/254738849148?text=${message}`, "_blank");
+    window.open(`https://wa.me/25470832249?text=${message}`, "_blank");
   };
 
   return (

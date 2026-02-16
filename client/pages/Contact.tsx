@@ -74,7 +74,7 @@ const Contact = () => {
 
       // Send to Google Apps Script
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwmdQ2jhIFvoRXwfsqp8Mby6OxwhU_ldyBK7gU04Fy5rylZmvmIVcFfpR2p7UWI7JfkUQ/exec",
+        "https://script.google.com/macros/s/AKfycbxamHsmi6gybjmuwEZJqKKxbgiRCul1lGuQgdncWYiBPcws-ZVlQkxs7-SO6hfFgANvJg/exec",
         {
           method: "POST",
           body: params,
@@ -114,13 +114,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+254 700 123 456", "+254 700 654 321"],
+      details: ["+254 114 261 221", "+254 708 322 249"],
       description: "Available 24/7 for urgent inquiries",
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@dms.co.ke", "projects@dms.co.ke"],
+      details: ["support@dealmojasafi.com", "info@dealmojasafi.com"],
       description: "We respond within 2 hours",
     },
     {
@@ -340,7 +340,7 @@ const Contact = () => {
                             }
                             required
                             className="bg-space-light border-space-light focus:border-neon-blue"
-                            placeholder="+254 700 123 456"
+                            placeholder="+254 708 322 249"
                           />
                         </div>
                         <div>

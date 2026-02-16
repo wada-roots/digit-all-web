@@ -8,11 +8,11 @@ const ContactBar = () => {
         <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">
           <div className="flex items-center space-x-2">
             <Phone className="h-4 w-4" />
-            <span>+254 707832249</span>
+            <span>+254 114 261 221 / +254 708 322 249</span>
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="h-4 w-4" />
-            <span>info@dealmojasafi.com</span>
+            <span>support@dealmojasafi.com</span>
           </div>
           <div className="flex items-center space-x-2">
             <Clock className="h-4 w-4" />
