@@ -114,7 +114,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+254 114 261 221", "+254 708 322 249"],
+      details: ["+254 114 261 221", "+254 707 322 249"],
       description: "Available 24/7 for urgent inquiries",
     },
     {
@@ -345,7 +345,7 @@ const Contact = () => {
                             }
                             required
                             className="bg-space-light border-space-light focus:border-neon-blue"
-                            placeholder="+254 708 322 249"
+                            placeholder="+254 707 322 249"
                           />
                         </div>
                         <div>
@@ -605,28 +605,18 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-space-light/50 rounded-2xl overflow-hidden border border-space-light"
+            className="bg-space-light/50 rounded-2xl overflow-hidden border border-space-light h-[500px]"
           >
-            <div className="h-96 bg-gradient-to-br from-neon-blue/20 to-neon-yellow/20 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-neon-blue mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-foreground mb-2">
-                  Nairobi Branch
-                </h3>
-                <p className="text-foreground/80">
-                  The Atrium Building, Chaka Road
-                </p>
-                <p className="text-foreground/80">
-                  P.O. Box 55990–00200
-                </p>
-                <p className="text-foreground/80">
-                  Nairobi, Kenya
-                </p>
-                <p className="text-sm text-foreground/60 mt-2">
-                  By appointment only
-                </p>
-              </div>
-            </div>
+            <iframe
+              src="https://maps.google.com/maps?q=The%20Atrium%20Building%2C%20Chaka%20Road%2C%20Nairobi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: "grayscale(0.5) contrast(1.2) invert(0.9) hue-rotate(180deg)" }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="The Atrium Building, Chaka Road"
+            ></iframe>
           </motion.div>
         </div>
       </section>

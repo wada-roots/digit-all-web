@@ -109,7 +109,7 @@ const Footer = () => {
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <Phone className="w-4 h-4 text-neon-blue mr-3" />
-                    <span className="text-foreground/90">+254 114 261 221 / +254 708 322 249</span>
+                    <span className="text-foreground/90">+254 114 261 221 / +254 707 322 249</span>
                   </div>
                   <div className="flex items-center">
                     <Mail className="w-4 h-4 text-neon-blue mr-3" />
@@ -232,7 +232,7 @@ const Footer = () => {
                   <Button
                     className="w-full bg-gradient-to-r from-neon-blue to-neon-yellow hover:from-neon-yellow hover:to-neon-blue text-white font-semibold py-2 rounded-full transition-all duration-300"
                     onClick={() =>
-                      window.open("https://wa.me/25470832249", "_blank")
+                      window.open("https://wa.me/25470732249", "_blank")
                     }
                   >
                     <MessageCircle className="w-4 h-4 mr-2" />
